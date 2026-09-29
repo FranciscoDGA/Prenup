@@ -11,7 +11,7 @@ const guides = defineCollection({
     cluster: z.string(),
     published: z.coerce.date(),
     updated: z.coerce.date().optional(),
-    author: z.string().default('Francisco Gomes'),
+    author: z.string().default('Francisco Gomes Alves'),
     tldr: z.string().optional(),
     faq: z
       .array(

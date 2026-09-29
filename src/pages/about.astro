@@ -1,9 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNote, authorLd } from '../data/author';
 ---
 <Base
-  title="About PrenupAnswers — Who We Are & How We're Funded"
-  description="PrenupAnswers is an independent educational site about prenuptial agreements for US couples. Here's who writes it, how it makes money, and what it will never do."
+  title="About PrenupAnswers — Who Runs It & How It's Funded"
+  description="PrenupAnswers is an independent educational site about prenuptial agreements for US couples, written by Francisco Gomes Alves, a pastor and law student in Brazil. Here's who he is and how the site makes money."
+  jsonLd={[authorLd]}
 >
   <section class="article-head">
     <div class="container">
@@ -12,7 +14,41 @@ import Base from '../layouts/Base.astro';
       <p class="meta">Independent. Educational. Not a law firm — and never will be.</p>
     </div>
   </section>
-  <div class="prose">
+
+  <div class="prose" id="author">
+    <h2>Who runs this site</h2>
+    <div class="author-profile">
+      {
+        author.photo ? (
+          <img class="author-photo" src={author.photo} alt={author.name} width="140" height="140" />
+        ) : (
+          <div class="author-photo author-photo--placeholder" aria-hidden="true">
+            {author.initials}
+          </div>
+        )
+      }
+      <div>
+        <h3 class="author-name-lg">{author.name}</h3>
+        <p class="author-role-lg">{author.role} · {author.jobTitle} · {author.location}</p>
+        <p>{authorBio}</p>
+      </div>
+    </div>
+
+    <ul>
+      {
+        authorCredentials.map((c) => (
+          <li>
+            <strong>{c.label}.</strong> {c.detail}
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="notice"><strong>Not legal advice.</strong> {authorNotLawyer}</p>
+
+    <p>{authorLocationNote}</p>
+
+    <h2>Why this site exists</h2>
     <p>
       <strong>PrenupAnswers exists because the internet failed engaged couples.</strong> Search "do I need a prenup"
       and you get three kinds of results: law firms fishing for clients, wedding blogs gliding past the money
@@ -21,7 +57,13 @@ import Base from '../layouts/Base.astro';
     <p>
       We're an independent educational site for couples in the United States. We explain what prenups cost, how state
       rules differ, what they can and can't protect, and how to raise the subject with a partner without it turning
-      into a fight. In plain English. With real numbers. Updated every year.
+      into a fight. In plain English. With real numbers. Every guide carries the date it was last reviewed.
+    </p>
+    <p>
+      A note on credentials, because it matters: on the questions couples actually get stuck on — how to bring this
+      up without a fight, whether it means you don't trust your partner — the useful experience is pastoral, not
+      legal. A lawyer can tell you what is enforceable. Only someone who has sat with couples can tell you what
+      actually happens in the conversation. This site is built on that distinction, and says plainly which is which.
     </p>
 
     <h2>How we're funded</h2>
@@ -34,13 +76,18 @@ import Base from '../layouts/Base.astro';
       <strong>Commission never decides what we recommend.</strong> If a cheaper path is the right path for your
       situation, that's what the article says — even when it earns us nothing.
     </p>
+    <p>
+      <strong>And neither does faith.</strong> The author is a pastor, but this site carries no religious
+      recommendations and no religious framing of the decision. It is funded and written as a consumer guide. What
+      you believe about marriage is your business; what a prenup costs is arithmetic.
+    </p>
 
     <h2>What we will never do</h2>
     <ul>
       <li>Sell legal services or draft agreements</li>
       <li>Pretend to be lawyers or offer legal advice</li>
       <li>Hide affiliate links behind vague language</li>
-      <li>Publish cost figures we can't source</li>
+      <li>Present an estimate as a sourced figure — ranges are labelled as estimates</li>
     </ul>
 
     <h2>When you actually need a lawyer</h2>
@@ -53,8 +100,8 @@ import Base from '../layouts/Base.astro';
 
     <h2>Contact</h2>
     <p>
-      Questions, corrections, or a source we missed? Email <strong>hello@prenupanswers.com</strong>. We read every
-      message — corrections get fixed within 48 hours.
+      Questions, corrections, or a source we missed? Email <strong>hello@prenupanswers.com</strong>. Corrections to
+      something factually wrong get fixed — if you report one and it is still wrong in a few weeks, email again.
     </p>
   </div>
 </Base>

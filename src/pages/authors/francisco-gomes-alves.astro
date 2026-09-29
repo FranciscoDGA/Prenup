@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNote, authorLd } from '../../data/author';
+---
+<Base
+  title={`${author.name} — Author, PrenupAnswers`}
+  description={`${author.name} is a ${author.jobTitle.toLowerCase()} and first-year law student in Brazil who writes PrenupAnswers, an independent guide to prenuptial agreements for US couples.`}
+  jsonLd={[authorLd]}
+>
+  <section class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/about/">About</a> / Author</p>
+      <h1>{author.name}</h1>
+      <p class="meta">{author.role} · {author.jobTitle} · {author.location}</p>
+    </div>
+  </section>
+
+  <div class="prose">
+    <div class="author-profile">
+      {
+        author.photo ? (
+          <img class="author-photo" src={author.photo} alt={author.name} width="140" height="140" />
+        ) : (
+          <div class="author-photo author-photo--placeholder" aria-hidden="true">
+            {author.initials}
+          </div>
+        )
+      }
+      <div>
+        <p>{authorBio}</p>
+      </div>
+    </div>
+
+    <h2>What he does here</h2>
+    <ul>
+      {
+        authorCredentials.map((c) => (
+          <li>
+            <strong>{c.label}.</strong> {c.detail}
+          </li>
+        ))
+      }
+    </ul>
+    <p class="author-topics">
+      Writes about: {author.knowsAbout.join(' · ')}.
+    </p>
+
+    <h2>What he is not</h2>
+    <p class="notice">{authorNotLawyer}</p>
+
+    <h2>Where he writes from</h2>
+    <p>{authorLocationNote}</p>
+
+    <h2>How the site is funded</h2>
+    <p>
+      Through affiliate partnerships and advertising, never by selling legal services. Francisco does not sell legal
+      advice, and cannot. See the <a href="/disclosure/">affiliate disclosure</a> and the
+      <a href="/about/">full About page</a>.
+    </p>
+
+    <h2>Reach him</h2>
+    <p>
+      Corrections and questions: <strong>hello@prenupanswers.com</strong>. If something here is wrong, say so —
+      factual corrections are made and the guide is re-dated.
+    </p>
+  </div>
+</Base>
