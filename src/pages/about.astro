@@ -2,8 +2,8 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base
-  title="About PrenupAnswers — Who We Are & How We're Funded"
-  description="PrenupAnswers is an independent educational site about prenuptial agreements for US couples. Here's who writes it, how it makes money, and what it will never do."
+  title="About PrenupAnswers — Who Writes This & How We're Funded"
+  description="Meet Francisco Gomes — pastor, marital counselor, and the writer behind PrenupAnswers. Who writes this site, how it makes money, and what it will never do."
 >
   <section class="article-head">
     <div class="container">
@@ -13,16 +13,45 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
   <div class="prose">
-    <p>
-      <strong>PrenupAnswers exists because the internet failed engaged couples.</strong> Search "do I need a prenup"
-      and you get three kinds of results: law firms fishing for clients, wedding blogs gliding past the money
-      conversation, and forum threads from 2013. None of them answer the actual question.
-    </p>
-    <p>
-      We're an independent educational site for couples in the United States. We explain what prenups cost, how state
-      rules differ, what they can and can't protect, and how to raise the subject with a partner without it turning
-      into a fight. In plain English. With real numbers. Updated every year.
-    </p>
+    <div class="author-intro">
+      <figure class="author-photo">
+        <img
+          src="/images/francisco-gomes.jpg"
+          alt="Francisco Gomes and his wife"
+          width="1200"
+          height="1600"
+          fetchpriority="high"
+        />
+        <figcaption>Francisco and his wife</figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">Who writes this</p>
+        <h2 style="margin-top:.2rem;">Francisco Gomes</h2>
+        <p class="author-role">Pastor · Marital counselor · Writer · Law student</p>
+        <p style="color:var(--muted);">
+          Francisco is a pastor and marital counselor. Most of his working life has been spent in the hardest room
+          in any marriage: the money conversation — the one where one partner is afraid to say a number, the other
+          is afraid to ask, and both are afraid that wanting a prenup means admitting the marriage might fail.
+        </p>
+        <p style="color:var(--muted);">
+          PrenupAnswers grew out of those conversations. Too many couples reach the wedding with the money talk
+          still undone — armed with forum myths, law-firm sales pitches, and wedding blogs that pretend these
+          questions don't exist. This site is the third thing: plain-English, sourced answers you can read in one
+          sitting and act on today.
+        </p>
+        <p style="color:var(--muted);">
+          <strong>Francisco is also a law student</strong> — and that is exactly why this site is careful about its
+          boundaries. He is not a lawyer, this is not a law firm, and nothing here is legal advice. When your
+          situation needs an attorney — a business, a trust, a prior marriage with children — the answer is a
+          licensed lawyer in your state, full stop.
+        </p>
+        <p style="color:var(--muted);">
+          PrenupAnswers is written from Brazil for readers across the United States. Every state's rules are
+          researched from primary sources — state statutes, court self-help pages, published pricing — and checked
+          against the current year before anything gets published.
+        </p>
+      </div>
+    </div>
 
     <h2>How we're funded</h2>
     <p>
@@ -57,4 +86,40 @@ import Base from '../layouts/Base.astro';
       message — corrections get fixed within 48 hours.
     </p>
   </div>
+
+  <style>
+    .author-intro {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      margin-bottom: 1rem;
+    }
+    .author-photo { margin: 0; }
+    .author-photo img {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(8, 26, 46, .12);
+    }
+    .author-photo figcaption {
+      font-size: .78rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: .5rem;
+      font-style: italic;
+    }
+    .author-role {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--gold-dark);
+      font-weight: 800;
+      margin-top: -.4rem;
+    }
+    @media (max-width: 700px) {
+      .author-intro { grid-template-columns: 1fr; }
+      .author-photo { max-width: 240px; margin: 0 auto; }
+    }
+  </style>
 </Base>

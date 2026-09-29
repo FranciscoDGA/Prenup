@@ -6,12 +6,14 @@ interface Props {
 }
 const {
   name = 'Francisco Gomes',
-  role = 'Founder & Editor, PrenupAnswers',
-  bio = 'Francisco researches marriage, money, and family law for US couples. He built PrenupAnswers after watching friends spend thousands on lawyers for questions that should have had free, honest answers online.',
+  role = 'Pastor, marital counselor & founder of PrenupAnswers',
+  bio = 'Francisco has spent years beside couples navigating the money conversations most couples avoid. He is also a law student — which is why every claim on this site is sourced, and why the site never pretends to be a law firm.',
 } = Astro.props;
 ---
 <div class="author-box">
-  <div class="avatar" aria-hidden="true">FG</div>
+  <div class="avatar">
+    <img src="/images/francisco-gomes.jpg" alt={name} width="52" height="52" loading="lazy" />
+  </div>
   <div>
     <b>{name}</b>
     <span style="color:var(--muted); font-size:.85rem;"> — {role}</span>
