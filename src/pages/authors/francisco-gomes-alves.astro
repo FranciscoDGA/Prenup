@@ -1,17 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNote, authorLd } from '../../data/author';
+import { author, authorBio, authorBackground, authorNotLawyer, researchMethod, authorLd } from '../../data/author';
 ---
 <Base
   title={`${author.name} — Author, PrenupAnswers`}
-  description={`${author.name} is a ${author.jobTitle.toLowerCase()} and first-year law student in Brazil who writes PrenupAnswers, an independent guide to prenuptial agreements for US couples.`}
+  description={`${author.name} writes PrenupAnswers from Brazil. He is a pastor and a first-year law student, not a licensed attorney, and has never sold legal services.`}
   jsonLd={[authorLd]}
 >
   <section class="article-head">
     <div class="container">
       <p class="crumbs"><a href="/">Home</a> / <a href="/about/">About</a> / Author</p>
       <h1>{author.name}</h1>
-      <p class="meta">{author.role} · {author.jobTitle} · {author.location}</p>
+      <p class="meta">Founder &amp; Editor, PrenupAnswers · Brazil</p>
     </div>
   </section>
 
@@ -31,31 +31,42 @@ import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNo
       </div>
     </div>
 
-    <h2>What he does here</h2>
-    <ul>
+    <h2>What he is not</h2>
+    <ul class="not-list">
       {
-        authorCredentials.map((c) => (
-          <li>
-            <strong>{c.label}.</strong> {c.detail}
-          </li>
+        authorNotLawyer.map((item) => (
+          <li>{item}</li>
         ))
       }
     </ul>
-    <p class="author-topics">
-      Writes about: {author.knowsAbout.join(' · ')}.
+
+    <h2>Background</h2>
+    <ul>
+      {authorBackground.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="author-topics">Writes about: {author.knowsAbout.join(' · ')}.</p>
+
+    <h2>Why that is not a conflict</h2>
+    <p>
+      He works in Brazil, takes no U.S. clients, and has no U.S. business to protect. There is nothing for him to sell
+      a reader and no case to win. His only exposure to being wrong is being wrong in public, which is why every guide
+      is dated and why corrections are made openly.
     </p>
 
-    <h2>What he is not</h2>
-    <p class="notice">{authorNotLawyer}</p>
+    <h2>How the research is done</h2>
+    {
+      researchMethod.map((m) => (
+        <>
+          <h3>{m.title}</h3>
+          <p>{m.detail}</p>
+        </>
+      ))
+    }
 
-    <h2>Where he writes from</h2>
-    <p>{authorLocationNote}</p>
-
-    <h2>How the site is funded</h2>
+    <h2>Funding</h2>
     <p>
-      Through affiliate partnerships and advertising, never by selling legal services. Francisco does not sell legal
-      advice, and cannot. See the <a href="/disclosure/">affiliate disclosure</a> and the
-      <a href="/about/">full About page</a>.
+      Affiliate partnerships and advertising — never legal services. See the
+      <a href="/disclosure/">affiliate disclosure</a> and the <a href="/about/">full About page</a>.
     </p>
 
     <h2>Reach him</h2>

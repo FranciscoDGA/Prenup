@@ -8,10 +8,8 @@ export const author = {
   name: 'Francisco Gomes Alves',
   initials: 'FG',
   role: 'Founder & Editor, PrenupAnswers',
-  jobTitle: 'Pastor',
-  affiliation: 'Igreja Apostólica Jeová Nissi, Brazil',
-  location: 'Brazil',
   photo: existsSync(photoOnDisk) ? photoPath : null,
+  url: '/authors/francisco-gomes-alves/',
   knowsAbout: [
     'Prenuptial agreements',
     'Marriage and relationships',
@@ -19,40 +17,58 @@ export const author = {
     'United States family law',
   ],
   sameAs: [] as string[],
-  url: '/authors/francisco-gomes-alves/',
 };
 
 export const authorBio =
-  'Francisco is a pastor and a first-year law student in Brazil. He is not a licensed attorney, and nothing on PrenupAnswers is legal advice. He started the site after watching friends pay thousands of dollars for answers that should have been free, plain, and honest.';
+  'Francisco Gomes Alves writes PrenupAnswers from Brazil. He is a pastor and a first-year law student — not a licensed attorney. He has never practised law, is not a member of any U.S. bar, and has never sold legal services to anyone.';
 
-export const authorCredentials = [
-  {
-    label: 'Pastor',
-    detail: 'Igreja Apostólica Jeová Nissi, Brazil — pastoral work with couples and families.',
-  },
-  {
-    label: 'Law student',
-    detail: 'First-year law degree. Studying family law; not yet licensed or admitted to practice anywhere.',
-  },
-  {
-    label: 'Writer & researcher',
-    detail: 'Reads primary sources — state statutes, bar association material, published court decisions — and writes the guides on this site.',
-  },
+export const authorBackground = [
+  'He works as a pastor at Igreja Apostólica Jeová Nissi in Brazil, where part of his work involves supporting couples and families.',
+  'He is in the first year of a law degree. This is background, not qualification: he holds no licence, is admitted to practise in no jurisdiction, and has never worked in a law office.',
 ];
 
-export const authorNotLawyer =
-  'Francisco is not a licensed attorney and is not authorized to practice law in any U.S. state. PrenupAnswers publishes general educational information only. Nothing here is legal advice, and reading it does not create an attorney–client relationship.';
+export const authorNotLawyer = [
+  'Not a lawyer. Francisco holds no law licence and is not a member of any U.S. state bar.',
+  'Not a law firm. PrenupAnswers employs no attorneys, sells no legal services, and drafts no agreements.',
+  'Not a review service. Nobody here reads, vets, or approves your contract before you sign it.',
+  'Not a substitute for advice. Nothing on this site is legal advice, and reading it creates no attorney–client relationship.',
+];
 
-export const authorLocationNote =
-  'Francisco lives and works in Brazil and writes for readers in the United States. Being an outsider to U.S. family law is the point: he cannot sell you a contract or bill you by the hour, so his only job is to help you understand the decision before you talk to a lawyer.';
+export const researchMethod = [
+  {
+    title: 'Statutes first',
+    detail:
+      'Law claims are traced back to the state statute or court rule they come from, not to a blog or a summary of a blog. Where a state has its own prenup statute, we name it.',
+  },
+  {
+    title: 'Bar association and legal-aid material',
+    detail:
+      'We read what bar associations, legal-aid organizations, and family-law publications publish for the public, because that is what a reader is most likely to be shown by a lawyer.',
+  },
+  {
+    title: 'Prices are labelled as estimates',
+    detail:
+      'Cost figures are ranges compiled from published fee surveys, published service pricing, and reported ranges. They are estimates, not quotes, and we say so wherever a number appears.',
+  },
+  {
+    title: 'Dated, and dated honestly',
+    detail:
+      'Every guide shows the date it was last reviewed. When we have not checked a page recently, the date tells you that too — a stale date is more useful to you than a fresh-looking one.',
+  },
+  {
+    title: 'Errors get corrected in public',
+    detail:
+      'If a reader reports something factually wrong, we fix it and re-date the page. We do not quietly delete a number we got wrong.',
+  },
+];
 
 export const authorLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': `${'https://prenupanswers.com'}${author.url}#person`,
+  '@id': `https://prenupanswers.com${author.url}#person`,
   name: author.name,
   url: `https://prenupanswers.com${author.url}`,
-  jobTitle: author.jobTitle,
+  jobTitle: 'Pastor',
   description: authorBio,
   knowsAbout: author.knowsAbout,
   ...(author.photo ? { image: `https://prenupanswers.com${author.photo}` } : {}),

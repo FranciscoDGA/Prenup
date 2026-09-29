@@ -1,10 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNote, authorLd } from '../data/author';
+import { author, authorBio, authorBackground, authorNotLawyer, researchMethod, authorLd } from '../data/author';
 ---
 <Base
   title="About PrenupAnswers — Who Runs It & How It's Funded"
-  description="PrenupAnswers is an independent educational site about prenuptial agreements for US couples, written by Francisco Gomes Alves, a pastor and law student in Brazil. Here's who he is and how the site makes money."
+  description="PrenupAnswers is an independent educational site about prenuptial agreements for US couples, written by Francisco Gomes Alves from Brazil. Who he is, how we check the facts, and how the site makes money."
   jsonLd={[authorLd]}
 >
   <section class="article-head">
@@ -16,7 +16,21 @@ import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNo
   </section>
 
   <div class="prose" id="author">
-    <h2>Who runs this site</h2>
+    <h2>What this site is, and is not</h2>
+    <p>
+      <strong>PrenupAnswers is a consumer guide.</strong> It exists to help you understand what a prenuptial agreement
+      costs, what the process involves, and what questions to take to a lawyer — before you spend money. It is not
+      legal advice, and no one here is a lawyer.
+    </p>
+    <ul class="not-list">
+      {
+        authorNotLawyer.map((item) => (
+          <li>{item}</li>
+        ))
+      }
+    </ul>
+
+    <h2>Who writes it</h2>
     <div class="author-profile">
       {
         author.photo ? (
@@ -29,42 +43,49 @@ import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNo
       }
       <div>
         <h3 class="author-name-lg">{author.name}</h3>
-        <p class="author-role-lg">{author.role} · {author.jobTitle} · {author.location}</p>
+        <p class="author-role-lg">{author.role} · Brazil</p>
         <p>{authorBio}</p>
       </div>
     </div>
-
+    <p>
+      <a href={author.url}>Full author profile &rarr;</a>
+    </p>
+    <p><strong>Background.</strong></p>
     <ul>
-      {
-        authorCredentials.map((c) => (
-          <li>
-            <strong>{c.label}.</strong> {c.detail}
-          </li>
-        ))
-      }
+      {authorBackground.map((item) => <li>{item}</li>)}
     </ul>
 
-    <p class="notice"><strong>Not legal advice.</strong> {authorNotLawyer}</p>
+    <h2>Why a Brazilian writes about U.S. prenups</h2>
+    <p>
+      Because he cannot sell you anything legal. There is no U.S. client to take, no contract to draft, no bill to
+      send, and no U.S. address. That removes the two things that usually distort a site like this — the need to win a
+      case, and the incentive to keep you paying.
+    </p>
+    <p>
+      It also sets a hard limit on what this site should be trusted to know. We are an outside look at a system we do
+      not practise in, which is why every legal claim here is traced to a statute or a published source, and why we
+      would rather say "this depends on your state, ask" than guess.
+    </p>
+    <p>
+      His pastoral work is relevant for a narrower reason, and it is the honest one. Couples rarely get stuck on
+      doctrine; they get stuck on the conversation — how to raise the subject, what it means that the other person
+      flinched, whether refusing means something is wrong. A lawyer can tell you what is enforceable. Only someone who
+      has sat with couples can describe what actually happens in the room. This site keeps those two things clearly
+      separate and says which is which.
+    </p>
 
-    <p>{authorLocationNote}</p>
-
-    <h2>Why this site exists</h2>
+    <h2>How we check the facts</h2>
     <p>
-      <strong>PrenupAnswers exists because the internet failed engaged couples.</strong> Search "do I need a prenup"
-      and you get three kinds of results: law firms fishing for clients, wedding blogs gliding past the money
-      conversation, and forum threads from 2013. None of them answer the actual question.
+      Trust is earned by method, not by biography. This is how the information on this site is put together:
     </p>
-    <p>
-      We're an independent educational site for couples in the United States. We explain what prenups cost, how state
-      rules differ, what they can and can't protect, and how to raise the subject with a partner without it turning
-      into a fight. In plain English. With real numbers. Every guide carries the date it was last reviewed.
-    </p>
-    <p>
-      A note on credentials, because it matters: on the questions couples actually get stuck on — how to bring this
-      up without a fight, whether it means you don't trust your partner — the useful experience is pastoral, not
-      legal. A lawyer can tell you what is enforceable. Only someone who has sat with couples can tell you what
-      actually happens in the conversation. This site is built on that distinction, and says plainly which is which.
-    </p>
+    {
+      researchMethod.map((m) => (
+        <>
+          <h3>{m.title}</h3>
+          <p>{m.detail}</p>
+        </>
+      ))
+    }
 
     <h2>How we're funded</h2>
     <p>
@@ -82,20 +103,13 @@ import { author, authorBio, authorCredentials, authorNotLawyer, authorLocationNo
       you believe about marriage is your business; what a prenup costs is arithmetic.
     </p>
 
-    <h2>What we will never do</h2>
-    <ul>
-      <li>Sell legal services or draft agreements</li>
-      <li>Pretend to be lawyers or offer legal advice</li>
-      <li>Hide affiliate links behind vague language</li>
-      <li>Present an estimate as a sourced figure — ranges are labelled as estimates</li>
-    </ul>
-
     <h2>When you actually need a lawyer</h2>
     <p>
       Online services are fine for straightforward situations. But if one partner owns a business, there's a
-      family-trust, complex stock comp, real estate across states, or a prior marriage with children involved — talk
-      to a licensed family-law attorney in your state. A few hundred dollars of advice up front is cheap insurance
-      for a document that governs your finances for life.
+      family trust, complex stock comp, real estate across states, or a prior marriage with children involved — talk
+      to a licensed family-law attorney in your state. A few hundred dollars of advice up front is cheap insurance for
+      a document that governs your finances for life. That advice is worth more than anything on this site, and we will
+      say so on any page that would have you thinking otherwise.
     </p>
 
     <h2>Contact</h2>
