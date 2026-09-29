@@ -3,7 +3,7 @@ title: "Do I Need a Prenup? The Brutally Honest 60-Second Test"
 description: "Six questions that settle whether you actually need a prenuptial agreement — plus the four situations where the answer is almost always yes. No guilt, no legalese."
 keyword: do i need a prenup
 cluster: Decision
-published: 2026-09-28
+published: 2026-09-08
 tldr: "If you own property, earn significantly more than your partner, have kids from a previous marriage, or carry meaningful debt — yes, get a prenup. If you're both starting from zero, you probably don't. Take the six-question test below and you'll know in a minute."
 faq:
   - q: "Is it bad luck to ask for a prenup before marriage?"

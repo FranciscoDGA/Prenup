@@ -3,7 +3,7 @@ title: "How Much Does a Prenup Cost in 2026? Real Numbers by State"
 description: "Online services, attorney hourly rates, and 2026 state-by-state cost ranges for prenuptial agreements — plus the four line items that blow up the bill and how to avoid them."
 keyword: how much does a prenup cost
 cluster: Cost
-published: 2026-09-28
+published: 2026-09-22
 tldr: "Expect $600–$1,500 through an online service, $1,500–$4,000 with an attorney for straightforward finances, and $5,000–$15,000+ when a business, multiple properties, or a tough negotiation is involved. New York, California, New Jersey, and Massachusetts sit at the high end."
 faq:
   - q: "How much does a prenup cost on average in the US?"

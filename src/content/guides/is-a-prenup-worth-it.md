@@ -3,7 +3,7 @@ title: "Is a Prenup Worth It? Run the Math Nobody Runs"
 description: "A prenup costs $600–$3,000. A contested divorce costs $15,000–$30,000+. Here's the actual math, when a prenup is a bad deal, and how to think about it like insurance."
 keyword: is a prenup worth it
 cluster: Decision
-published: 2026-09-28
+published: 2026-09-15
 tldr: "A prenup for a straightforward couple typically runs $600–$3,000. A contested divorce runs $15,000–$30,000+ per person — and without a prenup, you also surrender control of the outcome. The math only fails when you have essentially nothing to protect."
 faq:
   - q: "Is a prenup worth it for a young couple with no assets?"
