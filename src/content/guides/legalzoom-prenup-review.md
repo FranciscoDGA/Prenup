@@ -67,7 +67,7 @@ A licensed co-counsel attorney is involved from the start — not reviewing a fi
 
 **You already live in LegalZoom + you're in a supported state + you want a lawyer from the start →** the $1,499 tier is a fair offer. Compare it against HelloPrenup's ~$2,000 representation and local attorneys' hourly quotes, then decide — none of those three answers is wrong.
 
-**You're price-sensitive, or outside the 12 states, or want installments →** skip the storefront. The product LegalZoom would hand you is HelloPrenup's — [start there directly](https://helloprenup.com/?ref=prenupanswers) and keep the full add-on menu and payment plans.
+**You're price-sensitive, or outside the 12 states, or want installments →** skip the storefront. The product LegalZoom would hand you is HelloPrenup's — [start there directly](https://helloprenup.com/?via=francisco) and keep the full add-on menu and payment plans.
 
 **Business, multiple properties, trusts, big inequality →** none of the above. Hire a family-law attorney ([here's how the lawyer-vs-online line falls](/guides/lawyer-vs-online-prenup/)), and treat platforms as the drafting layer only.
 

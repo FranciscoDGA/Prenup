@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import FAQ from '../../components/FAQ.astro';
 import CTA from '../../components/CTA.astro';
 import { STATE_PAGES, REGIME_LABEL } from '../../data/statePages';
+import { AFF } from '../../data/affiliate';
 
 export async function getStaticPaths() {
   return STATE_PAGES.map((state) => ({ params: { slug: state.slug }, props: { state } }));
@@ -142,7 +143,7 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
     <CTA
       heading={`Get ${state.name} pricing in 60 seconds`}
       text={`Online prenup services prepare a ${state.name}-specific agreement for a flat fee — most couples with straightforward finances finish for under $1,000 instead of ${state.low.toLocaleString('en-US')}–${state.high.toLocaleString('en-US')} in hourly bills.`}
-      href="https://www.helloprenup.com/?ref=prenupanswers"
+      href={AFF.helloPrenup}
       label="See HelloPrenup pricing"
     />
   </div>

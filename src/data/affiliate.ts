@@ -1,5 +1,5 @@
-// Troque pelas suas URLs de afiliado assim que os programas forem aprovados.
+// Links de afiliado oficiais.
 export const AFF = {
-  helloPrenup: 'https://helloprenup.com/',
-  first: 'https://www.thisfirst.com/',
+  helloPrenup: 'https://helloprenup.com/?via=francisco',
+  first: 'https://www.thisfirst.com/?via=francisco',
 };
