@@ -1,0 +1,20 @@
+---
+interface Props {
+  name?: string;
+  role?: string;
+  bio?: string;
+}
+const {
+  name = 'Francisco Gomes',
+  role = 'Founder & Editor, PrenupAnswers',
+  bio = 'Francisco researches marriage, money, and family law for US couples. He built PrenupAnswers after watching friends spend thousands on lawyers for questions that should have had free, honest answers online.',
+} = Astro.props;
+---
+<div class="author-box">
+  <div class="avatar" aria-hidden="true">FG</div>
+  <div>
+    <b>{name}</b>
+    <span style="color:var(--muted); font-size:.85rem;"> — {role}</span>
+    <p>{bio}</p>
+  </div>
+</div>

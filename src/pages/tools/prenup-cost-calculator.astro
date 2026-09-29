@@ -1,0 +1,193 @@
+---
+import Base from '../../layouts/Base.astro';
+import FAQ from '../../components/FAQ.astro';
+import { AFF } from '../../data/affiliate';
+
+const faqItems = [
+  {
+    q: 'How accurate is this prenup cost calculator?',
+    a: 'It gives you a realistic planning range based on published 2026 attorney fee ranges by state, your chosen path (online service vs. attorney), and complexity. Actual quotes vary by firm — treat the output as a budget, not a quote.',
+  },
+  {
+    q: 'Why is an online prenup so much cheaper than an attorney?',
+    a: 'Online services charge a flat fee for a template-based, state-specific document instead of billing hourly. For straightforward finances that works well. If you own a business, have complex assets, or expect disagreement, an attorney earns their fee.',
+  },
+  {
+    q: 'Do both spouses need separate lawyers for a prenup?',
+    a: 'Not every state requires it, but separate counsel for each partner is the strongest protection against a court annulling the agreement later. Budget for it if your state or situation calls for it.',
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Prenup Cost Calculator',
+  url: 'https://prenupanswers.com/tools/prenup-cost-calculator/',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Any',
+  description:
+    'Free calculator that estimates prenuptial agreement costs for all 50 US states and D.C., by path (online, attorney review, full attorney) and complexity.',
+};
+---
+<Base
+  title="Prenup Cost Calculator — Estimate Your Price by State (2026)"
+  description="Free prenup cost calculator for all 50 states + D.C. Pick your state, path, and complexity — get a realistic 2026 price range in seconds. No email required."
+  jsonLd={jsonLd}
+>
+  <header class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / Tools / Cost Calculator</p>
+      <h1>What will your prenup actually cost?</h1>
+      <p class="meta">All 50 states + D.C. · Real 2026 fee ranges · No email, no consultation pitch</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+      <div class="calc">
+        <p style="margin-top:0; color:var(--muted);">
+          Answer three questions. We'll estimate what couples in your state typically pay — using published attorney
+          fee ranges, not marketing prices.
+        </p>
+
+        <label for="state">1. Which state are you getting married in?</label>
+        <select id="state" name="state">
+          <option value="" disabled selected>Select your state…</option>
+        </select>
+
+        <label for="path">2. Which route fits you?</label>
+        <select id="path" name="path">
+          <option value="online">Online prenup service (flat fee)</option>
+          <option value="review" selected>Online service + attorney review</option>
+          <option value="attorney">Attorney-drafted, start to finish</option>
+        </select>
+
+        <label for="complexity">3. How complex are your finances?</label>
+        <select id="complexity" name="complexity">
+          <option value="simple">Simple — similar incomes, one house or none, no business</option>
+          <option value="standard" selected>Standard — property, kids from prior marriage, or income gap</option>
+          <option value="complex">Complex — business, multiple properties, stock options, trusts</option>
+        </select>
+
+        <button class="btn btn-gold" id="calcBtn" type="button" style="margin-top:1.4rem; width:100%;">
+          Show my estimate →
+        </button>
+
+        <div class="result" id="result" role="status" aria-live="polite">
+          <div style="font-size:.8rem; text-transform:uppercase; letter-spacing:.12em; color:#93a3b6;">
+            Estimated total cost
+          </div>
+          <div class="amount" id="amount">$0 – $0</div>
+          <p id="resultNote"></p>
+          <a class="btn btn-gold" id="resultCta" href={AFF.helloPrenup} rel="sponsored noopener" target="_blank"
+            >See flat-fee pricing →</a
+          >
+        </div>
+      </div>
+
+      <p class="notice">
+        <strong>How this works:</strong> estimates combine published 2026 family-law fee ranges for your state with
+        typical costs for each route and complexity level. They're for planning — not a quote. Every firm prices
+        differently, and disclosure, negotiation rounds, and timing all move the final number.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container read">
+      <h2 style="margin-top:0;">Reading your number</h2>
+      <p style="color:var(--muted);">
+        <strong>Online (flat fee):</strong> best when finances are straightforward — a template-based,
+        state-specific document with e-signature and notarization guidance. Most couples spend under $1,500.
+      </p>
+      <p style="color:var(--muted);">
+        <strong>Online + attorney review:</strong> the sweet spot for most people. You do the cheap part yourself;
+        a lawyer spends an hour checking it against your state's rules. Strong value.
+      </p>
+      <p style="color:var(--muted);">
+        <strong>Attorney-drafted:</strong> the right call when there's a business, significant assets, or a
+        disagreement to work through. hourly rates run $300–$500 in most metros — which is exactly why starting
+        early matters.
+      </p>
+      <p>
+        Want the line-by-line breakdown? Read <a href="/guides/how-much-does-a-prenup-cost/">How Much Does a
+        Prenup Cost in 2026?</a>
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faqItems} title="Calculator FAQ" />
+</Base>
+
+<script>
+  import { STATES } from '../../data/states';
+  import { AFF } from '../../data/affiliate';
+
+  const stateSel = document.getElementById('state') as HTMLSelectElement;
+  const pathSel = document.getElementById('path') as HTMLSelectElement;
+  const cxSel = document.getElementById('complexity') as HTMLSelectElement;
+  const btn = document.getElementById('calcBtn') as HTMLButtonElement;
+  const result = document.getElementById('result') as HTMLElement;
+  const amountEl = document.getElementById('amount') as HTMLElement;
+  const noteEl = document.getElementById('resultNote') as HTMLElement;
+  const ctaEl = document.getElementById('resultCta') as HTMLAnchorElement;
+
+  const sorted = [...STATES].sort((a, b) => a.name.localeCompare(b.name));
+  for (const s of sorted) {
+    const opt = document.createElement('option');
+    opt.value = s.abbr;
+    opt.textContent = s.name;
+    stateSel.appendChild(opt);
+  }
+
+  const round50 = (n: number) => Math.max(150, Math.round(n / 50) * 50);
+  const money = (n: number) => '$' + n.toLocaleString('en-US');
+
+  const CX: Record<string, number> = { simple: 0.75, standard: 1, complex: 1.75 };
+
+  const PATH_NOTES: Record<string, string> = {
+    online:
+      'A flat-fee online service covers drafting and state-specific language. Add an attorney hour or two if your situation allows it — it’s cheap insurance.',
+    review:
+      'The sweet spot for most couples: you do the paperwork at flat-fee prices, and a lawyer checks it against your state’s rules.',
+    attorney:
+      'Full-service drafting and negotiation at hourly rates ($300–$500/hr in most metros). Start 3–6 months before the wedding to avoid rush fees.',
+  };
+
+  function calculate() {
+    const state = STATES.find((s) => s.abbr === stateSel.value);
+    if (!state) {
+      stateSel.focus();
+      return;
+    }
+    const cx = CX[cxSel.value] ?? 1;
+    let low: number;
+    let high: number;
+
+    if (pathSel.value === 'online') {
+      const base =
+        cxSel.value === 'simple' ? [500, 1000] : cxSel.value === 'complex' ? [1000, 3000] : [600, 1500];
+      low = base[0];
+      high = base[1];
+    } else if (pathSel.value === 'review') {
+      low = 600 + state.low * 0.4;
+      high = 1500 + state.high * 0.5;
+    } else {
+      low = state.low;
+      high = state.high;
+    }
+
+    amountEl.textContent = `${money(round50(low * cx))} – ${money(round50(high * cx))}`;
+    noteEl.textContent = `${state.name} · ${pathSel.options[pathSel.selectedIndex].text} — ${
+      PATH_NOTES[pathSel.value]
+    }`;
+
+    ctaEl.textContent = pathSel.value === 'attorney' ? 'Compare online pricing anyway →' : 'See flat-fee pricing →';
+    ctaEl.href = AFF.helloPrenup;
+
+    result.classList.add('show');
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  btn.addEventListener('click', calculate);
+</script>

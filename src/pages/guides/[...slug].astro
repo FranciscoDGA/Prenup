@@ -1,0 +1,76 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTA from '../../components/CTA.astro';
+import AuthorBox from '../../components/AuthorBox.astro';
+import { AFF } from '../../data/affiliate';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('guides');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.published.toISOString(),
+  dateModified: (post.data.updated ?? post.data.published).toISOString(),
+  author: { '@type': 'Person', name: post.data.author },
+  publisher: {
+    '@type': 'Organization',
+    name: 'PrenupAnswers',
+    url: 'https://prenupanswers.com/',
+  },
+  mainEntityOfPage: new URL(`/guides/${post.id}/`, Astro.site).toString(),
+};
+---
+<Base title={`${post.data.title} — PrenupAnswers`} description={post.data.description} jsonLd={articleLd}>
+  <header class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/guides/">Guides</a></p>
+      <h1>{post.data.title}</h1>
+      <p class="meta">
+        By {post.data.author} · Updated{' '}
+        {(post.data.updated ?? post.data.published).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })} · {post.data.cluster}
+      </p>
+    </div>
+  </header>
+
+  <article class="prose">
+    {post.data.tldr && (
+      <div class="tldr">
+        <b>The short version</b>
+        <p style="margin:.4rem 0 0;">{post.data.tldr}</p>
+      </div>
+    )}
+    <Content />
+  </article>
+
+  <div class="read" style="padding:0 1.25rem;">
+    <CTA
+      heading={post.data.ctaHeading ?? 'Skip the $350/hr learning curve'}
+      text={post.data.ctaText ?? 'Online prenup services draft a state-specific agreement for a flat fee — most couples with straightforward finances finish for under $1,000.'}
+      href={post.data.ctaHref ?? AFF.helloPrenup}
+      label={post.data.ctaLabel ?? 'See what HelloPrenup costs'}
+    />
+  </div>
+
+  <div style="padding:0 1.25rem 2rem;">
+    <AuthorBox />
+  </div>
+
+  <FAQ items={post.data.faq} />
+</Base>

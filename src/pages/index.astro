@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import { AFF } from '../data/affiliate';
+
+const guides = [
+  {
+    tag: 'The honest test',
+    title: 'Do I Need a Prenup?',
+    text: 'Six questions that cut through the guilt, the awkwardness, and the fairy tale — so you can decide with a clear head.',
+    href: '/guides/do-i-need-a-prenup/',
+  },
+  {
+    tag: 'The math',
+    title: 'Is a Prenup Worth It?',
+    text: 'What one actually costs versus what a contested divorce costs. The numbers take about 90 seconds to hit home.',
+    href: '/guides/is-a-prenup-worth-it/',
+  },
+  {
+    tag: 'Real numbers',
+    title: 'How Much Does a Prenup Cost?',
+    text: 'Lawyer hourly rates, online service pricing, and the state-by-state ranges nobody publishes up front.',
+    href: '/guides/how-much-does-a-prenup-cost/',
+  },
+];
+---
+<Base
+  title="PrenupAnswers — Prenup Costs, Laws & Honest Answers for US Couples"
+  description="Plain-English prenuptial agreement guidance for engaged couples in the US. Real costs, state rules, checklists, and how to bring it up — without the legalese."
+>
+  <section class="hero">
+    <div class="container">
+      <span class="kicker">Prenuptial agreements, decoded</span>
+      <h1>Don't let a courtroom decide what you built.</h1>
+      <p class="lede">
+        You're getting married — not signing your life away. Get straight answers on prenup costs, state rules, and
+        how to bring it up without starting a fight. No legalese. No hourly billing. No sales pitch.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="/tools/prenup-cost-calculator/">Calculate your prenup cost →</a>
+        <a class="btn btn-ghost" href="/guides/do-i-need-a-prenup/">Do I actually need one?</a>
+      </div>
+      <p class="fineprint">Free forever · Updated for 2026 · Written for real US couples, not lawyers</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="stats">
+        <div class="stat"><b>47%</b><span>of Millennials now sign a prenup before the wedding</span></div>
+        <div class="stat"><b>29%</b><span>of married people regret not getting one</span></div>
+        <div class="stat"><b>$350/hr</b><span>is what a family-law attorney charges to ask your first question</span></div>
+        <div class="stat"><b>50</b><span>states, 50 different sets of rules — one size fits nobody</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="start">
+    <div class="container">
+      <p class="eyebrow">Start here</p>
+      <h2>The three questions every couple asks at 1 a.m.</h2>
+      <div class="grid grid-3" style="margin-top:1.5rem;">
+        {guides.map((g) => (
+          <a class="card" href={g.href} style="text-decoration:none; color:inherit;">
+            <span class="tag">{g.tag}</span>
+            <h3>{g.title}</h3>
+            <p>{g.text}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container read" style="text-align:center;">
+      <p class="eyebrow">The tool</p>
+      <h2>What will a prenup cost — in your state?</h2>
+      <p style="color:var(--muted);">
+        Pick your state, pick your path (online service vs. attorney), and get a real price range in five seconds.
+        No email required. No "request a consultation" trap.
+      </p>
+      <a class="btn btn-navy" href="/tools/prenup-cost-calculator/" style="margin-top:.8rem;">
+        Open the free cost calculator →
+      </a>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container grid grid-2">
+      <div>
+        <p class="eyebrow">Why this site exists</p>
+        <h2>Lawyers charge $350/hr to explain what should be free.</h2>
+        <p style="color:var(--muted);">
+          Every engaged couple ends up in the same rabbit hole: forum advice from 2014, law firm blogs hunting for
+          clients, and wedding sites pretending money talks don't happen. PrenupAnswers is the third thing —
+          <strong>honest, skimmable, source-checked answers</strong> you can read in one sitting and act on today.
+        </p>
+        <p style="color:var(--muted);">
+          We don't draft agreements and we don't sell legal services. When an online service is the smart move, we'll
+          say so. When you genuinely need a lawyer in your corner, we'll say that too.
+        </p>
+        <a href="/about/" style="font-weight:700;">How we're funded →</a>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0;">Our promise</h3>
+        <ul style="color:var(--muted); padding-left:1.1rem;">
+          <li>Plain English first — legalese only when it's unavoidable</li>
+          <li>Real numbers, updated for 2026</li>
+          <li>Affiliate links never change what we recommend</li>
+          <li>Every claim you can verify with a linked source</li>
+        </ul>
+        <div class="cta-box" style="margin-bottom:0;">
+          <h3>Ready to see real prices?</h3>
+          <p>Two minutes, zero obligation, no email wall.</p>
+          <a class="btn btn-gold" href="/tools/prenup-cost-calculator/">Open the calculator →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

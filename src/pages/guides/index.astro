@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('guides')).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf()
+);
+---
+<Base
+  title="Prenup Guides — PrenupAnswers"
+  description="Every prenuptial agreement guide we've published: costs, state rules, checklists, and honest answers for US couples."
+>
+  <section class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / Guides</p>
+      <h1>Prenup guides</h1>
+      <p class="meta">Plain-English, source-checked, updated for 2026.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid grid-3">
+      {posts.map((post) => (
+        <a class="card" href={`/guides/${post.id}/`} style="text-decoration:none; color:inherit;">
+          <span class="tag">{post.data.cluster}</span>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.description}</p>
+          <p style="margin-top:.8rem; font-size:.82rem; color:var(--gold-dark); font-weight:700;">
+            {post.data.published.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

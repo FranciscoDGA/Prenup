@@ -1,0 +1,14 @@
+---
+interface Props {
+  heading: string;
+  text: string;
+  href: string;
+  label: string;
+}
+const { heading, text, href, label } = Astro.props;
+---
+<aside class="cta-box">
+  <h3>{heading}</h3>
+  <p>{text}</p>
+  <a class="btn btn-gold" href={href} rel="sponsored noopener" target="_blank">{label} →</a>
+</aside>

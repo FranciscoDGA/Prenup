@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prenupanswers.com/sitemap-index.xml

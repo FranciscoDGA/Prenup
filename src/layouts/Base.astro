@@ -1,0 +1,101 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { title, description, jsonLd } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'PrenupAnswers',
+  url: 'https://prenupanswers.com/',
+  description:
+    'Plain-English prenuptial agreement answers for engaged couples in the United States — costs, checklists, state laws, and honest guidance without the legalese.',
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:site_name" content="PrenupAnswers" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">Prenup<span>Answers</span></a>
+        <nav class="nav" aria-label="Main">
+          <a href="/guides/">Guides</a>
+          <a href="/tools/prenup-cost-calculator/">Cost Calculator</a>
+          <a href="/about/">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cols">
+          <div>
+            <h4>PrenupAnswers</h4>
+            <p>Honest, plain-English answers about prenuptial agreements — written for real couples, not lawyers.</p>
+          </div>
+          <div>
+            <h4>Guides</h4>
+            <ul>
+              <li><a href="/guides/do-i-need-a-prenup/">Do I Need a Prenup?</a></li>
+              <li><a href="/guides/is-a-prenup-worth-it/">Is a Prenup Worth It?</a></li>
+              <li><a href="/guides/how-much-does-a-prenup-cost/">What Does a Prenup Cost?</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <ul>
+              <li><a href="/tools/prenup-cost-calculator/">Prenup Cost Calculator</a></li>
+              <li><a href="/guides/">All Guides</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/about/">About &amp; Contact</a></li>
+              <li><a href="/disclosure/">Affiliate Disclosure</a></li>
+              <li><a href="/privacy/">Privacy Policy</a></li>
+              <li><a href="/terms/">Terms of Use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            <strong>Disclaimer:</strong> PrenupAnswers publishes general educational information for United States
+            readers. It is not legal advice, and reading it does not create an attorney–client relationship. Laws
+            vary by state — talk to a licensed attorney in your state before signing anything.
+          </p>
+          <p>© {new Date().getFullYear()} PrenupAnswers. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
