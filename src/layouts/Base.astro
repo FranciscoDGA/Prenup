@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/CookieBanner.astro';
 
 interface Props {
   title: string;
@@ -85,6 +86,8 @@ const websiteLd = {
               <li><a href="/about/">About &amp; Contact</a></li>
               <li><a href="/disclosure/">Affiliate Disclosure</a></li>
               <li><a href="/privacy/">Privacy Policy</a></li>
+              <li><a href="/cookies/">Cookie Policy</a></li>
+              <li><a href="/cookies/#manage" data-open-cookie-prefs>Cookie Preferences</a></li>
               <li><a href="/terms/">Terms of Use</a></li>
             </ul>
           </div>
@@ -99,5 +102,7 @@ const websiteLd = {
         </div>
       </div>
     </footer>
+
+    <CookieBanner />
   </body>
 </html>

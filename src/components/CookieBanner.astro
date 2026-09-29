@@ -1,0 +1,112 @@
+---
+---
+<div id="cookie-banner" class="cb-banner" role="region" aria-label="Cookie consent" hidden>
+  <div class="cb-inner">
+    <p>
+      <b>We keep your data minimal.</b> This site runs without advertising cookies today — analytics are
+      cookieless. If we ever add cookies that need consent, we'll ask first.
+      <a href="/cookies/">Cookie Policy</a>
+    </p>
+    <div class="cb-actions">
+      <button class="btn btn-gold" data-cb="accepted">Accept all</button>
+      <button class="btn btn-ghost" data-cb="rejected">Reject non-essential</button>
+    </div>
+  </div>
+</div>
+
+<div id="cookie-prefs" class="cb-overlay" hidden>
+  <div class="cb-modal" role="dialog" aria-modal="true" aria-labelledby="cb-title">
+    <h3 id="cb-title">Cookie preferences</h3>
+    <p id="cb-status">Loading…</p>
+    <ul class="cb-list">
+      <li><b>Strictly necessary:</b> none — no account, no session, calculator runs in your browser.</li>
+      <li><b>Analytics:</b> Cloudflare Web Analytics (cookieless, aggregated — no consent required).</li>
+      <li><b>Affiliate:</b> set by our partners only after you click their link (typically 60 days).</li>
+      <li><b>Advertising:</b> not active on this site yet. When launched, they will load only after you accept here.</li>
+    </ul>
+    <div class="cb-actions">
+      <button class="btn btn-gold" data-cb="accepted">Accept all</button>
+      <button class="btn btn-ghost" data-cb="rejected">Reject non-essential</button>
+      <button class="btn btn-navy" data-cb-close>Close</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  [hidden] { display: none !important; }
+
+  .cb-banner {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 70;
+    background: var(--navy-900); color: #dfe6ee;
+    border-top: 3px solid var(--gold);
+    box-shadow: 0 -6px 24px rgba(8, 26, 46, .35);
+    padding: 1rem 0;
+  }
+  .cb-inner {
+    max-width: var(--max); margin: 0 auto; padding: 0 1.25rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  .cb-banner p { margin: 0; font-size: .92rem; flex: 1 1 380px; }
+  .cb-banner a { color: var(--gold); }
+  .cb-actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .cb-actions .btn { padding: .6rem 1.1rem; font-size: .9rem; }
+
+  .cb-overlay {
+    position: fixed; inset: 0; z-index: 80;
+    background: rgba(8, 26, 46, .6);
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.25rem;
+  }
+  .cb-modal {
+    background: var(--card); border-radius: 12px; border-top: 4px solid var(--gold);
+    max-width: 520px; width: 100%; padding: 1.6rem 1.5rem;
+    box-shadow: 0 20px 60px rgba(8, 26, 46, .4);
+    max-height: 85vh; overflow: auto;
+  }
+  .cb-modal h3 { margin-top: 0; }
+  .cb-modal #cb-status { font-size: .9rem; color: var(--muted); }
+  .cb-list { padding-left: 1.1rem; margin: .8rem 0 1.2rem; font-size: .9rem; }
+  .cb-list li { margin: .45rem 0; }
+</style>
+
+<script>
+  const KEY = 'pa-consent';
+  // Flip to true when advertising/analytics cookies requiring consent are installed.
+  const NON_ESSENTIAL = false;
+
+  const banner = document.getElementById('cookie-banner')!;
+  const prefs = document.getElementById('cookie-prefs')!;
+  const status = document.getElementById('cb-status')!;
+
+  const get = () => {
+    try { return localStorage.getItem(KEY); } catch { return null; }
+  };
+  const save = (value: string) => {
+    try { localStorage.setItem(KEY, value); } catch { /* private mode */ }
+    banner.hidden = true;
+    prefs.hidden = true;
+  };
+  const openPrefs = (e: Event) => {
+    e.preventDefault();
+    const current = get();
+    status.textContent =
+      current === 'accepted'
+        ? 'Current choice: all cookies accepted (saved in this browser).'
+        : current === 'rejected'
+          ? 'Current choice: non-essential cookies rejected (saved in this browser).'
+          : 'No choice saved yet — non-essential cookies stay off until you accept.';
+    prefs.hidden = false;
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-open-cookie-prefs]').forEach((el) =>
+    el.addEventListener('click', openPrefs)
+  );
+  document.querySelectorAll<HTMLElement>('[data-cb]').forEach((el) =>
+    el.addEventListener('click', () => save(el.getAttribute('data-cb') || 'rejected'))
+  );
+  document.querySelectorAll<HTMLElement>('[data-cb-close]').forEach((el) =>
+    el.addEventListener('click', () => { prefs.hidden = true; })
+  );
+
+  if (NON_ESSENTIAL && !get()) banner.hidden = false;
+</script>
