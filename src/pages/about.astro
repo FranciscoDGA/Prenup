@@ -1,9 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import { author, authorBio, authorBackground, authorNotLawyer, researchMethod, authorLd } from '../data/author';
 ---
 <Base
-  title="About PrenupAnswers — Who Writes This & How We're Funded"
-  description="Meet Francisco Gomes — pastor, marital counselor, and the writer behind PrenupAnswers. Who writes this site, how it makes money, and what it will never do."
+  title="About PrenupAnswers — Who Runs It & How It's Funded"
+  description="PrenupAnswers is an independent educational site about prenuptial agreements for US couples, written by Francisco Gomes Alves from Brazil. Who he is, how we check the facts, and how the site makes money."
+  jsonLd={[authorLd]}
 >
   <section class="article-head">
     <div class="container">
@@ -12,46 +14,78 @@ import Base from '../layouts/Base.astro';
       <p class="meta">Independent. Educational. Not a law firm — and never will be.</p>
     </div>
   </section>
-  <div class="prose">
-    <div class="author-intro">
-      <figure class="author-photo">
-        <img
-          src="/images/francisco-gomes.jpg"
-          alt="Francisco Gomes and his wife"
-          width="1200"
-          height="1600"
-          fetchpriority="high"
-        />
-        <figcaption>Francisco and his wife</figcaption>
-      </figure>
+
+  <div class="prose" id="author">
+    <h2>What this site is, and is not</h2>
+    <p>
+      <strong>PrenupAnswers is a consumer guide.</strong> It exists to help you understand what a prenuptial agreement
+      costs, what the process involves, and what questions to take to a lawyer — before you spend money. It is not
+      legal advice, and no one here is a lawyer.
+    </p>
+    <ul class="not-list">
+      {
+        authorNotLawyer.map((item) => (
+          <li>{item}</li>
+        ))
+      }
+    </ul>
+
+    <h2>Who writes it</h2>
+    <div class="author-profile">
+      {
+        author.photo ? (
+          <img class="author-photo" src={author.photo} alt={author.name} width="140" height="140" />
+        ) : (
+          <div class="author-photo author-photo--placeholder" aria-hidden="true">
+            {author.initials}
+          </div>
+        )
+      }
       <div>
-        <p class="eyebrow">Who writes this</p>
-        <h2 style="margin-top:.2rem;">Francisco Gomes</h2>
-        <p class="author-role">Pastor · Marital counselor · Writer · Law student</p>
-        <p style="color:var(--muted);">
-          Francisco is a pastor and marital counselor. Most of his working life has been spent in the hardest room
-          in any marriage: the money conversation — the one where one partner is afraid to say a number, the other
-          is afraid to ask, and both are afraid that wanting a prenup means admitting the marriage might fail.
-        </p>
-        <p style="color:var(--muted);">
-          PrenupAnswers grew out of those conversations. Too many couples reach the wedding with the money talk
-          still undone — armed with forum myths, law-firm sales pitches, and wedding blogs that pretend these
-          questions don't exist. This site is the third thing: plain-English, sourced answers you can read in one
-          sitting and act on today.
-        </p>
-        <p style="color:var(--muted);">
-          <strong>Francisco is also a law student</strong> — and that is exactly why this site is careful about its
-          boundaries. He is not a lawyer, this is not a law firm, and nothing here is legal advice. When your
-          situation needs an attorney — a business, a trust, a prior marriage with children — the answer is a
-          licensed lawyer in your state, full stop.
-        </p>
-        <p style="color:var(--muted);">
-          PrenupAnswers is written from Brazil for readers across the United States. Every state's rules are
-          researched from primary sources — state statutes, court self-help pages, published pricing — and checked
-          against the current year before anything gets published.
-        </p>
+        <h3 class="author-name-lg">{author.name}</h3>
+        <p class="author-role-lg">{author.role} · Brazil</p>
+        <p>{authorBio}</p>
       </div>
     </div>
+    <p>
+      <a href={author.url}>Full author profile &rarr;</a>
+    </p>
+    <p><strong>Background.</strong></p>
+    <ul>
+      {authorBackground.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <h2>Why a Brazilian writes about U.S. prenups</h2>
+    <p>
+      Because he cannot sell you anything legal. There is no U.S. client to take, no contract to draft, no bill to
+      send, and no U.S. address. That removes the two things that usually distort a site like this — the need to win a
+      case, and the incentive to keep you paying.
+    </p>
+    <p>
+      It also sets a hard limit on what this site should be trusted to know. We are an outside look at a system we do
+      not practise in, which is why every legal claim here is traced to a statute or a published source, and why we
+      would rather say "this depends on your state, ask" than guess.
+    </p>
+    <p>
+      His pastoral work is relevant for a narrower reason, and it is the honest one. Couples rarely get stuck on
+      doctrine; they get stuck on the conversation — how to raise the subject, what it means that the other person
+      flinched, whether refusing means something is wrong. A lawyer can tell you what is enforceable. Only someone who
+      has sat with couples can describe what actually happens in the room. This site keeps those two things clearly
+      separate and says which is which.
+    </p>
+
+    <h2>How we check the facts</h2>
+    <p>
+      Trust is earned by method, not by biography. This is how the information on this site is put together:
+    </p>
+    {
+      researchMethod.map((m) => (
+        <>
+          <h3>{m.title}</h3>
+          <p>{m.detail}</p>
+        </>
+      ))
+    }
 
     <h2>How we're funded</h2>
     <p>
@@ -63,63 +97,25 @@ import Base from '../layouts/Base.astro';
       <strong>Commission never decides what we recommend.</strong> If a cheaper path is the right path for your
       situation, that's what the article says — even when it earns us nothing.
     </p>
-
-    <h2>What we will never do</h2>
-    <ul>
-      <li>Sell legal services or draft agreements</li>
-      <li>Pretend to be lawyers or offer legal advice</li>
-      <li>Hide affiliate links behind vague language</li>
-      <li>Publish cost figures we can't source</li>
-    </ul>
+    <p>
+      <strong>And neither does faith.</strong> The author is a pastor, but this site carries no religious
+      recommendations and no religious framing of the decision. It is funded and written as a consumer guide. What
+      you believe about marriage is your business; what a prenup costs is arithmetic.
+    </p>
 
     <h2>When you actually need a lawyer</h2>
     <p>
       Online services are fine for straightforward situations. But if one partner owns a business, there's a
-      family-trust, complex stock comp, real estate across states, or a prior marriage with children involved — talk
-      to a licensed family-law attorney in your state. A few hundred dollars of advice up front is cheap insurance
-      for a document that governs your finances for life.
+      family trust, complex stock comp, real estate across states, or a prior marriage with children involved — talk
+      to a licensed family-law attorney in your state. A few hundred dollars of advice up front is cheap insurance for
+      a document that governs your finances for life. That advice is worth more than anything on this site, and we will
+      say so on any page that would have you thinking otherwise.
     </p>
 
     <h2>Contact</h2>
     <p>
-      Questions, corrections, or a source we missed? Email <strong>hello@prenupanswers.com</strong>. We read every
-      message — corrections get fixed within 48 hours.
+      Questions, corrections, or a source we missed? Email <strong>hello@prenupanswers.com</strong>. Corrections to
+      something factually wrong get fixed — if you report one and it is still wrong in a few weeks, email again.
     </p>
   </div>
-
-  <style>
-    .author-intro {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 1.5rem;
-      align-items: start;
-      margin-bottom: 1rem;
-    }
-    .author-photo { margin: 0; }
-    .author-photo img {
-      width: 100%;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 24px rgba(8, 26, 46, .12);
-    }
-    .author-photo figcaption {
-      font-size: .78rem;
-      color: var(--muted);
-      text-align: center;
-      margin-top: .5rem;
-      font-style: italic;
-    }
-    .author-role {
-      font-size: .85rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--gold-dark);
-      font-weight: 800;
-      margin-top: -.4rem;
-    }
-    @media (max-width: 700px) {
-      .author-intro { grid-template-columns: 1fr; }
-      .author-photo { max-width: 240px; margin: 0 auto; }
-    }
-  </style>
 </Base>

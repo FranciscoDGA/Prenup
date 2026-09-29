@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import { author, authorBio, authorBackground, authorNotLawyer, researchMethod, authorLd } from '../../data/author';
+---
+<Base
+  title={`${author.name} — Author, PrenupAnswers`}
+  description={`${author.name} writes PrenupAnswers from Brazil. He is a pastor and a first-year law student, not a licensed attorney, and has never sold legal services.`}
+  jsonLd={[authorLd]}
+>
+  <section class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/about/">About</a> / Author</p>
+      <h1>{author.name}</h1>
+      <p class="meta">Founder &amp; Editor, PrenupAnswers · Brazil</p>
+    </div>
+  </section>
+
+  <div class="prose">
+    <div class="author-profile">
+      {
+        author.photo ? (
+          <img class="author-photo" src={author.photo} alt={author.name} width="140" height="140" />
+        ) : (
+          <div class="author-photo author-photo--placeholder" aria-hidden="true">
+            {author.initials}
+          </div>
+        )
+      }
+      <div>
+        <p>{authorBio}</p>
+      </div>
+    </div>
+
+    <h2>What he is not</h2>
+    <ul class="not-list">
+      {
+        authorNotLawyer.map((item) => (
+          <li>{item}</li>
+        ))
+      }
+    </ul>
+
+    <h2>Background</h2>
+    <ul>
+      {authorBackground.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="author-topics">Writes about: {author.knowsAbout.join(' · ')}.</p>
+
+    <h2>Why that is not a conflict</h2>
+    <p>
+      He works in Brazil, takes no U.S. clients, and has no U.S. business to protect. There is nothing for him to sell
+      a reader and no case to win. His only exposure to being wrong is being wrong in public, which is why every guide
+      is dated and why corrections are made openly.
+    </p>
+
+    <h2>How the research is done</h2>
+    {
+      researchMethod.map((m) => (
+        <>
+          <h3>{m.title}</h3>
+          <p>{m.detail}</p>
+        </>
+      ))
+    }
+
+    <h2>Funding</h2>
+    <p>
+      Affiliate partnerships and advertising — never legal services. See the
+      <a href="/disclosure/">affiliate disclosure</a> and the <a href="/about/">full About page</a>.
+    </p>
+
+    <h2>Reach him</h2>
+    <p>
+      Corrections and questions: <strong>hello@prenupanswers.com</strong>. If something here is wrong, say so —
+      factual corrections are made and the guide is re-dated.
+    </p>
+  </div>
+</Base>

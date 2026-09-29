@@ -1,22 +1,21 @@
 ---
-interface Props {
-  name?: string;
-  role?: string;
-  bio?: string;
-}
-const {
-  name = 'Francisco Gomes',
-  role = 'Pastor, marital counselor & founder of PrenupAnswers',
-  bio = 'Francisco has spent years beside couples navigating the money conversations most couples avoid. He is also a law student — which is why every claim on this site is sourced, and why the site never pretends to be a law firm.',
-} = Astro.props;
+import { author, authorBio } from '../data/author';
 ---
 <div class="author-box">
-  <div class="avatar">
-    <img src="/images/francisco-gomes.jpg" alt={name} width="52" height="52" loading="lazy" />
-  </div>
+  {
+    author.photo ? (
+      <a class="avatar" href={author.url} tabindex="-1" aria-hidden="true">
+        <img src={author.photo} alt="" width="52" height="52" loading="lazy" />
+      </a>
+    ) : (
+      <div class="avatar" aria-hidden="true">
+        {author.initials}
+      </div>
+    )
+  }
   <div>
-    <b>{name}</b>
-    <span style="color:var(--muted); font-size:.85rem;"> — {role}</span>
-    <p>{bio}</p>
+    <a class="author-name" href={author.url}>{author.name}</a>
+    <span class="author-role"> — {author.role}</span>
+    <p>{authorBio}</p>
   </div>
 </div>

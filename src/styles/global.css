@@ -207,11 +207,35 @@ h3 { font-size: 1.25rem; margin: 1.8rem 0 .5rem; }
   color: var(--gold); display: grid; place-items: center; font-weight: 800; font-size: 1.1rem;
   flex-shrink: 0; overflow: hidden;
 }
-.author-box .avatar img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
-}
+.author-box .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.author-box .author-name { color: var(--navy-900); font-weight: 700; text-decoration: none; }
+.author-box .author-name:hover { text-decoration: underline; }
+.author-box .author-role { color: var(--muted); font-size: .85rem; }
 .author-box b { color: var(--navy-900); }
 .author-box p { margin: .25rem 0 0; font-size: .92rem; color: var(--muted); }
+.author-profile {
+  display: flex; gap: 1.4rem; align-items: flex-start; margin: 1.5rem 0;
+}
+.author-profile p { margin: .5rem 0 0; }
+.author-photo {
+    width: 140px; height: 140px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+    object-position: center 15%;
+    border: 1px solid var(--line); background: var(--card);
+  }
+.author-photo--placeholder {
+  background: var(--navy-800); color: var(--gold); display: grid; place-items: center;
+  font-weight: 800; font-size: 2.6rem;
+}
+.author-name-lg { margin: 0; font-size: 1.35rem; color: var(--navy-900); }
+.author-role-lg { margin: .15rem 0 0; color: var(--muted); font-size: .92rem; }
+.author-topics { font-size: .9rem; color: var(--muted); }
+.not-list { list-style: none; padding-left: 0; }
+.not-list li { padding-left: 1.4rem; position: relative; margin: .5rem 0; }
+.not-list li::before { content: '\2715'; position: absolute; left: 0; color: var(--gold-dark); font-weight: 700; }
+@media (max-width: 520px) {
+  .author-profile { flex-direction: column; align-items: center; text-align: center; }
+  .author-photo { width: 110px; height: 110px; }
+}
 .notice {
   font-size: .85rem; color: var(--muted); background: #f4f1ea; border: 1px dashed var(--line);
   padding: .9rem 1.1rem; border-radius: 8px; margin: 1.5rem auto;
