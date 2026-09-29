@@ -1,14 +1,10 @@
-import { existsSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-
 const photoPath = '/images/francisco.jpg';
-const photoOnDisk = fileURLToPath(new URL(`../../public${photoPath}`, import.meta.url));
 
 export const author = {
   name: 'Francisco Gomes Alves',
   initials: 'FG',
   role: 'Founder & Editor, PrenupAnswers',
-  photo: existsSync(photoOnDisk) ? photoPath : null,
+  photo: photoPath,
   url: '/authors/francisco-gomes-alves/',
   knowsAbout: [
     'Prenuptial agreements',
