@@ -1,0 +1,58 @@
+---
+import Base from '../../layouts/Base.astro';
+import { STATE_PAGES } from '../../data/statePages';
+
+const communityCount = STATE_PAGES.filter((s) => s.regime === 'community').length;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Prenup Laws by State',
+  url: 'https://prenupanswers.com/states/',
+  description:
+    'Prenuptial agreement costs, property division rules, and signing requirements for all 50 US states and the District of Columbia.',
+  numberOfItems: STATE_PAGES.length,
+};
+---
+<Base
+  title="Prenup Laws by State — All 50 States + D.C. — PrenupAnswers"
+  description="Prenup costs, property division rules, and signing requirements for engaged couples in every US state — community property vs equitable distribution explained."
+  jsonLd={jsonLd}
+>
+  <section class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / State Laws</p>
+      <h1>Prenup laws by state</h1>
+      <p class="meta">
+        All 50 states + D.C. · {communityCount} community-property states · Updated September 2026
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1.5rem;">
+    <div class="container">
+      <div class="tldr" style="max-width:48rem;">
+        <b>Why your state is the whole game</b>
+        <p style="margin:.4rem 0 0;">
+          A prenup replaces your state’s default rules with your own — so the first thing to know is what those
+          defaults are. Pick your state for its property-division system, typical cost range, and execution rules.
+          Not sure where to start? The <a href="/tools/prenup-cost-calculator/">cost calculator</a> shows every
+          state’s range in one screen.
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:2rem;">
+        {STATE_PAGES.map((state) => (
+          <a class="card" href={`/states/${state.slug}/`} style="text-decoration:none; color:inherit;">
+            <span class="tag">{state.regime === 'community' ? 'Community property' : 'Equitable'}</span>
+            <h3>{state.name}</h3>
+            <p style="font-size:.9rem; line-height:1.5;">{state.note}</p>
+            <p style="margin-top:.8rem; font-size:.82rem; color:var(--gold-dark); font-weight:700;">
+              ${state.low.toLocaleString('en-US')} – ${state.high.toLocaleString('en-US')} typical range
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
