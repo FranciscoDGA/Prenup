@@ -16,11 +16,11 @@ export const author = {
 };
 
 export const authorBio =
-  'Francisco Gomes Alves writes PrenupAnswers from Brazil. He is a pastor and a first-year law student — not a licensed attorney. He has never practised law, is not a member of any U.S. bar, and has never sold legal services to anyone.';
+  'Francisco Gomes Alves writes PrenupAnswers from Brazil. He is a pastor — not a licensed attorney. He has never practised law, is not a member of any U.S. bar, and has never sold legal services to anyone.';
 
 export const authorBackground = [
-  'He works as a pastor at Igreja Apostólica Jeová Nissi in Brazil, where part of his work involves supporting couples and families.',
-  'He is in the first year of a law degree. This is background, not qualification: he holds no licence, is admitted to practise in no jurisdiction, and has never worked in a law office.',
+  'He serves as a pastor and vice-president of Igreja Apostólica Jeová Nissi in Brazil, where part of his work involves supporting couples and families.',
+  'He begins law school in 2027. This is aspiration, not qualification: he holds no licence, is admitted to practise in no jurisdiction, and has never worked in a law office.',
 ];
 
 export const authorNotLawyer = [
