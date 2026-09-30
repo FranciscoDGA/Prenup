@@ -1,8 +1,18 @@
-# The Prenup Brief — Welcome Sequence (paste into Kit)
+# The Prenup Brief — Welcome Sequence (MailerLite)
 
-**Platform:** Kit (free plan) · **Structure:** 1 Automation (form → sequence) + 1 Sequence with 4 emails.
-**Merge tag used:** `{{ subscriber.first_name | default: "there" }}` — Kit's standard syntax.
-**From name:** Francisco · PrenupAnswers · **Reply-to:** hello@prenupanswers.com
+**Platform:** MailerLite free (account 2673118) · **Status:** LIVE (activated Sept 30, 2026).
+**Structure:** 1 Automation "Welcome — Prenup Brief" — trigger = completes form **Newsletter** → Email 1 → Delay 2d → Email 2 → Delay 2d → Email 3 → Delay 3d → Email 4.
+**Sender:** Francisco · PrenupAnswers / hello@prenupanswers.com (domain `prenupanswers.com` verified via Cloudflare/Entri — SPF record replaced by MailerLite's).
+**Reply-to:** hello@prenupanswers.com (forwards to fc_go@hotmail.com via Cloudflare Email Routing).
+**Double opt-in:** ON (default) — confirmation email is ML's standard.
+**Content files:** `email1.html` … `email4.html` (+ .zip) in this folder — imported via Custom HTML editor → "Import HTML code". Merge tag used in bodies: `{{unsubscribe}}` (required — ML blocks saving without it). Greeting is plain "Hi there —" (name field optional).
+**Email 1 subject:** Your download's ready (and the one rule of this site) · **Email 2:** The three questions couples ask at 1 a.m. · **Email 3:** "Do you think we'll fail?" (the answer that lands) · **Email 4:** Your first Sunday (do this, not that)
+
+---
+
+## Email copy (source of record — bodies live in MailerLite)
+
+**Merge tags below use Kit syntax from the original draft; in MailerLite the bodies have no name tag ("Hi there —").**
 
 ---
 
@@ -100,10 +110,10 @@ Start 3–6 months before the wedding. That's the whole game.
 
 ---
 
-## Setup notes (Kit dashboard)
+## Setup notes (MailerLite dashboard — done)
 
-1. **Forms:** create two forms (checklist, scripts) or one — each embed's action URL goes into `src/data/subscribe.ts` → `kitFormAction`.
-2. **Redirect:** each form → "after submission" → redirect to the matching thank-you page (download is instant, don't gate it behind confirmation).
-3. **Sequence:** create Sequence "Welcome — Prenup Brief", paste the 4 emails above with delays 0 / 2 / 4 / 7 days.
-4. **Automation:** trigger = subscriber added via any form → action = add to that Sequence. This is your **1 free automation** — everything here fits inside it.
-5. **Broadcasts:** weekly newsletter issues are sent manually (Broadcasts are unlimited on free).
+1. **Form:** one ML form "Newsletter" (id 200044458910156443) serves all 3 site placements — endpoint `https://assets.mailerlite.com/jsonp/2673118/forms/200044458910156443/subscribe`, params `fields[email]`, `fields[name]`, `ml-submit=1`, `anticsrf=true`. Thank-you redirect is client-side via `src/data/subscribe.ts` → `redirectToFor(source)`.
+2. **Automation:** "Welcome — Prenup Brief" — trigger = completes form Newsletter; 4 emails + 3 Delay rules (0 / 2 / 4 / 7 days cumulative). Content = Custom HTML editor import of `email1–4.html`. Subject/Preview set per step.
+3. **Sender:** domain `prenupanswers.com` verified (Cloudflare DNS authorized via Entri); default sender + all 4 steps = hello@prenupanswers.com. Account login email remains esesdec@gmail.com.
+4. **Broadcasts:** weekly newsletter issues are sent manually via Campaigns (unlimited on free). Free plan: 250 subscribers / 2,500 emails per month.
+5. **Test subscribers to delete:** fc_go+ml-teste, fc_go+ml-nome-teste, and today's end-to-end test address (Subscribers → delete).
