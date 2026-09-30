@@ -1,0 +1,63 @@
+---
+import Base from '../../../layouts/Base.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { which: 'prenup-checklist' }, props: { which: 'checklist' } },
+    { params: { which: 'money-talk-script' }, props: { which: 'scripts' } },
+  ];
+}
+
+interface Props { which: 'checklist' | 'scripts'; }
+const { which } = Astro.props;
+
+const content = which === 'checklist'
+  ? {
+      title: 'Your Checklist Is Ready | PrenupAnswers',
+      h1: 'Your checklist is ready',
+      sub: 'Print it, grab a pen, and tick the boxes together — one layer per sitting.',
+      href: '/downloads/prenup-checklist.pdf',
+      btn: 'Download the 17-Point Checklist (PDF)',
+      guide: '/guides/prenup-checklist/',
+      guideLabel: 'The full guide behind the worksheet',
+      guideName: 'The Prenup Checklist: 17 Things to Include',
+    }
+  : {
+      title: 'Your Scripts Are Ready | PrenupAnswers',
+      h1: 'Your scripts are ready',
+      sub: 'Pick the one that fits your situation and say it this week — the twelve seconds are the whole price.',
+      href: '/downloads/money-talk-script.pdf',
+      btn: 'Download the Script Kit (PDF)',
+      guide: '/guides/how-to-bring-up-a-prenup/',
+      guideLabel: 'The full playbook',
+      guideName: 'How to Bring Up a Prenup',
+    };
+---
+<Base title={content.title} description="Your free download from PrenupAnswers is ready." noindex={true}>
+  <section class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / Thank you</p>
+      <h1>{content.h1}</h1>
+      <p class="meta">{content.sub}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container read" style="text-align:center;">
+      <p style="color:var(--muted);">
+        No inbox waiting — the file is right here. (A copy is on its way to your email as well,
+        with the rest of the welcome series.)
+      </p>
+      <a class="dl-btn" href={content.href} download>{content.btn}</a>
+
+      <div class="tldr" style="margin-top:2.2rem; text-align:left;">
+        <b>While you're here</b>
+        <p>
+          <a href={content.guide}>{content.guideLabel}: {content.guideName}</a> — or check what this
+          actually costs in your state with the <a href="/tools/prenup-cost-calculator/">free cost calculator</a>
+          (five seconds, no email).
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

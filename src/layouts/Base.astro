@@ -1,14 +1,16 @@
 ---
 import '../styles/global.css';
 import CookieBanner from '../components/CookieBanner.astro';
+import SubscribeForm from '../components/SubscribeForm.astro';
 
 interface Props {
   title: string;
   description: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  noindex?: boolean;
 }
 
-const { title, description, jsonLd } = Astro.props;
+const { title, description, jsonLd, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 
 const websiteLd = {
@@ -28,6 +30,7 @@ const websiteLd = {
     <meta name="fo-verify" content="930eb958-adcc-45b2-9aea-cdbc560c45ca" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:site_name" content="PrenupAnswers" />
@@ -60,6 +63,13 @@ const websiteLd = {
 
     <footer class="site-footer">
       <div class="container">
+        <div class="footer-sub">
+          <div>
+            <h4>The Prenup Brief</h4>
+            <p>One honest email a week — cost data, state-law changes, and the conversations couples actually have.</p>
+          </div>
+          <SubscribeForm variant="inline" cta="Subscribe" source="footer" />
+        </div>
         <div class="footer-cols">
           <div>
             <h4>PrenupAnswers</h4>
@@ -78,6 +88,7 @@ const websiteLd = {
             <ul>
               <li><a href="/tools/prenup-cost-calculator/">Prenup Cost Calculator</a></li>
               <li><a href="/states/">Prenup Laws by State</a></li>
+              <li><a href="/free/">Free Downloads</a></li>
               <li><a href="/guides/">All Guides</a></li>
             </ul>
           </div>

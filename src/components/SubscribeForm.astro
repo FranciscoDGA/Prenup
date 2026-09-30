@@ -1,0 +1,29 @@
+---
+import { subscribe, isSubscribedConfigured } from '../data/subscribe';
+
+interface Props {
+  variant?: 'block' | 'inline';
+  cta?: string;
+  source?: string;
+}
+const { variant = 'block', cta = 'Subscribe free', source = '' } = Astro.props;
+const configured = isSubscribedConfigured();
+---
+<form
+  class={`sub-form sub-form--${variant}`}
+  action={configured ? subscribe.kitFormAction : ''}
+  method={configured ? 'post' : 'get'}
+  data-source={source}
+>
+  <div class="sub-fields">
+    {variant === 'block' && (
+      <input type="text" name="first_name" placeholder="First name (optional)" aria-label="First name" autocomplete="given-name" />
+    )}
+    <input type="email" name="email_address" placeholder="Your email address" aria-label="Email address" required autocomplete="email" />
+    <button type="submit" class="btn btn-gold">{cta}</button>
+  </div>
+  <p class="sub-fine">
+    One honest email a week. Unsubscribe in one click. We never sell your address —
+    <a href="/privacy/">privacy policy</a>.
+  </p>
+</form>

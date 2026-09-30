@@ -22,6 +22,13 @@ A prenup is only as strong as its weakest paragraph — and most problems don't 
 
 Use this checklist in order. Three layers: **disclosure → terms → execution.** Skip a layer and you don't have a prenup; you have an expensive suggestion.
 
+<div class="isca-cta">
+  <p class="eyebrow">Printable version</p>
+  <h4>Take the 17 points with you</h4>
+  <p>The worksheet version of this guide — boxes to tick, one layer per sitting, the never-include list on page two. Free PDF, no trial.</p>
+  <a class="btn btn-gold" href="/free/prenup-checklist/">Get the printable checklist →</a>
+</div>
+
 ## Layer 1: Disclosure (the part that kills prenups when skipped)
 
 - [ ] **Full asset schedule — both partners.** Bank accounts, investments, retirement (401k/IRA/pensions), real estate, vehicles, valuable personal property, business interests, crypto.

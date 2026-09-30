@@ -24,6 +24,13 @@ You know the sentence. You've rearranged it thirty times: *soft opener, or strai
 
 Here's the good news: **the scary part is not the document. It's the twelve seconds.** And the twelve seconds are completely survivable with the right frame, the right timing, and four sentences you can borrow from this page.
 
+<div class="isca-cta">
+  <p class="eyebrow">Printable version</p>
+  <h4>Keep the scripts in your pocket</h4>
+  <p>All four sentences on one printable page — timing rules and recovery lines included. So the conversation happens this week, not "someday."</p>
+  <a class="btn btn-gold" href="/free/money-talk-script/">Get the script kit →</a>
+</div>
+
 ## Why you're dreading it (name the fear first)
 
 You're not afraid of paperwork. You're afraid of the look.

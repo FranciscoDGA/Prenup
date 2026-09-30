@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import SubscribeForm from '../components/SubscribeForm.astro';
 import { AFF } from '../data/affiliate';
 
 const guides = [
@@ -135,6 +136,23 @@ const guides = [
           <a class="btn btn-gold" href="/tools/prenup-cost-calculator/">Open the calculator →</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container read" style="text-align:center;">
+      <p class="eyebrow">The newsletter</p>
+      <h2>The Prenup Brief</h2>
+      <p style="color:var(--muted);">
+        One honest email a week — cost data, state-law changes, and the conversations couples actually have.
+        Join free, and grab our printable checklist and script kit while you're at it.
+      </p>
+      <div class="sub-hero">
+        <SubscribeForm variant="block" cta="Join free" source="homepage" />
+      </div>
+      <p style="margin-top:1rem; font-size:.9rem; color:var(--muted);">
+        Or browse the <a href="/free/">free downloads</a> first — no email needed for the cost calculator.
+      </p>
     </div>
   </section>
 </Base>
