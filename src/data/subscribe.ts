@@ -1,25 +1,20 @@
 /**
  * Newsletter / lead capture configuration — SINGLE POINT OF TRUTH.
  *
- * Create 3 Kit forms (see setup guide), then paste each form's embed action URL:
- *   e.g. 'https://app.kit.com/forms/1234567/submissions'
+ * One Kit form serves all placements; the `next` hidden field controls where
+ * each placement redirects after submission (set per source below).
  *
- * Form → "After submission → Redirect to":
- *   newsletter          → https://www.prenupanswers.com/free/
- *   lead-checklist      → https://www.prenupanswers.com/free/thank-you/prenup-checklist/
- *   lead-scripts        → https://www.prenupanswers.com/free/thank-you/money-talk-script/
- *
- * Any source not listed here falls back to `default` (the newsletter form).
- * Empty string = not configured yet → forms render as plain GET (no-op).
+ * Form ID: 9981147 (template "Clare", inline) — Embed → copy action URL to update.
+ * Kit form settings: "When a visitor subscribes" → Redirect to an external page.
  */
-export const kitFormActions: Record<string, string> = {
-  default: '',
-  'lead-checklist': '',
-  'lead-scripts': '',
+export const kitFormAction = 'https://app.kit.com/forms/9981147/subscriptions';
+
+const redirects: Record<string, string> = {
+  'lead-checklist': 'https://www.prenupanswers.com/free/thank-you/prenup-checklist/',
+  'lead-scripts': 'https://www.prenupanswers.com/free/thank-you/money-talk-script/',
 };
 
-export const kitFormActionFor = (source: string): string =>
-  kitFormActions[source] || kitFormActions.default || '';
+export const redirectToFor = (source: string): string =>
+  redirects[source] || 'https://www.prenupanswers.com/free/';
 
-export const isSubscribedConfigured = (): boolean =>
-  Object.values(kitFormActions).some((a) => a.length > 0);
+export const isSubscribedConfigured = (): boolean => kitFormAction.length > 0;
