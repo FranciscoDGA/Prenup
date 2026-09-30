@@ -267,13 +267,54 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
         postnup), which courts review under a different — often tougher — standard.
       </li>
       <li>
-        <strong>Execution per {state.name}’s rules.</strong> New York, for example, requires deed-style
-        acknowledgment; other states differ. Have your attorney or a notary handle the formality of it.
+        <strong>Execution {verified ? `per ${state.name}’s rules` : 'formalities'}.</strong>
+        {
+          state.abbr === 'NY' ? (
+            <> The agreement must be in writing, signed, and acknowledged in the same manner as a deed to be recorded. Have your attorney or a notary handle the formality.</>
+          ) : state.abbr === 'CA' ? (
+            <>
+              California’s statute asks for a writing signed by both parties (§ 1611) and adds no notarization or
+              witness requirement of its own. Have your attorney or a notary handle the formality if you want the
+              extra step.
+            </>
+          ) : state.abbr === 'TX' ? (
+            <>
+              Texas’s statute asks for a writing signed by both parties (§ 4.002) and adds no notarization or
+              witness requirement of its own. Have your attorney or a notary handle the formality if you want the
+              extra step.
+            </>
+          ) : (
+            <>
+              Formalities differ by state — California and Texas require a signed writing (§ 1611 / § 4.002), while
+              New York requires deed-style acknowledgment. Have your attorney or a notary handle the formality of it.
+            </>
+          )
+        }
       </li>
       <li>
-        <strong>Separate counsel strongly recommended.</strong> California’s statute effectively requires it —
-        or a written waiver after the party is advised to get one. Everywhere else, it is still the surest
-        protection against “I didn’t understand what I signed.”
+        <strong>Separate counsel strongly recommended.</strong>
+        {
+          verified && legal ? (
+            legal.counsel.status === 'BUILT_INTO_STATUTE' ? (
+              <>
+                {' '}
+                {state.name}’s statute effectively requires it — or a written waiver after the party is advised to
+                get one.
+              </>
+            ) : (
+              <>
+                {' '}
+                {state.name} does not require it by statute.
+              </>
+            )
+          ) : (
+            <>
+              {' '}
+              California, for example, builds it into its statute — or allows a written waiver after the party is
+              advised to get one.
+            </>
+          )
+        } Either way, separate counsel is the surest protection against “I didn’t understand what I signed.”
       </li>
       <li>
         <strong>Start 3–6 months out.</strong> Last-minute signing invites challenges — courts look hard at how
