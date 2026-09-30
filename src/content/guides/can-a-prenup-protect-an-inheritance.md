@@ -1,6 +1,7 @@
 ---
 title: "Can a Prenup Protect an Inheritance? (Even One You Haven't Received Yet)"
 primarySituation: children-family-assets
+commercialIntent: low
 description: "Inheritance is separate property by default — until it isn't. How a prenup keeps what you inherit (and what you'll inherit someday) out of the marital pot."
 keyword: can a prenup protect an inheritance
 cluster: Family

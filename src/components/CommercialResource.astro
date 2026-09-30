@@ -1,0 +1,91 @@
+---
+import { activePartnerUrl, partnerById } from '../data/partners';
+
+interface Props {
+  partnerId: string;
+  title: string;
+  description: string;
+  label?: string;
+  /** 'box' = standalone contextual block (default). 'card' = grid card. */
+  variant?: 'box' | 'card';
+  pageType?: string;
+  contentId?: string;
+  situationId?: string;
+  state?: string;
+}
+const {
+  partnerId,
+  title,
+  description,
+  label = 'Explore Professional Options →',
+  variant = 'box',
+  pageType,
+  contentId,
+  situationId,
+  state,
+} = Astro.props;
+
+const partner = partnerById(partnerId);
+const url = activePartnerUrl(partnerId, state);
+const isAffiliate = partner?.affiliate !== false;
+const showDisclosure = url && isAffiliate;
+
+// Failsafe (FASE 60): inactive partner or missing URL renders nothing.
+// Callers handle absence by falling back to editorial content (FASE 61).
+---
+{
+  url && variant === 'box' && (
+    <aside
+      class="commercial-resource"
+      data-commercial-view
+      data-partner-id={partnerId}
+      data-page-type={pageType}
+      data-content-id={contentId}
+      data-situation-id={situationId}
+      data-state={state}
+      aria-label={`Professional option: ${partner?.name ?? partnerId}`}
+    >
+      <p class="eyebrow">Looking for professional help?</p>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <a
+        class="btn btn-navy"
+        href={url}
+        rel={showDisclosure ? 'sponsored noopener' : 'noopener'}
+        target="_blank"
+        data-affiliate-link
+        data-partner-id={partnerId}
+      >
+        {label}
+      </a>
+      {showDisclosure && (
+        <p class="commercial-disclosure">
+          Affiliate link — we may earn a commission at no additional cost to you.{' '}
+          <a href="/disclosure/">How we make money</a>.
+        </p>
+      )}
+    </aside>
+  )
+}
+{
+  url && variant === 'card' && (
+    <a
+      class="card sit-card commercial-card"
+      href={url}
+      rel={showDisclosure ? 'sponsored noopener' : 'noopener'}
+      target="_blank"
+      data-commercial-view
+      data-affiliate-link
+      data-partner-id={partnerId}
+      data-page-type={pageType}
+      data-content-id={contentId}
+      data-situation-id={situationId}
+      data-state={state}
+    >
+      <span class="tag">Professional options</span>
+      <h4>{title}</h4>
+      <p>{description}</p>
+      {showDisclosure && <span class="commercial-note">Affiliate link · disclosure</span>}
+    </a>
+  )
+}

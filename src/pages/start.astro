@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import SituationSelector from '../components/SituationSelector.astro';
 import BriefCta from '../components/BriefCta.astro';
+import CommercialResource from '../components/CommercialResource.astro';
 import { SITUATIONS } from '../data/situations';
 
 const description =
@@ -43,6 +44,28 @@ const description =
                 <p>{rec.description}</p>
               </a>
             ))}
+            {s.id === 'cost' && (
+              <CommercialResource
+                variant="card"
+                partnerId="helloprenup"
+                title="Compare professional options"
+                description="See what flat-fee online services charge — then decide if you want a lawyer involved."
+                pageType="situation"
+                contentId={s.id}
+                situationId={s.id}
+              />
+            )}
+            {s.id === 'business-owner' && (
+              <CommercialResource
+                variant="card"
+                partnerId="helloprenup"
+                title="See how services handle business clauses"
+                description="Compare what online services include when a business is on the table."
+                pageType="situation"
+                contentId={s.id}
+                situationId={s.id}
+              />
+            )}
           </div>
           <p class="sit-state">
             <a href="/states/" data-state-link data-state-label="Check your state's prenup laws →">

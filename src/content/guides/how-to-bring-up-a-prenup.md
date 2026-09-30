@@ -1,5 +1,6 @@
 ---
 title: "How to Bring Up a Prenup Without Sounding Like You're Planning to Divorce"
+commercialIntent: none
 description: "The prenup conversation you're dreading takes four sentences. Exact scripts for every situation, what to do if it goes badly, and why the scary part is never the document."
 keyword: how to bring up a prenup
 cluster: Fear

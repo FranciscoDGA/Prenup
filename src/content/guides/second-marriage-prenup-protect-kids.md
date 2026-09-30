@@ -1,6 +1,7 @@
 ---
 title: "Second Marriage? How to Protect Your Kids With a Prenup — Without Poisoning the Engagement"
 primarySituation: remarriage
+commercialIntent: low
 description: "For parents remarrying: how a prenup keeps your children's inheritance safe from elective-share claims, protects your new spouse from ambiguity, and gets said without anyone feeling accused."
 keyword: prenup for second marriage
 cluster: Family

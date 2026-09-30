@@ -4,11 +4,35 @@ interface Props {
   text: string;
   href: string;
   label: string;
+  /** Partner id when this CTA points at an affiliate partner (enables failsafe + tracking). */
+  partnerId?: string;
+  pageType?: string;
+  contentId?: string;
 }
-const { heading, text, href, label } = Astro.props;
+const { heading, text, href, label, partnerId, pageType, contentId } = Astro.props;
+
+// External destinations are commercial: mark as sponsored and show the disclosure (FASE 6).
+// Internal destinations are editorial: no rel, no disclosure.
+const isExternal = /^https?:\/\//i.test(href);
+const showDisclosure = isExternal;
 ---
-<aside class="cta-box">
+<aside class="cta-box" data-commercial-view data-page-type={pageType} data-content-id={contentId}>
   <h3>{heading}</h3>
   <p>{text}</p>
-  <a class="btn btn-gold" href={href} rel="sponsored noopener" target="_blank">{label} →</a>
+  <a
+    class="btn btn-gold"
+    href={href}
+    rel={isExternal ? 'sponsored noopener' : undefined}
+    target={isExternal ? '_blank' : undefined}
+    data-affiliate-link={isExternal ? '' : undefined}
+    data-partner-id={partnerId}
+  >
+    {label} →
+  </a>
+  {showDisclosure && (
+    <p class="commercial-disclosure">
+      Affiliate link — we may earn a commission at no additional cost to you.{' '}
+      <a href="/disclosure/">How we make money</a>.
+    </p>
+  )}
 </aside>

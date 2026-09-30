@@ -1,5 +1,6 @@
 ---
 title: "First vs HelloPrenup: Which Online Prenup Service Is Right for You? (2026)"
+commercialIntent: high
 description: "Both land at $649, both are built for couples, and both include state-specific agreements. The differences — attorney tiers, notarization, payment plans — decide which one fits your situation."
 keyword: First vs HelloPrenup
 cluster: Compare
@@ -71,6 +72,8 @@ HelloPrenup's attorney package is the **required path** where state law demands 
 Wedding season is a cash vacuum: venue, rings, flights, dresses. HelloPrenup's Afterpay/Klarna checkout splits the $599 into interest-free installments — First presents flat package pricing. Neither is wrong; if spreading the cost over months keeps the prenup from slipping to "after the honeymoon" (where it becomes a much harder postnup), that's a real-world advantage.
 
 ## Who should pick which
+
+*Disclosure: some links below are affiliate links — we may earn a commission at no additional cost to you. It never changes which platform fits your situation. See our [affiliate disclosure](/disclosure/).*
 
 **Pick [First](https://www.thisfirst.com/?via=francisco) if:**
 - You want one simple choice: self-serve or full lawyer package, nothing in between

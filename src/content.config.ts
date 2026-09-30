@@ -27,6 +27,7 @@ const guides = defineCollection({
     author: z.string().default('Francisco Gomes Alves'),
     tldr: z.string().optional(),
     primarySituation: z.enum(SITUATION_IDS).optional(),
+    commercialIntent: z.enum(['none', 'low', 'medium', 'high']).default('low'),
     faq: z
       .array(
         z.object({

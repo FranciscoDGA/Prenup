@@ -2,7 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import FAQ from '../../components/FAQ.astro';
 import BriefCta from '../../components/BriefCta.astro';
-import { AFF } from '../../data/affiliate';
+import CommercialResource from '../../components/CommercialResource.astro';
+import { activePartnerUrl } from '../../data/partners';
+
+const partnerUrl = activePartnerUrl('helloprenup');
 
 const faqItems = [
   {
@@ -80,9 +83,29 @@ const jsonLd = {
           </div>
           <div class="amount" id="amount">$0 – $0</div>
           <p id="resultNote"></p>
-          <a class="btn btn-gold" id="resultCta" href={AFF.helloPrenup} rel="sponsored noopener" target="_blank"
-            >See flat-fee pricing →</a
-          >
+          {partnerUrl ? (
+            <>
+              <a
+                class="btn btn-gold"
+                id="resultCta"
+                href={partnerUrl}
+                rel="sponsored noopener"
+                target="_blank"
+                data-partner-id="helloprenup"
+                data-affiliate-link
+                >See flat-fee pricing →</a
+              >
+              <p class="commercial-disclosure commercial-disclosure--dark">
+                Affiliate link — we may earn a commission at no additional cost to you.{' '}
+                <a href="/disclosure/">How we make money</a>.
+              </p>
+            </>
+          ) : (
+            <p style="margin-top:.7rem;">
+              Prefer to price it yourself first? Read
+              <a href="/guides/how-much-does-a-prenup-cost/"> what actually drives prenup cost</a>.
+            </p>
+          )}
         </div>
 
         <div class="next-steps" id="nextSteps" hidden>
@@ -99,6 +122,14 @@ const jsonLd = {
               <h3>Prenup Laws by State</h3>
               <p id="nextStateText">Defaults, costs, and signing rules for every state — in one place.</p>
             </a>
+            <CommercialResource
+              variant="card"
+              partnerId="helloprenup"
+              title="Compare professional options"
+              description="If you'd rather have help, explore flat-fee online services and what they include."
+              pageType="tool"
+              contentId="prenup-cost-calculator"
+            />
             <a class="card sit-card" href="#brief">
               <span class="tag">Keep learning</span>
               <h3>The Prenup Brief</h3>
@@ -147,7 +178,6 @@ const jsonLd = {
 <script>
   import { STATES } from '../../data/states';
   import { STATE_PAGES } from '../../data/statePages';
-  import { AFF } from '../../data/affiliate';
   import { track } from '../../scripts/analytics';
 
   const stateSel = document.getElementById('state') as HTMLSelectElement;
@@ -157,7 +187,7 @@ const jsonLd = {
   const result = document.getElementById('result') as HTMLElement;
   const amountEl = document.getElementById('amount') as HTMLElement;
   const noteEl = document.getElementById('resultNote') as HTMLElement;
-  const ctaEl = document.getElementById('resultCta') as HTMLAnchorElement;
+  const ctaEl = document.getElementById('resultCta') as HTMLAnchorElement | null;
   const nextSteps = document.getElementById('nextSteps') as HTMLElement;
   const nextLearn = document.getElementById('nextLearn') as HTMLAnchorElement;
   const nextLearnTitle = document.getElementById('nextLearnTitle') as HTMLElement;
@@ -223,8 +253,9 @@ const jsonLd = {
       PATH_NOTES[pathSel.value]
     }`;
 
-    ctaEl.textContent = pathSel.value === 'attorney' ? 'Compare online pricing anyway →' : 'See flat-fee pricing →';
-    ctaEl.href = AFF.helloPrenup;
+    if (ctaEl) {
+      ctaEl.textContent = pathSel.value === 'attorney' ? 'Compare online pricing anyway →' : 'See flat-fee pricing →';
+    }
 
     const page = STATE_PAGES.find((p) => p.abbr === state.abbr);
     if (page) {

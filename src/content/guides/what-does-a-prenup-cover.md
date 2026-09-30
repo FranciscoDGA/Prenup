@@ -1,6 +1,7 @@
 ---
 title: "What Does a Prenup Cover? (and What It Can't Touch)"
 primarySituation: researching
+commercialIntent: low
 description: "A prenup can lock down property, debts, business, and support terms — but custody, child support, and anything unconscionable are off-limits. What's actually enforceable in the US."
 keyword: what does a prenup cover
 cluster: Basics

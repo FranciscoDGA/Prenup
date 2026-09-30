@@ -1,6 +1,7 @@
 ---
 title: "What Happens to Debt When You Get Married?"
 primarySituation: debt
+commercialIntent: low
 description: "Marriage doesn't merge your debts — mostly. What actually changes about debt, student loans, and credit after the wedding — and what doesn't."
 keyword: what happens to debt when you get married
 cluster: Basics

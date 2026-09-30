@@ -5,7 +5,8 @@ import FAQ from '../../components/FAQ.astro';
 import CTA from '../../components/CTA.astro';
 import AuthorBox from '../../components/AuthorBox.astro';
 import SitContext from '../../components/SitContext.astro';
-import { AFF } from '../../data/affiliate';
+import BriefCta from '../../components/BriefCta.astro';
+import { activePartnerUrl } from '../../data/partners';
 import { author } from '../../data/author';
 
 export async function getStaticPaths() {
@@ -18,6 +19,17 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+// Commercial intent gate (FASE 8/34): 'none' pages never show an affiliate CTA.
+// Partner failsafe (FASE 60): if the partner is inactive or the URL is missing,
+// fall back to an editorial CTA — never a broken button (FASE 61).
+const intent = post.data.commercialIntent;
+const affiliateUrl = activePartnerUrl('helloprenup');
+const customHref = post.data.ctaHref;
+const editorialHref = '/tools/prenup-cost-calculator/';
+const showAffiliateCta = intent !== 'none' && !customHref && Boolean(affiliateUrl);
+const showEditorialCta = intent !== 'none' && !customHref && !affiliateUrl;
+const showCta = intent !== 'none' || Boolean(customHref);
 
 const articleLd = {
   '@context': 'https://schema.org',
@@ -79,18 +91,49 @@ const articleLd = {
 
   {post.data.primarySituation && <SitContext situationId={post.data.primarySituation} />}
 
-  <div class="read" style="padding:0 1.25rem;">
-    <CTA
-      heading={post.data.ctaHeading ?? 'Skip the $350/hr learning curve'}
-      text={post.data.ctaText ?? 'Online prenup services draft a state-specific agreement for a flat fee — most couples with straightforward finances finish for under $1,000.'}
-      href={post.data.ctaHref ?? AFF.helloPrenup}
-      label={post.data.ctaLabel ?? 'See what HelloPrenup costs'}
-    />
-  </div>
+  {showCta && showAffiliateCta && (
+    <div class="read" style="padding:0 1.25rem;">
+      <CTA
+        heading={post.data.ctaHeading ?? 'Skip the $350/hr learning curve'}
+        text={post.data.ctaText ?? 'Online prenup services draft a state-specific agreement for a flat fee — most couples with straightforward finances finish for under $1,000.'}
+        href={customHref ?? affiliateUrl!}
+        label={post.data.ctaLabel ?? 'See what HelloPrenup costs'}
+        partnerId={customHref ? undefined : 'helloprenup'}
+        pageType="guide"
+        contentId={post.id}
+      />
+    </div>
+  )}
+  {showCta && customHref && (
+    <div class="read" style="padding:0 1.25rem;">
+      <CTA
+        heading={post.data.ctaHeading ?? 'Looking for professional help?'}
+        text={post.data.ctaText ?? 'Once you understand the basics, you may want to compare qualified providers who can advise you about your specific circumstances.'}
+        href={customHref}
+        label={post.data.ctaLabel ?? 'Explore professional options'}
+        pageType="guide"
+        contentId={post.id}
+      />
+    </div>
+  )}
+  {showCta && showEditorialCta && (
+    <div class="read" style="padding:0 1.25rem;">
+      <CTA
+        heading="See real numbers, not guesses"
+        text="Our free cost calculator estimates what couples typically pay in your state — no email, no consultation pitch."
+        href={editorialHref}
+        label="Open the free cost calculator"
+        pageType="guide"
+        contentId={post.id}
+      />
+    </div>
+  )}
 
   <div style="padding:0 1.25rem 2rem;">
     <AuthorBox />
   </div>
 
   <FAQ items={post.data.faq} />
+
+  <BriefCta source="guide" />
 </Base>

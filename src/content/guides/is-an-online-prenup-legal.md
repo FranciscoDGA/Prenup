@@ -1,5 +1,6 @@
 ---
 title: "Is an Online Prenup Legally Valid? The 5 Things Courts Actually Check"
+commercialIntent: medium
 description: "You're not paying for where the document came from — you're paying for how it was executed. The 5 factors courts examine, when DIY fails, and when you truly need a lawyer."
 keyword: is an online prenup legally valid
 cluster: Validity

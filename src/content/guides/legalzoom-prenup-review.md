@@ -1,5 +1,6 @@
 ---
 title: "LegalZoom Prenup Review (2026): What You Actually Get"
+commercialIntent: high
 description: "LegalZoom's prenup is powered by an exclusive HelloPrenup partnership — plus an attorney-assisted tier in 12 states. What that means for your price, your options, and when to go direct instead."
 keyword: LegalZoom prenup review
 cluster: Compare

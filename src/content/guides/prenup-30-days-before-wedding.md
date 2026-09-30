@@ -1,5 +1,6 @@
 ---
 title: "Prenup 30 Days Before the Wedding: What's Still Possible (and What Isn't)"
+commercialIntent: medium
 description: "Engaged, wedding looming, just realized you need a prenup? A realistic 30-day plan — what's doable fast, what must wait for a postnup, and the pressure mistake that gets agreements thrown out."
 keyword: prenup last minute before wedding
 cluster: Risk

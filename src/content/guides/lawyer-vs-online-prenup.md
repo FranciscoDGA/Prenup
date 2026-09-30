@@ -1,5 +1,6 @@
 ---
 title: "Lawyer vs Online Prenup: The Honest Comparison (2026)"
+commercialIntent: high
 description: "What a real attorney costs, what online services actually deliver, and the 7-question test that tells you which one your finances need — without the marketing spin from either side."
 keyword: lawyer vs online prenup
 cluster: Compare

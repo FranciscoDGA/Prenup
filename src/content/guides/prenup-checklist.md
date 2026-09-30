@@ -1,5 +1,6 @@
 ---
 title: "The Prenup Checklist: 17 Things to Include Before You Sign"
+commercialIntent: low
 description: "A complete prenuptial agreement checklist — financial disclosure, separate property, debts, support, the house, business clauses, and the execution details that keep it enforceable."
 keyword: prenup checklist
 cluster: Checklist

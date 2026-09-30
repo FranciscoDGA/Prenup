@@ -6,7 +6,7 @@ import SituationSelector from '../../components/SituationSelector.astro';
 import SourceList from '../../components/SourceList.astro';
 import { STATE_PAGES, REGIME_LABEL } from '../../data/statePages';
 import { getStateLegal } from '../../data/stateLegal';
-import { AFF } from '../../data/affiliate';
+import { activePartnerUrl } from '../../data/partners';
 
 export async function getStaticPaths() {
   return STATE_PAGES.map((state) => ({ params: { slug: state.slug }, props: { state } }));
@@ -17,6 +17,7 @@ const regimeLabel = REGIME_LABEL[state.regime];
 const isCommunity = state.regime === 'community';
 const legal = getStateLegal(state.abbr);
 const verified = legal?.status === 'VERIFIED';
+const partnerUrl = activePartnerUrl('helloprenup', state.abbr);
 
 const allSourceIds = legal
   ? [
@@ -340,12 +341,26 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
   </article>
 
   <div class="read" style="padding:0 1.25rem;">
-    <CTA
-      heading={`Get ${state.name} pricing in 60 seconds`}
-      text={`Online prenup services prepare a ${state.name}-specific agreement for a flat fee — most couples with straightforward finances finish for under $1,000 instead of ${state.low.toLocaleString('en-US')}–${state.high.toLocaleString('en-US')} in hourly bills.`}
-      href={AFF.helloPrenup}
-      label="See HelloPrenup pricing"
-    />
+    {partnerUrl ? (
+      <CTA
+        heading={`Get ${state.name} pricing in 60 seconds`}
+        text={`Online prenup services prepare a ${state.name}-specific agreement for a flat fee — most couples with straightforward finances finish for under $1,000 instead of ${state.low.toLocaleString('en-US')}–${state.high.toLocaleString('en-US')} in hourly bills.`}
+        href={partnerUrl}
+        label="See HelloPrenup pricing"
+        partnerId="helloprenup"
+        pageType="state"
+        contentId={state.slug}
+      />
+    ) : (
+      <CTA
+        heading={`See what couples pay in ${state.name}`}
+        text="Our free cost calculator estimates typical costs for your state — no email, no consultation pitch."
+        href="/tools/prenup-cost-calculator/"
+        label="Open the free cost calculator"
+        pageType="state"
+        contentId={state.slug}
+      />
+    )}
   </div>
 
   <FAQ items={faq} title={`FAQ: prenups in ${state.name}`} />

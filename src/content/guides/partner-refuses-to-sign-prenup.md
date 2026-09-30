@@ -1,5 +1,6 @@
 ---
 title: "Your Partner Won't Sign the Prenup: What Now?"
+commercialIntent: none
 description: "You asked and they said no — or worse, they went quiet. How to find out what the refusal is actually about, the exact words to try once more, and what to do if the answer never changes."
 keyword: what if partner refuses to sign prenup
 cluster: Fear

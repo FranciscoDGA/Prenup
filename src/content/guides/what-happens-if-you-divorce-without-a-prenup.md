@@ -1,5 +1,6 @@
 ---
 title: "What Happens If You Divorce Without a Prenup?"
+commercialIntent: medium
 description: "No prenup means your state decides how assets, debts, and support get split — not you. Here's exactly what happens, step by step, and what couples lose by not choosing."
 keyword: what happens if you divorce without a prenup
 cluster: Risk
