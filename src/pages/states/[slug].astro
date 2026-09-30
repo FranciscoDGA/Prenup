@@ -2,7 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import FAQ from '../../components/FAQ.astro';
 import CTA from '../../components/CTA.astro';
+import SourceList from '../../components/SourceList.astro';
 import { STATE_PAGES, REGIME_LABEL } from '../../data/statePages';
+import { getStateLegal } from '../../data/stateLegal';
 import { AFF } from '../../data/affiliate';
 
 export async function getStaticPaths() {
@@ -12,6 +14,21 @@ export async function getStaticPaths() {
 const { state } = Astro.props;
 const regimeLabel = REGIME_LABEL[state.regime];
 const isCommunity = state.regime === 'community';
+const legal = getStateLegal(state.abbr);
+const verified = legal?.status === 'VERIFIED';
+
+const allSourceIds = legal
+  ? [
+      ...new Set([
+        ...(legal.governingLaw.sourceIds ?? []),
+        ...(legal.enforceability.sourceIds ?? []),
+        ...(legal.disclosure.sourceIds ?? []),
+        ...(legal.counsel.sourceIds ?? []),
+        ...(legal.execution.sourceIds ?? []),
+        ...(legal.support.sourceIds ?? []),
+      ]),
+    ]
+  : [];
 
 const crumbsLd = {
   '@context': 'https://schema.org',
@@ -24,14 +41,18 @@ const crumbsLd = {
 };
 
 const divisionText = isCommunity
-  ? `${state.name} is a community-property state. During a divorce, property acquired during the marriage — wages, accounts, real estate bought with marital money — is generally presumed to belong to both spouses and split 50/50. What each of you brought in, and what you kept separate, usually stays yours — if you can prove it stayed separate. Without a prenup, that presumption controls every dollar the two of you earn from the wedding day forward.`
+  ? `${state.name} is a community-property state. During a divorce, property acquired during the marriage — wages, accounts, real estate bought with marital money — is generally presumed to belong to both spouses and divided equally between them, subject to the court’s discretion and the facts of the case. What each of you brought in, and what you kept separate, usually stays yours — if you can prove it stayed separate. Without a prenup, those defaults control every dollar the two of you earn from the wedding day forward.`
   : `${state.name} follows equitable-distribution rules. During a divorce, a judge divides marital property based on a list of statutory factors — contribution to the marriage, income, length of the marriage, future needs — and “equitable” means fair, not necessarily equal. Marital fault can matter in some states and not others. Without a prenup, “fair” is defined by a stranger in a courtroom after months of litigation.`;
+
+const enforceabilityFaq = legal
+  ? `In general, yes — when it is done right. ${state.name}’s specific requirements are set by statute, and this page walks through them above: what has to be in writing, what makes an agreement voluntary, and how the court tests fairness. The exact sources are listed under Sources at the bottom of the page. Agreements signed under pressure, with hidden assets, or with unconscionable terms are the ones that get set aside.`
+  : `In general, yes — when it is done right. Courts typically look for a written agreement signed by both parties, genuine consent (no pressure or last-minute ambushes), meaningful financial disclosure, and terms that were fair when signed. The exact test comes from ${state.name} law — we are verifying ${state.name}’s specific standards against official sources (last template review: September 2026), so treat the general framework on this page as guidance and confirm with a licensed ${state.name} attorney.`;
 
 const faq = [
   isCommunity
     ? {
         q: `Is ${state.name} a community-property state?`,
-        a: `Yes. ${state.name} is one of nine community-property states (alongside Arizona, California, Idaho, Louisiana, Nevada, New Mexico, Texas, and Washington). Property acquired during the marriage is presumed to be owned equally — ${state.note}`,
+        a: `Yes. ${state.name} is one of nine community-property states (alongside Arizona, California, Idaho, Louisiana, Nevada, New Mexico, Texas, and Washington). Property acquired during the marriage is generally presumed to be shared — ${state.note}`,
       }
     : {
         q: `How does ${state.name} divide property in a divorce?`,
@@ -43,7 +64,7 @@ const faq = [
   },
   {
     q: `Are prenuptial agreements enforceable in ${state.name}?`,
-    a: `Yes — when they are done right. Courts in ${state.name} enforce prenups that are in writing, signed voluntarily by both spouses before the wedding, and based on full financial disclosure. Agreements signed under pressure, with hidden assets, or containing unconscionable terms (or child-custody terms) can be thrown out.`,
+    a: enforceabilityFaq,
   },
 ];
 
@@ -55,7 +76,11 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
     <div class="container">
       <p class="crumbs"><a href="/">Home</a> / <a href="/states/">State Laws</a> / {state.name}</p>
       <h1>Prenups in {state.titleName}: Laws, Costs &amp; Rules</h1>
-      <p class="meta">{isCommunity ? 'Community property' : 'Equitable distribution'} · {state.abbr} · Updated September 2026</p>
+      <p class="meta">
+        {isCommunity ? 'Community property' : 'Equitable distribution'} · {state.abbr} · Updated September 2026{
+          verified && legal ? ` · Sources verified ${legal.lastVerified}` : ''
+        }
+      </p>
     </div>
   </header>
 
@@ -65,24 +90,109 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
       <p style="margin:.4rem 0 0;">
         {state.name} is a <strong>{regimeLabel}</strong> state. A typical attorney-drafted prenup costs
         <strong>${state.low.toLocaleString('en-US')}–${state.high.toLocaleString('en-US')}</strong>. To hold up in
-        court it must be written, signed voluntarily by both of you before the wedding, and built on complete
-        financial disclosure.
+        court it generally needs to be in writing, signed by both of you voluntarily before the wedding, and
+        built on honest financial disclosure — {state.name}’s exact requirements come from state law, and this
+        page walks through them below.
       </p>
     </div>
 
     <p>
-      Planning a wedding in {state.name} already has enough moving parts. Whether your prenup is a formality or the
-      most important document you sign all year depends on {state.name}’s default rules — and they are not the same
-      in every state. Here is exactly how {state.titleName} handles property, debts, and support, and what engaged
-      couples in your state are doing about it.
+      Prenuptial agreements are recognized across the United States — including in {state.name}. What differs
+      from state to state is what makes one <em>enforceable</em>: the writing, the timing, the disclosure, and
+      the way the agreement was signed. Here is how {state.titleName} handles property, debts, and support, and
+      what couples should know before signing.
     </p>
 
-    <h2>How {state.titleName} divides property without a prenup</h2>
-    <p>{divisionText}</p>
+    <h2>Does {state.titleName} recognize prenuptial agreements?</h2>
     <p>
-      {state.note} A prenup replaces those defaults with your own terms: you decide what stays separate, how the
-      house is handled, who keeps which accounts, and how (or whether) support works — within your state’s limits.
+      Yes. Couples in {state.name} can use a prenup to decide what stays separate, how the house is handled, who
+      keeps which accounts, and how (or whether) support works — as long as the agreement follows {state.name}’s
+      rules for validity. {state.note}
     </p>
+
+    <h2>What law governs prenups in {state.titleName}?</h2>
+    {
+      legal ? (
+        <p>{legal.governingLaw.text}</p>
+      ) : (
+        <p>
+          {state.name}’s prenup rules are set by {state.name} statute and case law. We list specific citations on
+          this page only after they have been verified against the official source — {state.name}’s citations are
+          still under verification (last template review: September 2026). The framework on this page reflects
+          principles that apply across U.S. jurisdictions, but the details that matter most — disclosure,
+          execution, and support limits — can differ in {state.name}. When in doubt, confirm with a licensed{' '}
+          {state.name} attorney.
+        </p>
+      )
+    }
+
+    <h2>What makes a prenup enforceable in {state.titleName}?</h2>
+    {
+      legal ? (
+        <p>{legal.enforceability.text}</p>
+      ) : (
+        <>
+          <p>Across states, courts generally weigh the same set of questions:</p>
+          <ul>
+            <li>Was there a written agreement signed by both parties?</li>
+            <li>Was it entered into voluntarily — no pressure, no last-minute ambush?</li>
+            <li>Did each side have meaningful notice of the other’s finances?</li>
+            <li>Were the terms fair when the agreement was signed?</li>
+            <li>Does the agreement run afoul of your state’s public-policy limits?</li>
+          </ul>
+          <p>
+            How {state.name} answers those questions — and how strictly it applies them — is part of what we are
+            verifying against official sources. Nothing here should be treated as a confirmed statement of{' '}
+            {state.name} law on enforceability.
+          </p>
+        </>
+      )
+    }
+
+    <h2>Financial disclosure</h2>
+    {
+      legal ? (
+        <p>{legal.disclosure.text}</p>
+      ) : (
+        <p>
+          Disclosure is the most common fault line in a prenup fight. Courts generally scrutinize what each side
+          knew before signing, and some states put disclosure rules directly in their statute. We are verifying{' '}
+          {state.name}’s exact standard — meanwhile, full written disclosure (signed schedules of assets, debts,
+          and income) is the safe course everywhere.
+        </p>
+      )
+    }
+
+    <h2>Independent legal counsel</h2>
+    {
+      legal ? (
+        <>
+          <p><strong>Status for {state.name}: {legal.counsel.label}.</strong></p>
+          <p>{legal.counsel.text}</p>
+        </>
+      ) : (
+        <p>
+          Independent counsel is not a universal legal requirement — and how much weight your state gives
+          “each side had a lawyer” varies. What is true everywhere: separate counsel is the single best
+          protection against “I didn’t know what I was signing.” If {state.name} has specific rules on
+          representation, we will state them here once they are verified against the official source.
+        </p>
+      )
+    }
+
+    <h2>Signing, witnesses &amp; notarization</h2>
+    {
+      legal ? (
+        <p>{legal.execution.text}</p>
+      ) : (
+        <p>
+          Witness, notary, and ceremony requirements differ state to state. We do not state {state.name}’s
+          specific execution rules until they are verified against an official source — an attorney or notary
+          can handle this part in a few minutes, and getting the formality wrong is an avoidable way to
+          endanger the agreement.
+        </p>
+      )
+    }
 
     <h2>What a prenup can decide in {state.titleName}</h2>
     <ul>
@@ -93,10 +203,34 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
       <li><strong>Support</strong> — caps, durations, or waivers, subject to {state.name}’s public-policy limits.</li>
       <li><strong>Inheritance</strong> — protecting kids from a previous marriage and how wills interact with the agreement.</li>
     </ul>
+
+    <h2>What a prenup generally cannot decide</h2>
     <p>
-      What it <em>cannot</em> do: set child custody or child support (courts decide those, always), hide assets from
-      each other, or spring one spouse with a document signed the night before the wedding. Those are the four
-      fastest ways to lose the whole agreement.
+      A prenup cannot set child custody or child support — courts keep those decisions for themselves — nor can
+      it hide assets from each other. And an agreement sprung on one spouse the night before the wedding is
+      exactly the kind of document that gets challenged, and sometimes thrown out entirely. Those are the
+      fastest ways to lose an agreement you both worked hard on.
+    </p>
+
+    <h2>Spousal support</h2>
+    {
+      legal ? (
+        <p>{legal.support.text}</p>
+      ) : (
+        <p>
+          Prenups commonly address spousal support — caps, limits, or waivers — but every state has public-policy
+          limits, and courts test support terms for fairness. {state.name}’s specific limits are part of what
+          we are verifying against official sources; when support is a central concern, that is a question for
+          your attorney, not a template.
+        </p>
+      )
+    }
+
+    <h2>How {state.titleName} divides property without a prenup</h2>
+    <p>{divisionText}</p>
+    <p>
+      A prenup replaces those defaults with your own terms: you decide what stays separate, how the house is
+      handled, who keeps which accounts, and how (or whether) support works — within your state’s limits.
     </p>
 
     <h2>What does a prenup cost in {state.titleName}?</h2>
@@ -117,26 +251,49 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
 
     <h2>{state.titleName} prenup requirements</h2>
     <ol>
-      <li><strong>In writing.</strong> Verbal agreements do not exist in this area of law — in any state.</li>
-      <li><strong>Full financial disclosure from both of you</strong> — assets, debts, income — attached to the document as signed schedules.</li>
+      <li>
+        <strong>A signed writing.</strong> The agreement must be in writing and signed by both parties —
+        California spells it out in Family Code § 1611, Texas in Family Code § 4.002, and New York requires a
+        writing, signatures, and deed-style acknowledgment. Confirm {state.name}’s exact formality rule with a
+        local attorney.
+      </li>
+      <li>
+        <strong>Financial disclosure both of you can see</strong> — assets, debts, income — attached to the
+        document as signed schedules. Hidden or thin disclosure is the classic way an agreement gets attacked.
+      </li>
       <li><strong>Voluntary signing.</strong> No ambushes, no “sign this tonight,” no threats to call off the wedding.</li>
-      <li><strong>Signed before the marriage.</strong> Post-ceremony changes become a harder instrument (a postnup) that courts scrutinize more closely.</li>
-      <li><strong>Notarization and/or witnesses per {state.name} rules.</strong> Formalities vary — confirm your state’s execution requirements or have your attorney handle them.</li>
-      <li><strong>Separate counsel strongly recommended.</strong> Not mandatory everywhere, but the surest protection against “I didn’t understand what I signed.”</li>
-      <li><strong>Start 3–6 months out.</strong> Last-minute signing is the second-leading reason prenups get set aside nationwide.</li>
+      <li>
+        <strong>Signed before the marriage.</strong> Changes after the wedding become a different instrument (a
+        postnup), which courts review under a different — often tougher — standard.
+      </li>
+      <li>
+        <strong>Execution per {state.name}’s rules.</strong> New York, for example, requires deed-style
+        acknowledgment; other states differ. Have your attorney or a notary handle the formality of it.
+      </li>
+      <li>
+        <strong>Separate counsel strongly recommended.</strong> California’s statute effectively requires it —
+        or a written waiver after the party is advised to get one. Everywhere else, it is still the surest
+        protection against “I didn’t understand what I signed.”
+      </li>
+      <li>
+        <strong>Start 3–6 months out.</strong> Last-minute signing invites challenges — courts look hard at how
+        much time each side had to review the final document.
+      </li>
     </ol>
 
     <h2>The bottom line for {state.name} couples</h2>
     <p>
       You get one shot at agreeing on the terms while you still agree on everything. In {state.name}, that means
-      beating {regimeLabel}’s defaults to the courthouse — with a document your state’s courts will actually
-      enforce. Run the numbers first, then use the checklist so nothing gets skipped.
+      getting it in writing, signed voluntarily, with the numbers on the table — and with a document your
+      state’s courts will actually enforce. Run the numbers first, then use the checklist so nothing gets
+      skipped.
     </p>
     <p>
       Continue with the <a href="/guides/prenup-checklist/">17-point prenup checklist</a>, see
       <a href="/guides/how-much-does-a-prenup-cost/">how much a prenup costs in {state.name}</a> for the national
-      cost breakdown, or read <a href="/guides/what-happens-if-you-divorce-without-a-prenup/">what divorce looks
-      like without one</a> for the full picture.
+      cost breakdown, read <a href="/guides/what-happens-if-you-divorce-without-a-prenup/">what divorce looks
+      like without one</a> for the full picture, or see
+      <a href="/guides/can-a-prenup-protect-a-business/">how a prenup protects a business</a> if you own one.
     </p>
   </article>
 
@@ -150,4 +307,36 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
   </div>
 
   <FAQ items={faq} title={`FAQ: prenups in ${state.name}`} />
+
+  <section class="section section-alt">
+    <div class="prose">
+      <h2>Sources</h2>
+      {
+        legal ? (
+          <>
+            <p>
+              Every state-specific legal statement above traces to the official sources listed here.
+              Last verified: {legal.lastVerified}.
+            </p>
+            <SourceList ids={allSourceIds} />
+          </>
+        ) : (
+          <p>
+            We verify state-specific claims against official sources before stating them as fact.{' '}
+            {state.name}’s statutory citations are still under verification (last template review: September
+            2026), so treat state-specific details on this page as general guidance — and confirm with a
+            licensed {state.name} attorney before relying on them. The property-regime and cost figures above
+            are editorial estimates, not legal citations.
+          </p>
+        )
+      }
+
+      <h2>Important</h2>
+      <p>
+        PrenupAnswers provides general educational information, not individualized legal advice. State laws and
+        legal requirements can change. Consult a licensed attorney in the relevant jurisdiction for advice about
+        your circumstances.
+      </p>
+    </div>
+  </section>
 </Base>

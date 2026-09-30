@@ -93,7 +93,7 @@ Same rule. Courts set child support by state formula and won't delegate that aut
 
 ### ❌ Terms signed under pressure
 
-Presented the week before the wedding? Signed while one partner had no lawyer, no time, or was threatened with a called-off wedding? Courts call that **duress** — the second-leading cause of tossed prenups. Start 3–6 months out.
+Presented the week before the wedding? Signed while one partner had no lawyer, no time, or was threatened with a called-off wedding? Courts call that **duress**, and it's among the clearest grounds for setting an agreement aside. Start 3–6 months out.
 
 ### ❌ Anything illegal or impossible
 

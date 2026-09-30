@@ -9,7 +9,7 @@ published: 2026-09-24
 tldr: "Bring it up 3–6 months before the wedding, in a calm moment, framed as 'doing this marriage right' — not as 'in case it fails.' Lead with a shared tool, not a document you already signed. Four copy-paste scripts below cover every situation: you earn more, they earn more, kids from before, and the universal opener."
 faq:
   - q: "When is the right time to bring up a prenup?"
-    a: "Three to six months before the wedding, on an ordinary calm day — never during a fight, never the week of the wedding, never at the venue. Courts literally examine timing: a document presented under time pressure smells like duress, and that's the second-leading reason prenups get thrown out. Early timing is both kinder and more legally sound."
+    a: "Three to six months before the wedding, on an ordinary calm day — never during a fight, never the week of the wedding, never at the venue. Courts examine timing: a document presented under time pressure smells like duress, and duress is one of the clearest grounds for setting a prenup aside. Early timing is both kinder and more legally sound."
   - q: "What if my fiancé reacts badly?"
     a: "Give it 48 hours and revisit once — people need a night to process what initially sounds like an accusation. Bring it back with the same calm frame ('I want us to start with everything clear'). If the reaction is anger that never softens, that's information about how future money conversations will go. A couples counselor for one session is a legitimate bridge, not a failure."
   - q: "Does asking for a prenup mean I don't trust my partner?"
@@ -58,7 +58,7 @@ That's it. That's the whole pitch. You're not preparing to leave; you're removin
 
 - **3–6 months before the wedding.** Early enough to be calm, early enough that both sides have counsel if needed, early enough it never smells like an ultimatum.
 - **Never during a fight.** "We should get a prenup" after a money argument is a grenade. Never, ever.
-- **Never the final week.** Last-minute signing is the second-leading reason prenups get tossed — courts call it duress. Kindness and enforceability want the same thing here.
+- **Never the final week.** Last-minute signing invites a duress challenge — that's what courts look at. Kindness and enforceability want the same thing here.
 - **Pick a boring Sunday morning,** not dinner with witnesses. No audience, no clock.
 
 ## The four scripts (copy them)

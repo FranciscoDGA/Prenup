@@ -15,7 +15,7 @@ faq:
   - q: "Do we need witnesses and a notary?"
     a: "Requirements vary by state. Both spouses must sign in writing before the wedding; some states require notarization, some require witnesses. Since 2019, many states follow the revised Uniform Premarital Agreement Act. Confirm your state's formalities — an attorney or the online service you use should handle this."
   - q: "How long before the wedding should we start?"
-    a: "Three to six months. Courts look at timing: a document presented days before the wedding smells like duress — the second-leading reason prenups get set aside. Starting early protects enforceability and your budget."
+    a: "Three to six months. Courts look at timing: a document presented days before the wedding smells like duress — one of the clearest grounds for setting a prenup aside. Starting early protects enforceability and your budget."
   - q: "Does a prenup have to be fair to both sides?"
     a: "It must be voluntary, with full disclosure, and not unconscionable when signed. It doesn't have to be 'equal' — courts generally don't second-guess substantive fairness. But surprises are fatal: if terms are buried and undisclosed, 'unfair' becomes 'unenforceable.'"
 ---

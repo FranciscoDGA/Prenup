@@ -82,7 +82,7 @@ And a related blind spot worth knowing: employer retirement plans (pensions, and
 
 A **postnuptial agreement** does the same job after the wedding. The key window: while you and your spouse still agree on where the money came from. Once the marriage is in trouble, reestablishing separate character over commingled funds becomes a much harder — and more expensive — argument. If you're married and expecting an inheritance, the time to paper it is now, not later.
 
-## Habits that make the protection airtight
+## Habits that strengthen the protection
 
 A prenup is the strongest layer, but good habits reinforce it:
 

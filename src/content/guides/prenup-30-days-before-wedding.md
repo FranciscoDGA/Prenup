@@ -6,12 +6,12 @@ cluster: Risk
 image: /images/guides/prenup-30-days-before-wedding.jpg
 imageAlt: "Wedding planning flat lay with a notebook, checklist cards, and stationery"
 published: 2026-09-29
-tldr: "Thirty days is tight but workable IF finances are straightforward, you start this week, and your partner is willing — courts treat last-minute signing as the second-leading cause of tossed prenups, so speed must come from process, not pressure. Complex estates: sign the simple core now, schedule the hard clauses as a postnup. Never present the document in the final week."
+tldr: "Thirty days is tight but workable IF finances are straightforward, you start this week, and your partner is willing — courts scrutinize last-minute signing as a duress risk, so speed must come from process, not pressure. Complex estates: sign the simple core now, schedule the hard clauses as a postnup. Never present the document in the final week."
 faq:
   - q: "Can I get a prenup done in 30 days?"
     a: "With simple-to-moderate finances, yes: disclosure (2–3 days), drafting on a platform (1 week), review by both parties (1 week), signing with notary/witnesses (2–3 days), plus buffer. The variable is your partner — they need genuine time to read and, ideally, consult someone. If they can't, you're not late for the prenup; you're early for the postnup."
   - q: "Is a prenup signed right before the wedding valid?"
-    a: "It can be, but courts examine timing closely: agreements presented in the final days before the wedding are the second-leading reason prenups get set aside, because proximity to the event looks like duress. Validity survives urgency only when both partners were informed, willing, and had real time to consider — not when one partner produced a document with days to go."
+    a: "It can be, but courts examine timing closely: agreements presented in the final days before the wedding are vulnerable to a duress challenge, because proximity to the event looks like pressure. Validity survives urgency only when both partners were informed, willing, and had real time to consider — not when one partner produced a document with days to go."
   - q: "What if my fiancé says 'it's too late for this'?"
     a: "Separate the refusal from the moment: 'I know this is late — that's on me for not raising it sooner. Can we at least lock down the simple parts now and do the rest after we're married?' A small, fair, immediate ask under a 'we'll finish it later' promise is far easier to accept than a 20-page document overnight."
   - q: "What should we cut if time is short?"
@@ -28,7 +28,7 @@ Thirty days. Here's the truth you need, delivered calmly: **this is tight, but i
 
 ## Why speed is dangerous (and how to be fast without being reckless)
 
-Family courts examine one thing above all when agreements are challenged: **was it voluntary?** And nothing smells like coercion like a prenup presented in the final days before the wedding. Last-minute signing is the **second-leading reason** prenups get set aside nationwide — not because the content was wrong, but because the *clock* did the talking.
+Family courts examine one thing above all when agreements are challenged: **was it voluntary?** And nothing smells like coercion like a prenup presented in the final days before the wedding. Last-minute signing can sink a prenup on **duress** grounds — not because the content was wrong, but because the *clock* did the talking.
 
 So the entire strategy for a 30-day prenup is: **move fast through process, never through pressure.** Your fiancé must feel they had time, not that time was used against them. Same speed on your side; completely different experience on theirs.
 

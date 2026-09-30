@@ -17,7 +17,7 @@ faq:
   - q: "Is an online prenup valid in my state?"
     a: "Validity depends on your state's rules, not the platform's origin. Reputable services generate state-specific documents with your state's required formalities built in (notarization, witnesses, statutory language). Confirm your state's execution requirements and follow the platform's signing ceremony exactly — that checklist is the enforceability insurance."
   - q: "What if we sign online and nothing changes for 20 years — is it still valid?"
-    a: "Yes, if properly executed. Agreements don't expire with time. What weakens them is if circumstances changed dramatically (a massive hidden asset, children added with no update) and you never amended. A short amendment or review every several years keeps everything airtight — most platforms make updates easy."
+    a: "Yes, if properly executed. Agreements don't expire with time. What weakens them is if circumstances changed dramatically (a massive hidden asset, children added with no update) and you never amended. A short amendment or review every several years keeps everything current — most platforms make updates easy."
 ---
 
 Let's name the fear precisely: you're not afraid of the *document*. You're afraid of spending $700, planning around it for two years, and then having a judge in a courtroom wave it off with *"this isn't worth the paper."*
