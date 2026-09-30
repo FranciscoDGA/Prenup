@@ -1,5 +1,5 @@
 ---
-import { kitFormAction, redirectToFor, isSubscribedConfigured } from '../data/subscribe';
+import { formEndpoint, redirectToFor, isSubscribedConfigured } from '../data/subscribe';
 
 interface Props {
   variant?: 'block' | 'inline';
@@ -12,16 +12,18 @@ const next = redirectToFor(source);
 ---
 <form
   class={`sub-form sub-form--${variant}`}
-  action={configured ? kitFormAction : ''}
+  action={configured ? formEndpoint : ''}
   method={configured ? 'post' : 'get'}
   data-next={next}
   data-source={source}
 >
+  <input type="hidden" name="ml-submit" value="1" />
+  <input type="hidden" name="anticsrf" value="true" />
   <div class="sub-fields">
     {variant === 'block' && (
-      <input type="text" name="first_name" placeholder="First name (optional)" aria-label="First name" autocomplete="given-name" />
+      <input type="text" name="fields[name]" placeholder="First name (optional)" aria-label="First name" autocomplete="given-name" />
     )}
-    <input type="email" name="email_address" placeholder="Your email address" aria-label="Email address" required autocomplete="email" />
+    <input type="email" name="fields[email]" placeholder="Your email address" aria-label="Email address" required autocomplete="email" />
     <button type="submit" class="btn btn-gold">{cta}</button>
   </div>
   <p class="sub-fine">
@@ -31,37 +33,36 @@ const next = redirectToFor(source);
 </form>
 
 <script>
-  document.addEventListener('submit', (event) => {
+  document.addEventListener('submit', async (event) => {
     const form = event.target as HTMLFormElement;
     if (!form.matches('.sub-form') || form.method !== 'post') return;
     event.preventDefault();
 
     const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const fine = form.querySelector<HTMLElement>('.sub-fine');
     if (button) button.disabled = true;
 
-    const body = new URLSearchParams();
-    new FormData(form).forEach((value, key) => {
-      if (typeof value === 'string') body.append(key, value);
-    });
-
-    fetch(form.action, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body,
-      redirect: 'manual',
-      mode: 'cors',
-    })
-      .then((res) => {
-        if (res.type === 'opaqueredirect' || res.ok) {
-          window.location.href = form.dataset.next || '/free/';
-        } else {
-          throw new Error(`Kit responded ${res.status}`);
-        }
-      })
-      .catch(() => {
-        if (button) button.disabled = false;
-        const fine = form.querySelector<HTMLElement>('.sub-fine');
-        if (fine) fine.textContent = 'Something went wrong — please try again.';
+    try {
+      const body = new URLSearchParams();
+      new FormData(form).forEach((value, key) => {
+        if (typeof value === 'string') body.append(key, value);
       });
+
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+        mode: 'cors',
+      });
+      const data = await res.json().catch(() => null);
+      if (res.ok && data && data.success) {
+        window.location.href = form.dataset.next || '/free/';
+      } else {
+        throw new Error('subscribe failed');
+      }
+    } catch {
+      if (button) button.disabled = false;
+      if (fine) fine.textContent = 'Something went wrong — please try again.';
+    }
   });
 </script>

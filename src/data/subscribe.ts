@@ -1,13 +1,14 @@
 /**
  * Newsletter / lead capture configuration — SINGLE POINT OF TRUTH.
  *
- * One Kit form serves all placements; the `next` hidden field controls where
- * each placement redirects after submission (set per source below).
+ * MailerLite (free plan) — one embedded form serves all placements; the site's
+ * own JS POSTs here and navigates to the per-source thank-you page below.
  *
- * Form ID: 9981147 (template "Clare", inline) — Embed → copy action URL to update.
- * Kit form settings: "When a visitor subscribes" → Redirect to an external page.
+ * Form: Embedded "Newsletter" (slug TaZb1Z, id 200044458910156443), account 2673118.
+ * To update: MailerLite → Forms → Newsletter → Share → Embed → copy the form action URL.
  */
-export const kitFormAction = 'https://app.kit.com/forms/9981147/subscriptions';
+export const formEndpoint =
+  'https://assets.mailerlite.com/jsonp/2673118/forms/200044458910156443/subscribe';
 
 const redirects: Record<string, string> = {
   'lead-checklist': 'https://www.prenupanswers.com/free/thank-you/prenup-checklist/',
@@ -17,4 +18,4 @@ const redirects: Record<string, string> = {
 export const redirectToFor = (source: string): string =>
   redirects[source] || 'https://www.prenupanswers.com/free/';
 
-export const isSubscribedConfigured = (): boolean => kitFormAction.length > 0;
+export const isSubscribedConfigured = (): boolean => formEndpoint.length > 0;
