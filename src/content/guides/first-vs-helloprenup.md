@@ -11,7 +11,7 @@ faq:
   - q: "Which one has attorneys included?"
     a: "Both, at different price points. First builds a two-lawyer review tier ($3,500, notarization included). HelloPrenup sells à la carte: $49 for a 20-minute attorney Q&A, or full representation per partner with your choice from a network of 100+ attorneys across 49 states. If you want lawyers, HelloPrenup is dramatically cheaper; if you want the lawyers baked into one premium package, that's First's model."
   - q: "Do both work in my state?"
-    a: "Both generate state-specific agreements and serve couples across the US — confirm your state during checkout, since signing formalities (notary, witnesses, e-sign rules) vary by state. HelloPrenup publishes coverage of 49 states; First asks you to select your state up front so the document matches local rules."
+    a: "Both generate state-specific agreements and serve couples across the US — confirm your state during checkout, since signing formalities (notary, witnesses, e-sign rules) vary by state. HelloPrenup publishes coverage of 49 states; First lists 46 states plus Washington, D.C. (its Lawyer Review package is not in every state — First publishes the current list) and asks you to select your state up front so the document matches local rules."
   - q: "Can I pay in installments?"
     a: "HelloPrenup supports Afterpay and Klarna at checkout — interest-free installments on the $599. First's pricing is presented as flat package pricing; check its checkout for current payment-plan availability. If cash flow during wedding season matters, this is HelloPrenup's quiet advantage."
   - q: "Which one do you recommend?"

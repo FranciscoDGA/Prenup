@@ -7,7 +7,7 @@ published: 2026-09-08
 tldr: "If you own property, earn significantly more than your partner, have kids from a previous marriage, or carry meaningful debt — yes, get a prenup. If you're both starting from zero, you probably don't. Take the six-question test below and you'll know in a minute."
 faq:
   - q: "Is it bad luck to ask for a prenup before marriage?"
-    a: "No — and the data agrees. An Axios/Harris Poll (2023) found about 47% of engaged or married Millennials have one, and asking is increasingly seen as financial maturity, not distrust. The awkwardness lasts one conversation. The financial protection lasts a lifetime."
+    a: "No — and the data agrees. An Axios/Harris Poll found about 47% of engaged or married Millennials and 41% of Gen Z have one, and asking is increasingly seen as financial maturity, not distrust. The awkwardness lasts one conversation. The financial protection lasts a lifetime."
   - q: "Can I bring up a prenup without sounding like I don't trust my fiancé(e)?"
     a: "Frame it as protecting both of you and as paperwork you'd rather do while you still like each other. 'I want us to decide this together instead of a judge deciding for us later' is the version that lands best."
   - q: "Do we need a lawyer for a prenup to be valid?"
