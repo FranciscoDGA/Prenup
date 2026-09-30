@@ -38,7 +38,7 @@ This is the layer that replaces your state's default rules with your own.
 
 ### Debts — premarital and marital
 
-Student loans, credit cards, car notes, business lines: assign them explicitly. "My student loans remain mine, paid from my earnings, and never become marital debt" is one clause that prevents a six-month argument.
+Student loans, credit cards, car notes, business lines: assign them explicitly. "My student loans remain mine, paid from my earnings, and never become marital debt" is one clause that prevents a six-month argument. The rules shift the moment you say "I do" — [what happens to debt when you get married](/guides/what-happens-to-debt-when-you-get-married/) walks through who owes what after the wedding.
 
 ### The business
 
@@ -48,6 +48,8 @@ If either of you owns or will own a company, this is the section that justifies 
 - How **growth during marriage** is treated
 - **Valuation method** if divorce ever forces the question
 - Terms that protect **outside partners** who didn't sign anything
+
+The mechanics are where most owner prenups fail — [Can a Prenup Protect a Business?](/guides/can-a-prenup-protect-a-business/) breaks down growth, valuation, commingling, and the four decisions that make the protection real.
 
 ### Spousal support — with state limits
 
@@ -63,7 +65,7 @@ Obligation to maintain a policy naming the spouse, with stated amounts and term.
 
 ### Inheritance and estate rights
 
-How the agreement interacts with wills, trusts, and your state's elective-share laws — critical when you're blending families and want children from your first marriage protected.
+How the agreement interacts with wills, trusts, and your state's elective-share laws — critical when you're blending families and want children from your first marriage protected. The inheritance itself has its own trap — [Can a Prenup Protect an Inheritance?](/guides/can-a-prenup-protect-an-inheritance/) covers commingling, growth, and inheritances you haven't received yet.
 
 ### Process terms
 
