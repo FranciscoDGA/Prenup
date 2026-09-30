@@ -49,12 +49,12 @@ export const researchMethod = [
   {
     title: 'Dated, and dated honestly',
     detail:
-      'Every guide shows the date it was last reviewed. When we have not checked a page recently, the date tells you that too — a stale date is more useful to you than a fresh-looking one.',
+      'Every guide shows its date. When a page is updated, the date changes — and when it has not been touched in a while, that stale date tells you that too. A visible date is more useful to you than a fresh-looking one.',
   },
   {
     title: 'Errors get corrected in public',
     detail:
-      'If a reader reports something factually wrong, we fix it and re-date the page. We do not quietly delete a number we got wrong.',
+      'If a reader reports something factually wrong, we aim to fix it and re-date the page. We do not quietly delete a number we got wrong.',
   },
 ];
 

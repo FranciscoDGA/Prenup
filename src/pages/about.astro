@@ -1,121 +1,303 @@
 ---
 import Base from '../layouts/Base.astro';
 import { author, authorBio, authorBackground, authorNotLawyer, researchMethod, authorLd } from '../data/author';
+
+const standards = [
+  {
+    title: 'Plain English',
+    detail: 'We explain legal and financial concepts in language ordinary readers can understand — without the legalese that exists to make simple things sound complicated.',
+  },
+  {
+    title: 'Source-First Research',
+    detail: 'Important factual claims should be traceable to appropriate sources whenever practical. If we cannot trace it, we do not present it as settled.',
+  },
+  {
+    title: 'State Awareness',
+    detail: 'Prenup rules differ from state to state. We distinguish general information from rules that may vary by jurisdiction, and we say when a state is the exception.',
+  },
+  {
+    title: 'Transparency',
+    detail: 'We identify the nature and limitations of this publication — who writes it, where they are, how it is funded, and what it is not qualified to do.',
+  },
+  {
+    title: 'Corrections',
+    detail: 'If we identify an important factual error, we aim to correct it rather than quietly leave it in place. Every guide shows its date, so you can see how current it is.',
+  },
+  {
+    title: 'No Individual Legal Advice',
+    detail: 'Our content is educational and does not create an attorney-client relationship. Nothing here is written for your specific situation.',
+  },
+];
+
+const isNotList = [
+  'A law firm.',
+  'A substitute for an attorney.',
+  'A provider of individualized legal advice.',
+  'A guarantee that a prenup will be enforceable.',
+  'A representation that every state follows the same rules.',
+];
+
+const researchSources = [
+  'State statutes and court rules',
+  'State court self-help and procedural resources',
+  'Government and official public sources',
+  'Uniform Law Commission materials',
+  'Recognized legal and bar organizations',
+  'Publicly available legal reference materials',
+];
 ---
 <Base
-  title="About PrenupAnswers — Who Runs It & How It's Funded"
-  description="PrenupAnswers is an independent educational site about prenuptial agreements for US couples, written by Francisco Gomes Alves from Brazil. Who he is, how we check the facts, and how the site makes money."
+  title="About PrenupAnswers | Our Mission, Method & Editorial Standards"
+  description="Learn who is behind PrenupAnswers, how we research U.S. prenup information, what sources we use, and the editorial standards behind our content."
   jsonLd={[authorLd]}
 >
-  <section class="article-head">
+  <section class="hero">
     <div class="container">
-      <p class="crumbs"><a href="/">Home</a> / About</p>
-      <h1>About PrenupAnswers</h1>
-      <p class="meta">Independent. Educational. Not a law firm — and never will be.</p>
+      <span class="kicker">About PrenupAnswers</span>
+      <h1>Clear Answers for One of Marriage's Most Complicated Conversations</h1>
+      <p class="lede">
+        PrenupAnswers is an independent consumer resource helping couples understand prenuptial agreements,
+        costs, state-law differences, and the questions worth asking before signing anything.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="/guides/">Explore the Guides</a>
+        <a class="btn btn-ghost" href="#how-we-research">See How We Research</a>
+      </div>
     </div>
   </section>
 
-  <div class="prose" id="author">
-    <h2>What this site is, and is not</h2>
-    <p>
-      <strong>PrenupAnswers is a consumer guide.</strong> It exists to help you understand what a prenuptial agreement
-      costs, what the process involves, and what questions to take to a lawyer — before you spend money. It is not
-      legal advice, and no one here is a lawyer.
-    </p>
-    <ul class="not-list">
+  <section class="section">
+    <div class="prose">
+      <p class="eyebrow">Why we exist</p>
+      <h2>Why PrenupAnswers Exists</h2>
+      <p>
+        Prenuptial agreements are usually discussed in language designed for lawyers — not for the people who
+        actually have to understand them. The result is that couples face one of the most consequential
+        financial decisions of their lives with either a wall of legalese or a pile of conflicting forum
+        answers.
+      </p>
+      <p>
+        PrenupAnswers exists to make the subject easier to understand, without pretending that complex legal
+        questions have simple, universal answers. Some of what you read here will end with "it depends on your
+        state" — because it does, and saying so is more useful than pretending otherwise.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container read">
+      <p class="eyebrow">The person behind the publication</p>
+      <h2>Meet the Founder</h2>
+      <div class="author-profile">
+        <img class="author-photo" src={author.photo} alt={author.name} width="140" height="140" />
+        <div>
+          <h3 class="author-name-lg">{author.name}</h3>
+          <p class="author-role-lg">{author.role} · Based in Brazil</p>
+          <p>{authorBio}</p>
+        </div>
+      </div>
+      <p>
+        He is based in Brazil and is not a licensed attorney in the United States. That is not a footnote we
+        would rather you skipped — it shapes how this site works. <a href={author.url}>Full author profile &rarr;</a>
+      </p>
+      <ul>
+        {authorBackground.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="prose">
+      <p class="eyebrow">The human story</p>
+      <h2>Why This Publication Needed to Exist</h2>
+      <p>
+        Francisco's work as a pastor in Brazil puts him in an unusual position: he sits with couples through
+        the conversations that precede a marriage — the money talk, the inherited house, the business one
+        partner built before the relationship started. Couples rarely get stuck on doctrine. They get stuck
+        on the conversation.
+      </p>
+      <p>
+        Those same couples, in the United States, search for clear answers and find pricing they cannot parse
+        and statutes they cannot read. PrenupAnswers is the attempt to close that gap: source-based,
+        plain-English information that tells you what to ask next, and when it is time to talk to a qualified
+        professional instead of a website.
+      </p>
+      <p>
+        There is a harder reason to be open about the founder's position, and it is the honest one. He cannot
+        sell you anything legal. There is no U.S. client to take, no contract to draft, no bill to send, and
+        no U.S. address. That removes the two things that usually distort a site like this — the need to win
+        a case, and the incentive to keep you paying. It also sets a clear limit on what this site should be
+        trusted to know, which is why legal claims here are traced back to a statute or a published source
+        wherever practical.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container read">
+      <p class="eyebrow">Scope</p>
+      <h2>What PrenupAnswers Is</h2>
+      <ul>
+        <li><strong>Independent</strong> — no law firm, court, or prenup service owns, controls, or reviews this site.</li>
+        <li><strong>U.S.-focused</strong> — written for readers in the United States, with state differences called out.</li>
+        <li><strong>Plain-English explanations</strong> — legal and financial concepts translated into ordinary language.</li>
+        <li><strong>Research-based</strong> — claims traced back to public sources wherever practical.</li>
+        <li><strong>State-specific where it matters</strong> — we flag when a rule changes across state lines.</li>
+        <li><strong>Built to improve your questions</strong> — the goal is to help you walk into a conversation with a qualified professional better prepared.</li>
+      </ul>
+      <p>
+        In practice, that means the guides here are designed to get you to the right starting point:
+        <a href="/guides/">the prenup guides</a>, <a href="/states/">state-by-state information</a>, and the
+        <a href="/tools/prenup-cost-calculator/">cost calculator</a> for what people in your state typically
+        pay.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="how-we-research">
+    <div class="prose">
+      <p class="eyebrow">Method</p>
+      <h2>How We Research</h2>
+      <p><strong>We don't ask you to trust us blindly.</strong></p>
+      <p>
+        Content on this site is researched using public sources relevant to the question being answered.
+        Depending on the topic, our research may include:
+      </p>
+      <ul>
+        {researchSources.map((s) => <li>{s}</li>)}
+      </ul>
+      <p>
+        We do not claim that every source above appears in every article. What we aim for is that important
+        legal and factual statements rest on something more authoritative than another blog post.
+      </p>
       {
-        authorNotLawyer.map((item) => (
-          <li>{item}</li>
+        researchMethod.map((m) => (
+          <>
+            <h3>{m.title}</h3>
+            <p>{m.detail}</p>
+          </>
         ))
       }
-    </ul>
+    </div>
+  </section>
 
-    <h2>Who writes it</h2>
-    <div class="author-profile">
-      {
-        author.photo ? (
-          <img class="author-photo" src={author.photo} alt={author.name} width="140" height="140" />
-        ) : (
-          <div class="author-photo author-photo--placeholder" aria-hidden="true">
-            {author.initials}
-          </div>
-        )
-      }
-      <div>
-        <h3 class="author-name-lg">{author.name}</h3>
-        <p class="author-role-lg">{author.role} · Brazil</p>
-        <p>{authorBio}</p>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="read">
+        <p class="eyebrow">Standards</p>
+        <h2>Our Editorial Standards</h2>
+        <p>Six principles apply to everything published here.</p>
+      </div>
+      <div class="grid grid-2" style="margin-top:1.5rem;">
+        {
+          standards.map((s) => (
+            <div class="card">
+              <h3>{s.title}</h3>
+              <p>{s.detail}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
-    <p>
-      <a href={author.url}>Full author profile &rarr;</a>
-    </p>
-    <p><strong>Background.</strong></p>
-    <ul>
-      {authorBackground.map((item) => <li>{item}</li>)}
-    </ul>
+  </section>
 
-    <h2>Why a Brazilian writes about U.S. prenups</h2>
-    <p>
-      Because he cannot sell you anything legal. There is no U.S. client to take, no contract to draft, no bill to
-      send, and no U.S. address. That removes the two things that usually distort a site like this — the need to win a
-      case, and the incentive to keep you paying.
-    </p>
-    <p>
-      It also sets a hard limit on what this site should be trusted to know. We are an outside look at a system we do
-      not practise in, which is why every legal claim here is traced to a statute or a published source, and why we
-      would rather say "this depends on your state, ask" than guess.
-    </p>
-    <p>
-      His pastoral work is relevant for a narrower reason, and it is the honest one. Couples rarely get stuck on
-      doctrine; they get stuck on the conversation — how to raise the subject, what it means that the other person
-      flinched, whether refusing means something is wrong. A lawyer can tell you what is enforceable. Only someone who
-      has sat with couples can describe what actually happens in the room. This site keeps those two things clearly
-      separate and says which is which.
-    </p>
+  <section class="section">
+    <div class="prose">
+      <p class="eyebrow">Limits</p>
+      <h2>What PrenupAnswers Is Not</h2>
+      <p>PrenupAnswers is not:</p>
+      <ul class="not-list">
+        {isNotList.map((item) => <li>{item}</li>)}
+      </ul>
+      <p>
+        For advice about your specific circumstances, consult a licensed attorney in the relevant
+        jurisdiction.
+      </p>
 
-    <h2>How we check the facts</h2>
-    <p>
-      Trust is earned by method, not by biography. This is how the information on this site is put together:
-    </p>
-    {
-      researchMethod.map((m) => (
-        <>
-          <h3>{m.title}</h3>
-          <p>{m.detail}</p>
-        </>
-      ))
-    }
+      <h2>The Limits of One Person's Role</h2>
+      <p>
+        Francisco Gomes Alves is not a licensed U.S. attorney. PrenupAnswers therefore does not present his
+        role as legal representation or individualized legal advice. The publication's goal is to make
+        source-based information easier to understand and easier for readers to verify.
+      </p>
+      <p>
+        PrenupAnswers is currently an independent editorial publication and does not claim attorney review
+        of every article.
+      </p>
 
-    <h2>How we're funded</h2>
-    <p>
-      Two ways, and that's it: affiliate partnerships and display advertising. If you click a link to an online prenup
-      service and buy something, we may earn a commission at no extra cost to you. See the full
-      <a href="/disclosure/">affiliate disclosure</a>.
-    </p>
-    <p>
-      <strong>Commission never decides what we recommend.</strong> If a cheaper path is the right path for your
-      situation, that's what the article says — even when it earns us nothing.
-    </p>
-    <p>
-      <strong>And neither does faith.</strong> The author is a pastor, but this site carries no religious
-      recommendations and no religious framing of the decision. It is funded and written as a consumer guide. What
-      you believe about marriage is your business; what a prenup costs is arithmetic.
-    </p>
+      <h2>When You Actually Need a Lawyer</h2>
+      <p>
+        Online services are fine for straightforward situations. But if one partner owns a business, there's a
+        family trust, complex stock comp, real estate across states, or a prior marriage with children
+        involved — talk to a licensed family-law attorney in your state. A few hundred dollars of advice up
+        front is cheap insurance for a document that governs your finances for life. That advice is worth more
+        than anything on this site, and we will say so on any page that would have you thinking otherwise.
+      </p>
+    </div>
+  </section>
 
-    <h2>When you actually need a lawyer</h2>
-    <p>
-      Online services are fine for straightforward situations. But if one partner owns a business, there's a
-      family trust, complex stock comp, real estate across states, or a prior marriage with children involved — talk
-      to a licensed family-law attorney in your state. A few hundred dollars of advice up front is cheap insurance for
-      a document that governs your finances for life. That advice is worth more than anything on this site, and we will
-      say so on any page that would have you thinking otherwise.
-    </p>
+  <section class="section section-alt">
+    <div class="prose">
+      <p class="eyebrow">Verification</p>
+      <h2>Sources You Can Check Yourself</h2>
+      <p>
+        Whenever practical, we link readers to the underlying source so they can examine the information
+        themselves.
+      </p>
+      <p>
+        A few things that follow from that: laws vary by state, legal rules can change over time, and general
+        information is not the same as advice about your circumstances. For anything that affects your own
+        situation, verify the details with a qualified attorney in your jurisdiction before you sign. The
+        full disclaimers live in our <a href="/terms/">Terms of Use</a>.
+      </p>
+    </div>
+  </section>
 
-    <h2>Contact</h2>
-    <p>
-      Questions, corrections, or a source we missed? Email <strong>hello@prenupanswers.com</strong>. Corrections to
-      something factually wrong get fixed — if you report one and it is still wrong in a few weeks, email again.
-    </p>
-  </div>
+  <section class="section">
+    <div class="prose">
+      <p class="eyebrow">How it's funded</p>
+      <h2>Affiliate Transparency</h2>
+      <p>
+        Some links on PrenupAnswers may be affiliate links. If you use an affiliate link, we may receive
+        compensation at no additional cost to you. See the full
+        <a href="/disclosure/">affiliate disclosure</a>.
+      </p>
+      <p>
+        <strong>Commission never decides what we recommend.</strong> If a cheaper path is the right path for
+        your situation, that's what the article says — even when it earns us nothing.
+      </p>
+      <p>
+        <strong>And neither does faith.</strong> The author is a pastor, but this site carries no religious
+        recommendations and no religious framing of the decision. What you believe about marriage is your
+        business; what a prenup costs is arithmetic.
+      </p>
+
+      <h2>Found Something That Needs Correction?</h2>
+      <p>
+        If you believe we've published inaccurate, outdated, or incomplete information, we'd like to know.
+        Email <a href="mailto:hello@prenupanswers.com"><strong>hello@prenupanswers.com</strong></a>.
+        Corrections to something factually wrong get fixed — if you report one and it is still wrong in a few
+        weeks, email again.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container read" style="text-align:center;">
+      <p class="eyebrow">Start here</p>
+      <h2 style="margin-top:.4rem;">Start With Your Question</h2>
+      <p>
+        You do not need to understand the whole subject — you need the answer to the question in front of you.
+        The guides are organized around the questions couples actually ask.
+      </p>
+      <p style="margin-top:1.4rem;">
+        <a class="btn btn-navy" href="/guides/">Explore the Prenup Guides</a>
+      </p>
+      <p style="font-size:.92rem; color:var(--muted);">
+        Or check <a href="/states/">your state's rules</a> and estimate
+        <a href="/tools/prenup-cost-calculator/">what it costs</a>. Questions about this site? Read
+        <a href="/terms/">Terms of Use</a> or <a href="/privacy/">Privacy Policy</a>.
+      </p>
+    </div>
+  </section>
 </Base>
