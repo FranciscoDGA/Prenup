@@ -3,6 +3,8 @@ title: "What Happens to Debt When You Get Married?"
 description: "Marriage doesn't merge your debts — mostly. What actually changes about debt, student loans, and credit after the wedding — and what doesn't."
 keyword: what happens to debt when you get married
 cluster: Basics
+image: /images/guides/what-happens-to-debt-when-you-get-married.jpg
+imageAlt: "Couple reviewing household bills with a calculator and laptop at the kitchen table"
 published: 2026-09-30
 tldr: "Marriage itself changes nothing about who owes what: debt brought into the marriage stays separate, joint debt is shared by both spouses, and solo debt taken on after the wedding depends on your state's system — community property in nine states makes most marital debt shared. The practical layer (household budget, shared goals) works differently from the legal one."
 faq:

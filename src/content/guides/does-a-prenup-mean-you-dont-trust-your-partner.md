@@ -3,6 +3,8 @@ title: "Does a Prenup Mean You Don't Trust Your Partner? (The Honest Answer)"
 description: "The fear behind every prenup conversation: 'if you trusted me, you wouldn't need this.' Why the opposite is true — and what real distrust actually looks like in a marriage."
 keyword: does a prenup mean you don't trust your partner
 cluster: Fear
+image: /images/guides/does-a-prenup-mean-you-dont-trust-your-partner.jpg
+imageAlt: "Couple standing close outdoors with arms linked and hands held"
 published: 2026-09-26
 tldr: "No. A prenup requires more financial transparency than marriage alone — full disclosure of every account, in writing, signed voluntarily. Trust in a person and certainty about circumstances are different: you can trust your partner completely and still not trust layoffs, illness, in-laws, or exhaustion. What destroys marriages isn't the document; it's the money nobody said out loud."
 faq:

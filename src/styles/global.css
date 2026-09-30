@@ -146,6 +146,11 @@ h3 { font-size: 1.25rem; margin: 1.8rem 0 .5rem; }
 .article-head h1 { color: #fff; max-width: 20ch; }
 .article-head .meta { font-size: .88rem; color: #93a3b6; }
 .article-head .crumbs a { color: var(--gold); text-decoration: none; }
+.guide-hero { margin: 1.6rem 0 0; }
+.guide-hero img {
+  width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover;
+  display: block; border-radius: 10px; border: 1px solid rgba(255,255,255,.12);
+}
 .prose { max-width: var(--read); margin: 0 auto; padding: 2.2rem 1.25rem 3rem; }
 .prose > p, .prose > ul, .prose > ol { font-size: 1.06rem; }
 .prose > p { margin: 1.05rem 0; }

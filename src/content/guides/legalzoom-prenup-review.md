@@ -3,6 +3,8 @@ title: "LegalZoom Prenup Review (2026): What You Actually Get"
 description: "LegalZoom's prenup is powered by an exclusive HelloPrenup partnership — plus an attorney-assisted tier in 12 states. What that means for your price, your options, and when to go direct instead."
 keyword: LegalZoom prenup review
 cluster: Compare
+image: /images/guides/legalzoom-prenup-review.jpg
+imageAlt: "Woman in a white blouse taking notes at a desk beside her laptop"
 published: 2026-09-29
 tldr: "LegalZoom doesn't really sell its own prenup — it's the exclusive storefront that routes couples to HelloPrenup at the same $599, plus an attorney-assisted tier (~$1,499, notarization included) in about 12 states through its law firm. Existing LegalZoom customers get convenience; everyone else usually gets the same product for less by going direct. Complex estates still need a real family-law attorney."
 faq:

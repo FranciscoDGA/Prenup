@@ -3,6 +3,8 @@ title: "Can a Prenup Protect an Inheritance? (Even One You Haven't Received Yet)
 description: "Inheritance is separate property by default — until it isn't. How a prenup keeps what you inherit (and what you'll inherit someday) out of the marital pot."
 keyword: can a prenup protect an inheritance
 cluster: Family
+image: /images/guides/can-a-prenup-protect-an-inheritance.jpg
+imageAlt: "Older woman sorting through black-and-white family photographs at a table"
 published: 2026-09-30
 tldr: "In most states an inheritance is already your separate property — but that protection is fragile: one joint account, one mortgage payment, and commingling can make it divisible, with you bearing the burden of tracing every dollar. A prenup converts the default rule into a contract that survives commingling, covers income and appreciation, and can protect inheritances you haven't received yet."
 faq:

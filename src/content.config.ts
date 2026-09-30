@@ -9,6 +9,8 @@ const guides = defineCollection({
     description: z.string(),
     keyword: z.string(),
     cluster: z.string(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
     published: z.coerce.date(),
     updated: z.coerce.date().optional(),
     author: z.string().default('Francisco Gomes Alves'),

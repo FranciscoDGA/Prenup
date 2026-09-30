@@ -3,6 +3,8 @@ title: "How to Bring Up a Prenup Without Sounding Like You're Planning to Divorc
 description: "The prenup conversation you're dreading takes four sentences. Exact scripts for every situation, what to do if it goes badly, and why the scary part is never the document."
 keyword: how to bring up a prenup
 cluster: Fear
+image: /images/guides/how-to-bring-up-a-prenup.jpg
+imageAlt: "Couple having a serious conversation over coffee at the kitchen table"
 published: 2026-09-24
 tldr: "Bring it up 3–6 months before the wedding, in a calm moment, framed as 'doing this marriage right' — not as 'in case it fails.' Lead with a shared tool, not a document you already signed. Four copy-paste scripts below cover every situation: you earn more, they earn more, kids from before, and the universal opener."
 faq:

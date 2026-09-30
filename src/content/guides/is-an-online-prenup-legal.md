@@ -3,6 +3,8 @@ title: "Is an Online Prenup Legally Valid? The 5 Things Courts Actually Check"
 description: "You're not paying for where the document came from — you're paying for how it was executed. The 5 factors courts examine, when DIY fails, and when you truly need a lawyer."
 keyword: is an online prenup legally valid
 cluster: Validity
+image: /images/guides/is-an-online-prenup-legal.jpg
+imageAlt: "Woman wearing glasses working on a laptop in a cozy bedroom"
 published: 2026-09-29
 tldr: "Courts don't invalidate prenups for being 'online' — they invalidate them for how they were signed: not voluntary, no full disclosure, signed too late, missing your state's formalities, or unconscionable terms. Get those five right and a $700 platform agreement stands like any $5,000 lawyer draft. Electronic signatures have been federally valid since ESIGN (2000)."
 faq:

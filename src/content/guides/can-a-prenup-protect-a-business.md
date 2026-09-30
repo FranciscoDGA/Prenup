@@ -3,6 +3,8 @@ title: "Can a Prenup Protect a Business? What Actually Works"
 description: "Yes — but only if your prenup handles growth, valuation, and commingling. What actually protects your business in a divorce — and what quietly doesn't."
 keyword: can a prenup protect a business
 cluster: Risk
+image: /images/guides/can-a-prenup-protect-a-business.jpg
+imageAlt: "Small-business owner packing orders and filling out paperwork beside a laptop"
 published: 2026-09-30
 tldr: "Yes — a prenup can keep your business yours, but only if it specifies classification, future growth, valuation method, and contributions. A generic 'the business is separate' clause, commingling of funds, or signing under time pressure are how protection quietly fails."
 faq:

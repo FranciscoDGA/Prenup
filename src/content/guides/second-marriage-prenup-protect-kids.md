@@ -3,6 +3,8 @@ title: "Second Marriage? How to Protect Your Kids With a Prenup — Without Pois
 description: "For parents remarrying: how a prenup keeps your children's inheritance safe from elective-share claims, protects your new spouse from ambiguity, and gets said without anyone feeling accused."
 keyword: prenup for second marriage
 cluster: Family
+image: /images/guides/second-marriage-prenup-protect-kids.jpg
+imageAlt: "Family of five relaxing together on a blanket in a sunlit meadow"
 published: 2026-09-28
 tldr: "A second marriage puts three sets of interests on one table: your kids, your fiancé, and the state's default rules — which often let a surviving spouse claim one-third to one-half of your estate no matter what your will says. A prenup (plus wills and beneficiary forms) lets you settle it calmly now, so the fight never happens later between people who love you."
 faq:

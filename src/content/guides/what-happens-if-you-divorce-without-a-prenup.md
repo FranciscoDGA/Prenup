@@ -3,6 +3,8 @@ title: "What Happens If You Divorce Without a Prenup?"
 description: "No prenup means your state decides how assets, debts, and support get split — not you. Here's exactly what happens, step by step, and what couples lose by not choosing."
 keyword: what happens if you divorce without a prenup
 cluster: Risk
+image: /images/guides/what-happens-if-you-divorce-without-a-prenup.jpg
+imageAlt: "Stressed couple reviewing financial documents at a kitchen table"
 published: 2026-09-23
 tldr: "Without a prenup, your state's default divorce law takes over: property gets split by community-property or equitable-distribution rules, a judge decides what's 'fair,' and you pay $15,000–$30,000+ per side to argue about it. You don't lose control because you divorce — you lose it because you never chose the terms."
 faq:

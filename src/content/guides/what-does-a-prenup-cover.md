@@ -3,6 +3,8 @@ title: "What Does a Prenup Cover? (and What It Can't Touch)"
 description: "A prenup can lock down property, debts, business, and support terms — but custody, child support, and anything unconscionable are off-limits. What's actually enforceable in the US."
 keyword: what does a prenup cover
 cluster: Basics
+image: /images/guides/what-does-a-prenup-cover.jpg
+imageAlt: "Hand signing a formal contract with a pen on a wooden desk"
 published: 2026-09-27
 tldr: "Prenups cover money: property division, debts, business interests, inheritance treatment, and (within state limits) spousal support. They can't touch child custody or child support, can't contain illegal or unconscionable terms, and can't be sprung on someone at the last minute. Everything else is negotiable."
 faq:

@@ -3,6 +3,8 @@ title: "The Prenup Checklist: 17 Things to Include Before You Sign"
 description: "A complete prenuptial agreement checklist — financial disclosure, separate property, debts, support, the house, business clauses, and the execution details that keep it enforceable."
 keyword: prenup checklist
 cluster: Checklist
+image: /images/guides/prenup-checklist.jpg
+imageAlt: "Hand writing a checklist in an open notebook"
 published: 2026-09-25
 tldr: "A valid, durable prenup needs three layers: (1) full financial disclosure from both of you, (2) clear terms on property, debt, support, and the big assets, and (3) correct execution — signed before the wedding, voluntarily, with counsel recommended. Miss layer one and a court can throw the whole thing out."
 faq:

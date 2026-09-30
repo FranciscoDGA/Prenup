@@ -3,6 +3,8 @@ title: "Lawyer vs Online Prenup: The Honest Comparison (2026)"
 description: "What a real attorney costs, what online services actually deliver, and the 7-question test that tells you which one your finances need — without the marketing spin from either side."
 keyword: lawyer vs online prenup
 cluster: Compare
+image: /images/guides/lawyer-vs-online-prenup.jpg
+imageAlt: "Two attorneys discussing documents with a client across a desk"
 published: 2026-09-29
 tldr: "For simple finances (both W-2 earners, one house, no business, no kids from before), an online prenup at $599–$649 delivers the same enforceable document as a $3,000–$10,000 attorney job — the law checks process, not price. The moment a business, multiple properties, big inequality, or support waivers enter, pay for lawyers. The line between the two is sharper than either side's marketing admits."
 faq:
