@@ -83,6 +83,6 @@ That's not a compromise between the two options. It's what both options look lik
 
 If your finances fit the seven yeses, a lawyer's primary contribution to your prenup would be a larger invoice. If they don't, an online service's primary contribution would be a false sense of completion. **Know which sentence describes you — then stop shopping and start signing.**
 
-**Next:** check your state's price range on the [cost calculator](/tools/prenup-cost-calculator/) (it shows what the attorney path would cost you locally), then pick your platform with [First vs HelloPrenup](/guides/first-vs-helloprenup/) — or skip straight to the [17-point checklist](/guides/prenup-checklist/) and start the disclosures tonight.
+**Next:** check your state's price range on the [cost calculator](/tools/prenup-cost-calculator/) (it shows what the attorney path would cost you locally), then pick your platform with [First vs HelloPrenup](/guides/first-vs-helloprenup/) — both let you [start free](https://www.thisfirst.com/?via=francisco) ([HelloPrenup's free start is here](https://helloprenup.com/?via=francisco)) — or skip straight to the [17-point checklist](/guides/prenup-checklist/) and start the disclosures tonight.
 
 <sub><em>Transparency: we earn a commission if you sign up through our links — it never changes a verdict, and you pay the same either way. See our <a href="/disclosure/">affiliate disclosure</a>.</em></sub>

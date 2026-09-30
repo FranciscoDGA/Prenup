@@ -83,3 +83,4 @@ Use this checklist in order. Three layers: **disclosure → terms → execution.
 2. Agree on the big four: house, business, support, inheritance.
 3. [Check your state's cost range](/tools/prenup-cost-calculator/) — five seconds, no email.
 4. Start 3–6 months before the wedding. The full cost breakdown is in [How Much Does a Prenup Cost?](/guides/how-much-does-a-prenup-cost/).
+5. Already inside that window? Follow [Prenup 30 Days Before the Wedding](/guides/prenup-30-days-before-wedding/) — what's still possible, what isn't. And for the clause-by-clause "what can this thing actually decide," see [What Does a Prenup Cover?](/guides/what-does-a-prenup-cover/).

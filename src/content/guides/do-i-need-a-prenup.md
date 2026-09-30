@@ -94,3 +94,5 @@ The couples who handle this well treat it as logistics, not accusation. Three li
 Then do the boring part together: figure out what it would actually cost. Our [cost calculator](/tools/prenup-cost-calculator/) takes your state and gives you a real range in five seconds — no email, no "book a consultation" trap.
 
 And if you're still weighing the investment, run the numbers in [Is a Prenup Worth It?](/guides/is-a-prenup-worth-it/) — spoiler: a contested divorce costs about twenty times what the prenup does.
+
+**Next:** want the other side of the same coin first? [What Happens If You Divorce Without a Prenup](/guides/what-happens-if-you-divorce-without-a-prenup/) shows exactly what your state decides for you — and check your own state's rules and price band on the [state pages](/states/).

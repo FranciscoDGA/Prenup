@@ -52,7 +52,7 @@ High cost-of-living states price accordingly. Ranges are for a **standard, non-c
 | Indiana | $1,500 – $5,500 | Wisconsin | $1,500 – $6,500 |
 | Alabama | $1,000 – $4,500 | Kansas | $1,200 – $5,000 |
 
-**Don't see your state?** The [cost calculator](/tools/prenup-cost-calculator/) has all 50 states plus D.C. — pick yours, pick your path, get the range.
+**Don't see your state?** The [cost calculator](/tools/prenup-cost-calculator/) has all 50 states plus D.C. — pick yours, pick your path, get the range. Prefer the full state-by-state picture (regime, filing notes, attorney bands)? Browse all 51 [state pages](/states/).
 
 ## The four line items that blow up the bill
 

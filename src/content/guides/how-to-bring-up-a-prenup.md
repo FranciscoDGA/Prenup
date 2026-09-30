@@ -109,3 +109,5 @@ You stop being the partner who "wanted a prenup" and become the partner who *fig
 4. "I'd rather talk about it now, while we still like each other."
 
 Say one of them this week. The twelve seconds are the whole price — and everything after them gets easier.
+
+**Next:** if the conversation already went badly and they're digging in, [Your Partner Won't Sign the Prenup: What Now?](/guides/partner-refuses-to-sign-prenup/) is the recovery playbook. Before the next attempt, run your state's numbers on the [cost calculator](/tools/prenup-cost-calculator/) — knowing it's a $600–$1,500 conversation instead of a $10,000 one changes how the whole talk feels. And if the fear underneath is the trust question itself, [Does a Prenup Mean You Don't Trust Your Partner?](/guides/does-a-prenup-mean-you-dont-trust-your-partner/) answers it head-on.

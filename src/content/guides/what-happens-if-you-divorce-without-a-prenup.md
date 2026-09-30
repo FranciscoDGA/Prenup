@@ -46,6 +46,8 @@ This is where "we'll work it out ourselves" meets reality. Two systems:
 
 Here, a judge divides marital property **fairly** — which legally does *not* have to mean equally. Courts weigh length of marriage, each spouse's earning capacity, contributions (including homemaking), and future needs.
 
+Unsure which system you're under? Every state's regime, notes, and attorney price band lives on our [state pages](/states/) — find yours in one click.
+
 Sounds reasonable until you remember: "fair" is one person's opinion, formed in a courtroom, after hearing two lawyers argue. One judge's fair is another's shock.
 
 ## Step 4: Debts get divided too

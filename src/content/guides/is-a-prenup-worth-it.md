@@ -76,4 +76,4 @@ If the answer is obvious and mutual, you may not need much. If the answer makes 
 
 It's the cheapest fight you'll ever avoid.
 
-**Next step:** pull your state's real price range with the [prenup cost calculator](/tools/prenup-cost-calculator/) — five seconds, no email. Already know the number? Then read [How Much Does a Prenup Cost?](/guides/how-much-does-a-prenup-cost/) for the line items that surprise people.
+**Next step:** pull your state's real price range with the [prenup cost calculator](/tools/prenup-cost-calculator/) — five seconds, no email. Already know the number? Then read [How Much Does a Prenup Cost?](/guides/how-much-does-a-prenup-cost/) for the line items that surprise people. Still not sure a prenup applies to *your* situation at all? [Do I Need a Prenup?](/guides/do-i-need-a-prenup/) is the 60-second test.

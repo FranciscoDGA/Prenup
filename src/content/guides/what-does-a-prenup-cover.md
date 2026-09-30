@@ -100,3 +100,5 @@ Terms requiring a spouse to commit a crime, break a court order, or remain depen
 **A prenup can decide almost everything about money — and nothing about your kids, nothing obtained by force, and nothing you hid.**
 
 Everything in the "can decide" list is worth deciding while you still agree on everything. Start with your state's rules and price range — the [cost calculator](/tools/prenup-cost-calculator/) takes five seconds — then run the [17-point checklist](/guides/prenup-checklist/) to make sure nothing's missing.
+
+**Next:** second marriage or blended family? The clauses that matter most change — [Second Marriage? How to Protect Your Kids With a Prenup](/guides/second-marriage-prenup-protect-kids/) covers inheritance, life insurance, and the house.

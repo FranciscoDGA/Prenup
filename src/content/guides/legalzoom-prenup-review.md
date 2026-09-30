@@ -75,6 +75,6 @@ A licensed co-counsel attorney is involved from the start — not reviewing a fi
 
 LegalZoom's prenup is a trustworthy doorway to HelloPrenup's $599 product — plus a competitive $1,499 attorney tier for 12 lucky states — and the right move is usually to walk through the door to the *other* side, unless the brand is what you're paying for.
 
-**Next:** see [First vs HelloPrenup](/guides/first-vs-helloprenup/) for the direct-platform matchup, or check your state's attorney price band on the [cost calculator](/tools/prenup-cost-calculator/) before choosing a tier.
+**Next:** see [First vs HelloPrenup](/guides/first-vs-helloprenup/) for the direct-platform matchup — [First](https://www.thisfirst.com/?via=francisco) is the other flat-fee contender worth pricing — or check your state's attorney price band on the [cost calculator](/tools/prenup-cost-calculator/) before choosing a tier.
 
 <sub><em>Transparency: we earn a commission if you sign up through some links on this page — never through a verdict. LegalZoom prices were verified October 2026 and state availability changes; confirm at checkout. See our <a href="/disclosure/">affiliate disclosure</a>.</em></sub>
