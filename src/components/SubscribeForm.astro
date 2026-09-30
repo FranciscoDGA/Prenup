@@ -8,14 +8,15 @@ interface Props {
 }
 const { variant = 'block', cta = 'Subscribe free', source = '' } = Astro.props;
 const configured = isSubscribedConfigured();
+const next = redirectToFor(source);
 ---
 <form
   class={`sub-form sub-form--${variant}`}
   action={configured ? kitFormAction : ''}
   method={configured ? 'post' : 'get'}
+  data-next={next}
   data-source={source}
 >
-  <input type="hidden" name="next" value={redirectToFor(source)} />
   <div class="sub-fields">
     {variant === 'block' && (
       <input type="text" name="first_name" placeholder="First name (optional)" aria-label="First name" autocomplete="given-name" />
@@ -28,3 +29,39 @@ const configured = isSubscribedConfigured();
     <a href="/privacy/">privacy policy</a>.
   </p>
 </form>
+
+<script>
+  document.addEventListener('submit', (event) => {
+    const form = event.target as HTMLFormElement;
+    if (!form.matches('.sub-form') || form.method !== 'post') return;
+    event.preventDefault();
+
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    if (button) button.disabled = true;
+
+    const body = new URLSearchParams();
+    new FormData(form).forEach((value, key) => {
+      if (typeof value === 'string') body.append(key, value);
+    });
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+      redirect: 'manual',
+      mode: 'cors',
+    })
+      .then((res) => {
+        if (res.type === 'opaqueredirect' || res.ok) {
+          window.location.href = form.dataset.next || '/free/';
+        } else {
+          throw new Error(`Kit responded ${res.status}`);
+        }
+      })
+      .catch(() => {
+        if (button) button.disabled = false;
+        const fine = form.querySelector<HTMLElement>('.sub-fine');
+        if (fine) fine.textContent = 'Something went wrong — please try again.';
+      });
+  });
+</script>
