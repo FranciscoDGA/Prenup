@@ -1,5 +1,5 @@
 ---
-import { subscribe, isSubscribedConfigured } from '../data/subscribe';
+import { kitFormActionFor, isSubscribedConfigured } from '../data/subscribe';
 
 interface Props {
   variant?: 'block' | 'inline';
@@ -8,11 +8,12 @@ interface Props {
 }
 const { variant = 'block', cta = 'Subscribe free', source = '' } = Astro.props;
 const configured = isSubscribedConfigured();
+const action = kitFormActionFor(source);
 ---
 <form
   class={`sub-form sub-form--${variant}`}
-  action={configured ? subscribe.kitFormAction : ''}
-  method={configured ? 'post' : 'get'}
+  action={configured && action ? action : ''}
+  method={configured && action ? 'post' : 'get'}
   data-source={source}
 >
   <div class="sub-fields">
