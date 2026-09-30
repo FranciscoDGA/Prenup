@@ -20,7 +20,7 @@ faq:
 
 Let's drop the romance for ninety seconds and talk about this like the purchase it is.
 
-You're about to spend an average of **$33,000 on a wedding**. Someone in the comments will say prenups are unromantic. Meanwhile the prenup costs less than the floral arrangements — and unlike the floral arrangements, it still matters in ten years.
+You're about to spend an average of **$34,000 on a wedding** (The Knot 2026 study, 10,474 US couples). Someone in the comments will say prenups are unromantic. Meanwhile the prenup costs less than the floral arrangements — and unlike the floral arrangements, it still matters in ten years.
 
 Here's the actual math.
 

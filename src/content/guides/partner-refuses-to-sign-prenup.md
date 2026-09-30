@@ -3,7 +3,7 @@ title: "Your Partner Won't Sign the Prenup: What Now?"
 description: "You asked and they said no — or worse, they went quiet. How to find out what the refusal is actually about, the exact words to try once more, and what to do if the answer never changes."
 keyword: what if partner refuses to sign prenup
 cluster: Fear
-published: 2026-10-02
+published: 2026-09-29
 tldr: "A 'no' to a prenup is almost never about the document — it's about what they think the document means (an insult, a plan B, a power grab). Diagnose the real objection first with three neutral questions, retry once with the shared-tool frame, bring in a neutral third party if needed. If money conversations are permanently forbidden, that refusal itself is the answer you needed before the wedding, not after."
 faq:
   - q: "Is a refusal to sign a prenup a red flag?"

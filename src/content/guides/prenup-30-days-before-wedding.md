@@ -3,7 +3,7 @@ title: "Prenup 30 Days Before the Wedding: What's Still Possible (and What Isn't
 description: "Engaged, wedding looming, just realized you need a prenup? A realistic 30-day plan — what's doable fast, what must wait for a postnup, and the pressure mistake that gets agreements thrown out."
 keyword: prenup last minute before wedding
 cluster: Risk
-published: 2026-10-04
+published: 2026-09-29
 tldr: "Thirty days is tight but workable IF finances are straightforward, you start this week, and your partner is willing — courts treat last-minute signing as the second-leading cause of tossed prenups, so speed must come from process, not pressure. Complex estates: sign the simple core now, schedule the hard clauses as a postnup. Never present the document in the final week."
 faq:
   - q: "Can I get a prenup done in 30 days?"

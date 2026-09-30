@@ -3,7 +3,7 @@ title: "First vs HelloPrenup: Which Online Prenup Service Is Right for You? (202
 description: "Both land at $649, both are built for couples, and both include state-specific agreements. The differences — attorney tiers, notarization, payment plans — decide which one fits your situation."
 keyword: First vs HelloPrenup
 cluster: Compare
-published: 2026-10-08
+published: 2026-09-29
 tldr: "Effective base price is a tie: First is $649 with notarization included; HelloPrenup is $599 + $50 notarization = $649. The real separation is the attorney tier — HelloPrenup's lawyer package runs about $2,000 per couple vs. First's $3,500 — plus HelloPrenup's payment plans and its required-representation states (CA, AL, NY, WA support waivers; SC, WV agreements). Budget couples: either. Attorneys: HelloPrenup."
 faq:
   - q: "Is First or HelloPrenup cheaper?"
