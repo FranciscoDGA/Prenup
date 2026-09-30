@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import FAQ from '../../components/FAQ.astro';
 import CTA from '../../components/CTA.astro';
 import AuthorBox from '../../components/AuthorBox.astro';
+import SitContext from '../../components/SitContext.astro';
 import { AFF } from '../../data/affiliate';
 import { author } from '../../data/author';
 
@@ -75,6 +76,8 @@ const articleLd = {
     )}
     <Content />
   </article>
+
+  {post.data.primarySituation && <SitContext situationId={post.data.primarySituation} />}
 
   <div class="read" style="padding:0 1.25rem;">
     <CTA

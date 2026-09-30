@@ -1,5 +1,6 @@
 ---
 title: "Can a Prenup Protect a Business? What Actually Works"
+primarySituation: business-owner
 description: "Yes — but only if your prenup handles growth, valuation, and commingling. What actually protects your business in a divorce — and what quietly doesn't."
 keyword: can a prenup protect a business
 cluster: Risk

@@ -1,5 +1,6 @@
 ---
 title: "Does a Prenup Mean You Don't Trust Your Partner? (The Honest Answer)"
+primarySituation: partner-wants-prenup
 description: "The fear behind every prenup conversation: 'if you trusted me, you wouldn't need this.' Why the opposite is true — and what real distrust actually looks like in a marriage."
 keyword: does a prenup mean you don't trust your partner
 cluster: Fear

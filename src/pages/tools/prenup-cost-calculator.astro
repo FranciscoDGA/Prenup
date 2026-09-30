@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import FAQ from '../../components/FAQ.astro';
+import BriefCta from '../../components/BriefCta.astro';
 import { AFF } from '../../data/affiliate';
 
 const faqItems = [
@@ -83,6 +84,28 @@ const jsonLd = {
             >See flat-fee pricing →</a
           >
         </div>
+
+        <div class="next-steps" id="nextSteps" hidden>
+          <h2>Your next step depends on your situation.</h2>
+          <p class="next-intro">Want to understand what affects your estimate? Start here — no email needed.</p>
+          <div class="sit-grid">
+            <a class="card sit-card" id="nextLearn" href="/guides/how-much-does-a-prenup-cost/">
+              <span class="tag">Learn</span>
+              <h3 id="nextLearnTitle">How Much Does a Prenup Cost?</h3>
+              <p id="nextLearnText">What really moves the number — state, path, and complexity.</p>
+            </a>
+            <a class="card sit-card" id="nextState" href="/states/">
+              <span class="tag">Check your state</span>
+              <h3>Prenup Laws by State</h3>
+              <p id="nextStateText">Defaults, costs, and signing rules for every state — in one place.</p>
+            </a>
+            <a class="card sit-card" href="#brief">
+              <span class="tag">Keep learning</span>
+              <h3>The Prenup Brief</h3>
+              <p>One honest email a week — practical questions and state-law updates.</p>
+            </a>
+          </div>
+        </div>
       </div>
 
       <p class="notice">
@@ -116,12 +139,16 @@ const jsonLd = {
     </div>
   </section>
 
+  <BriefCta source="calculator" id="brief" />
+
   <FAQ items={faqItems} title="Calculator FAQ" />
 </Base>
 
 <script>
   import { STATES } from '../../data/states';
+  import { STATE_PAGES } from '../../data/statePages';
   import { AFF } from '../../data/affiliate';
+  import { track } from '../../scripts/analytics';
 
   const stateSel = document.getElementById('state') as HTMLSelectElement;
   const pathSel = document.getElementById('path') as HTMLSelectElement;
@@ -131,6 +158,12 @@ const jsonLd = {
   const amountEl = document.getElementById('amount') as HTMLElement;
   const noteEl = document.getElementById('resultNote') as HTMLElement;
   const ctaEl = document.getElementById('resultCta') as HTMLAnchorElement;
+  const nextSteps = document.getElementById('nextSteps') as HTMLElement;
+  const nextLearn = document.getElementById('nextLearn') as HTMLAnchorElement;
+  const nextLearnTitle = document.getElementById('nextLearnTitle') as HTMLElement;
+  const nextLearnText = document.getElementById('nextLearnText') as HTMLElement;
+  const nextState = document.getElementById('nextState') as HTMLAnchorElement;
+  const nextStateText = document.getElementById('nextStateText') as HTMLElement;
 
   const sorted = [...STATES].sort((a, b) => a.name.localeCompare(b.name));
   for (const s of sorted) {
@@ -144,6 +177,14 @@ const jsonLd = {
   const money = (n: number) => '$' + n.toLocaleString('en-US');
 
   const CX: Record<string, number> = { simple: 0.75, standard: 1, complex: 1.75 };
+
+  let started = false;
+  const noteStart = () => {
+    if (started) return;
+    started = true;
+    track('calculator_started');
+  };
+  for (const sel of [stateSel, pathSel, cxSel]) sel.addEventListener('change', noteStart);
 
   const PATH_NOTES: Record<string, string> = {
     online:
@@ -185,9 +226,26 @@ const jsonLd = {
     ctaEl.textContent = pathSel.value === 'attorney' ? 'Compare online pricing anyway →' : 'See flat-fee pricing →';
     ctaEl.href = AFF.helloPrenup;
 
+    const page = STATE_PAGES.find((p) => p.abbr === state.abbr);
+    if (page) {
+      nextState.href = `/states/${page.slug}/`;
+      nextStateText.textContent = `${page.name} — default rules, costs, and signing requirements in one place.`;
+    }
+    const complex = cxSel.value === 'complex';
+    nextLearn.href = complex ? '/guides/can-a-prenup-protect-a-business/' : '/guides/how-much-does-a-prenup-cost/';
+    nextLearnTitle.textContent = complex ? 'Can a Prenup Protect a Business?' : 'How Much Does a Prenup Cost?';
+    nextLearnText.textContent = complex
+      ? 'Growth, valuation, and commingling — what actually protects the business.'
+      : 'What really moves the number — state, path, and complexity.';
+
     result.classList.add('show');
+    nextSteps.hidden = false;
     result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    track('calculator_completed', { state: state.abbr });
   }
 
-  btn.addEventListener('click', calculate);
+  btn.addEventListener('click', () => {
+    noteStart();
+    calculate();
+  });
 </script>

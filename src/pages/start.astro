@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import SituationSelector from '../components/SituationSelector.astro';
+import BriefCta from '../components/BriefCta.astro';
+import { SITUATIONS } from '../data/situations';
+
+const description =
+  "Pick the question that sounds most like yours — get one guide to start, one to go deeper on, and one useful tool. No email, no login.";
+---
+<Base title={`Start Here: What's Your Situation? — PrenupAnswers`} description={description}>
+  <header class="article-head">
+    <div class="container">
+      <p class="crumbs"><a href="/">Home</a> / Start Here</p>
+      <h1>Start here</h1>
+      <p class="meta">Answer one question — leave with three useful resources. No email, no login.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <SituationSelector mode="anchor" source="start" />
+      <p class="sit-after">
+        Each path gives you a guide to read, something to go deeper on, and one useful tool — nothing to sign up for.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="result-heading">
+    <div class="container">
+      <p class="eyebrow">Your starting point</p>
+      <h2 id="result-heading">Here's a good place to start.</h2>
+      <p class="sit-sub">Based on what you selected, these resources may help you understand the issue.</p>
+      <p class="sit-hint" id="sitHint">Pick a question above — your starting point will appear right here.</p>
+
+      {SITUATIONS.map((s) => (
+        <div class="sit-result" id={s.id} data-result-id={s.id}>
+          <h3>{s.title}</h3>
+          <div class="sit-grid">
+            {[s.primary, s.secondary, s.tool].map((rec) => (
+              <a class="card sit-card" href={rec.href} data-situation-id={s.id}>
+                <span class="tag">{rec.label}</span>
+                <h4>{rec.title}</h4>
+                <p>{rec.description}</p>
+              </a>
+            ))}
+          </div>
+          <p class="sit-state">
+            <a href="/states/" data-state-link data-state-label="Check your state's prenup laws →">
+              Check your state's prenup laws →
+            </a>
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <BriefCta source="start" id="brief" />
+</Base>
+
+<script>
+  import { track } from '../scripts/analytics';
+  import { SITUATION_IDS } from '../data/situations';
+  import { STATE_PAGES } from '../data/statePages';
+
+  const ids: string[] = SITUATION_IDS;
+  const seen = { selected: new Set<string>(), result: new Set<string>(), click: new Set<string>() };
+
+  const apply = () => {
+    const id = location.hash.replace('#', '');
+    if (!ids.includes(id)) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    if (!seen.selected.has(id)) {
+      seen.selected.add(id);
+      track('situation_selected', { situation_id: id });
+    }
+    if (!seen.result.has(id)) {
+      seen.result.add(id);
+      track('situation_result_view', { situation_id: id });
+    }
+    el.setAttribute('tabindex', '-1');
+    el.focus({ preventScroll: true });
+  };
+
+  window.addEventListener('hashchange', apply);
+  window.addEventListener('DOMContentLoaded', apply);
+  apply();
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target instanceof Element ? target.closest('.sit-result a') : null;
+    if (!link) return;
+    const box = link.closest('.sit-result');
+    const id = box instanceof HTMLElement ? box.dataset.resultId || '' : '';
+    const key = id + '|' + (link.getAttribute('href') || '');
+    if (seen.click.has(key)) return;
+    seen.click.add(key);
+    track('situation_resource_click', { situation_id: id, target: link.getAttribute('href') || '' });
+  });
+
+  const params = new URLSearchParams(location.search);
+  const requested = (params.get('state') || '').toLowerCase();
+  const match = STATE_PAGES.find((p) => p.abbr.toLowerCase() === requested || p.slug === requested);
+  if (match) {
+    document.querySelectorAll('[data-state-link]').forEach((link) => {
+      link.setAttribute('href', `/states/${match.slug}/`);
+      link.textContent = `See ${match.name}'s prenup laws →`;
+    });
+  }
+</script>

@@ -1,5 +1,6 @@
 ---
 title: "Do I Need a Prenup? The Brutally Honest 60-Second Test"
+primarySituation: getting-married
 description: "Six questions that settle whether you actually need a prenuptial agreement — plus the four situations where the answer is almost always yes. No guilt, no legalese."
 keyword: do i need a prenup
 cluster: Decision

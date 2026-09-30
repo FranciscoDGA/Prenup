@@ -1,0 +1,20 @@
+---
+import { getSituation } from '../data/situations';
+
+interface Props {
+  situationId: string;
+}
+const situation = getSituation(Astro.props.situationId);
+---
+{situation && (
+  <aside class="sit-context" aria-label="Related situation">
+    <div class="sit-context-box">
+      <p class="eyebrow">Where to next</p>
+      <h2>{situation.articleHeading}</h2>
+      <p>{situation.articleText}</p>
+      <a class="btn btn-navy" href={`/start/#${situation.id}`} data-situation-cta={situation.id}>
+        {situation.articleCta}
+      </a>
+    </div>
+  </aside>
+)}

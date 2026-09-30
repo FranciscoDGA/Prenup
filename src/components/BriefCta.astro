@@ -1,0 +1,21 @@
+---
+import SubscribeForm from './SubscribeForm.astro';
+
+interface Props {
+  source?: string;
+  id?: string;
+}
+const { source = 'brief', id } = Astro.props;
+---
+<section class="section brief-cta" id={id} aria-labelledby={id ? `${id}-heading` : undefined}>
+  <div class="container read" style="text-align:center;">
+    <p class="eyebrow">The Prenup Brief</p>
+    <h2 id={id ? `${id}-heading` : undefined}>Want useful prenup information without having to search for it?</h2>
+    <p style="color:var(--muted);">
+      The Prenup Brief brings practical questions, cost information, and state-law updates to your inbox.
+    </p>
+    <div class="sub-hero">
+      <SubscribeForm variant="block" cta="Send Me the Prenup Brief →" source={source} />
+    </div>
+  </div>
+</section>

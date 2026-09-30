@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import SubscribeForm from '../components/SubscribeForm.astro';
+import SituationSelector from '../components/SituationSelector.astro';
 
 const guides = [
   {
@@ -92,6 +93,15 @@ const guides = [
   </section>
 
   <section class="section">
+    <div class="container">
+      <SituationSelector source="homepage" />
+      <p class="sit-after">
+        Each one gives you a guide to read, something to go deeper on, and one useful tool — no email required.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
     <div class="container read" style="text-align:center;">
       <p class="eyebrow">The tool</p>
       <h2>What will a prenup cost — in your state?</h2>
@@ -105,7 +115,7 @@ const guides = [
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section">
     <div class="container grid grid-2">
       <div>
         <p class="eyebrow">Why this site exists</p>
@@ -138,7 +148,7 @@ const guides = [
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-alt">
     <div class="container read" style="text-align:center;">
       <p class="eyebrow">The newsletter</p>
       <h2>The Prenup Brief</h2>

@@ -1,0 +1,63 @@
+---
+import { SITUATIONS } from '../data/situations';
+
+interface Props {
+  variant?: 'grid' | 'compact';
+  mode?: 'route' | 'anchor';
+  heading?: string;
+  subheading?: string;
+  stateAbbr?: string;
+  source?: string;
+}
+const {
+  variant = 'grid',
+  mode = 'route',
+  heading = "What's your situation?",
+  subheading = 'Start with the question that sounds most like yours.',
+  stateAbbr,
+  source = 'selector',
+} = Astro.props;
+
+const hrefFor = (id: string) => {
+  if (mode === 'anchor') return `#${id}`;
+  const qs = stateAbbr ? `?state=${stateAbbr.toLowerCase()}` : '';
+  return `/start/${qs}#${id}`;
+};
+---
+<div
+  class:list={['sit-block', variant === 'compact' && 'sit-block--compact']}
+  data-sit-source={source}
+  data-sit-viewed="false"
+>
+  <h2>{heading}</h2>
+  <p class="sit-sub">{subheading}</p>
+  <div class="sit-grid">
+    {SITUATIONS.map((s) => (
+      <a class="card sit-card" href={hrefFor(s.id)} data-situation-id={s.id}>
+        <h3>{s.title}</h3>
+        <p>{s.description}</p>
+      </a>
+    ))}
+  </div>
+</div>
+
+<script>
+  import { track } from '../scripts/analytics';
+
+  const blocks = document.querySelectorAll<HTMLElement>('[data-sit-viewed="false"]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const el = entry.target as HTMLElement;
+          el.dataset.sitViewed = 'true';
+          track('situation_selector_view', { source: el.dataset.sitSource || 'selector' });
+          io.unobserve(el);
+        }
+      },
+      { threshold: 0.25 }
+    );
+    blocks.forEach((b) => io.observe(b));
+  }
+</script>

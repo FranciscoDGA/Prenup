@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import FAQ from '../../components/FAQ.astro';
 import CTA from '../../components/CTA.astro';
+import SituationSelector from '../../components/SituationSelector.astro';
 import SourceList from '../../components/SourceList.astro';
 import { STATE_PAGES, REGIME_LABEL } from '../../data/statePages';
 import { getStateLegal } from '../../data/stateLegal';
@@ -348,6 +349,18 @@ const description = `${state.name} prenups: typical cost $${state.low.toLocaleSt
   </div>
 
   <FAQ items={faq} title={`FAQ: prenups in ${state.name}`} />
+
+  <section class="section sit-state-band">
+    <div class="container">
+      <SituationSelector
+        variant="compact"
+        stateAbbr={state.abbr}
+        source="state-page"
+        heading="Looking for information that fits your situation?"
+        subheading={`Start with the question that sounds most like yours — your ${state.name} context comes along.`}
+      />
+    </div>
+  </section>
 
   <section class="section section-alt">
     <div class="prose">

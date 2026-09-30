@@ -1,5 +1,6 @@
 ---
 title: "How Much Does a Prenup Cost in 2026? Real Numbers by State"
+primarySituation: cost
 description: "Online services, attorney hourly rates, and 2026 state-by-state cost ranges for prenuptial agreements — plus the four line items that blow up the bill and how to avoid them."
 keyword: how much does a prenup cost
 cluster: Cost
