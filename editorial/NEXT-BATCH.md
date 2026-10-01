@@ -1,5 +1,7 @@
 # NEXT CONTENT BATCH (FASE 59) + Cadence & Batching (FASE 34–38)
 
+> **STATUS 2026-10-01: ALL 6 PRODUCED & PUBLISHED** (CW-022…027 in CONTENT-INVENTORY; 95 pages, gates green). Next batch per BACKLOG → NEXT tier.
+
 ## Selection principle
 **BUILD DEPTH, NOT VOLUME.** Six articles chosen to complete the thinnest clusters' maps (FASE 6 gaps CRITICAL/IMPORTANT), each with an existing brief and a verified unique value. No volume quotas.
 

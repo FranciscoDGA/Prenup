@@ -69,7 +69,7 @@ No prenup? The formula and the judge decide, and neither knows that you always p
 
 ### Money
 
-Contested divorce runs **$15,000–$30,000+ per person** in the US. Property disputes — who gets the house, what the business is worth, whose retirement grew with marital money — are where those bills come from. Every question a prenup answered in advance is an hour you don't pay $350 for later.
+Contested divorce runs **$15,000–$30,000+ per person** in the US. Property disputes — [who gets the house](/guides/who-keeps-the-house/), what the business is worth, whose retirement grew with marital money — are where those bills come from. Every question a prenup answered in advance is an hour you don't pay $350 for later.
 
 ### Time and outcomes
 
@@ -83,6 +83,6 @@ Not just money. They lose **the choice to define fairness themselves.** The coup
 
 ## It's not too late — but the tool changes
 
-If you're reading this *married*, the instrument is called a **postnuptial agreement**: same core rules as a prenup — written, voluntary, full financial disclosure, signed by both — just executed after the wedding. Harder to do well (courts scrutinize timing and fairness more closely), but absolutely available in most states, and vastly better than defaulting.
+If you're reading this *married*, the instrument is called a **postnuptial agreement**: same core rules as a prenup — written, voluntary, full financial disclosure, signed by both — just executed after the wedding ([here's how the postnup route works](/guides/can-you-get-a-prenup-after-marriage/)). Harder to do well (courts scrutinize timing and fairness more closely), but absolutely available in most states, and vastly better than defaulting.
 
 **First, know your state's defaults and price ranges:** the [cost calculator](/tools/prenup-cost-calculator/) covers all 50 states in five seconds. Then see [Is a Prenup Worth It?](/guides/is-a-prenup-worth-it/) for the math on buying back control.

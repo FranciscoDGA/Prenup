@@ -82,6 +82,7 @@ For straightforward finances, attorney-drafted prenups typically land **$1,500�
 1. **Read the comparison** if you're choosing between routes: [lawyer vs. online](/guides/lawyer-vs-online-prenup/).
 2. **Check your state** — counsel rules and formalities differ: [your state's prenup page](/states/).
 3. **Get your number** before deciding a budget: [the free cost calculator](/tools/prenup-cost-calculator/).
+4. **Booked the consultation?** Bring the right questions: [what to ask a prenup lawyer](/guides/what-should-i-ask-a-prenup-lawyer/).
 
 And if you haven't settled the bigger question first — whether your situation calls for a prenup at all — start there: [Do you need a prenup?](/guides/do-i-need-a-prenup/)
 

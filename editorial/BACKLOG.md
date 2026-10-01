@@ -10,7 +10,7 @@ Priority scale (FASE 54 — reason, not artificial score):
 
 | Queue | Entries | Source |
 |---|---|---|
-| **PRODUCE NOW** | BRIEF-011, 012, 004, 006, 007, 008 (NOW batch) | NEXT-BATCH.md |
+| **PRODUCE NOW** | — (NOW batch produced & published 2026-10-01; next candidates per intelligence: change-after-signing, who-pays) | NEXT-BATCH.md, intelligence/content-gaps.md |
 | **OPTIMIZE NOW** | 3 title-truncation pages (selected; execution gated on measurement baseline) | intelligence/experiments.md |
 | **UPDATE NOW** | 18 guides missing Sources (structural) + 2 review price-freshness | intelligence/refresh-queue.md |
 | **WATCH** | change-after-signing + who-pays (promoted by SERP evidence 10-01 → produce NEXT) · no-assets expansion · all corpus (<30 days, no data) · 2 cannibalization pairs | intelligence/content-gaps.md, FIRST-INTELLIGENCE-REPORT.md |
@@ -19,7 +19,7 @@ Priority scale (FASE 54 — reason, not artificial score):
 
 | Status | Items |
 |---|---|
-| **NOW** (selected batch, `NEXT-BATCH.md`) | BRIEF-011 how-does-a-prenup-work · BRIEF-012 what-should-i-ask-a-prenup-lawyer · BRIEF-004 postnup-after-marriage · BRIEF-006 partner-asks · BRIEF-007 who-keeps-house · BRIEF-008 spouse's-debt |
+| **PRODUCED 2026-10-01** (NOW batch → see CONTENT-INVENTORY CW-022…027) | BRIEF-011 how-does-a-prenup-work ✓ · BRIEF-012 what-should-i-ask-a-prenup-lawyer ✓ · BRIEF-004 postnup-after-marriage ✓ · BRIEF-006 partner-asks ✓ · BRIEF-007 who-keeps-house ✓ · BRIEF-008 spouse's-debt ✓ |
 | **NEXT** (briefed or specified, after batch) | BRIEF-005 not-cover · BRIEF-009 custody · BRIEF-010 find-attorney · #11 red flags · #7 who-pays · #15 business-after-marriage |
 | **LATER** (P3 backlog) | #12 money-talk · #6 change-cancel · #14 retirement · #17 college · #19 student-loans · #8 budget · #9 how-lawyers-bill |
 | **UPDATE** (existing content needs work, not new pages) | Sources sections for 18 guides lacking them (add when each is next updated) · annual price refresh (cost guide, reviews) · first-GSC-data review of the 3 Sprint 5 articles |

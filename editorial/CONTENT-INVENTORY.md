@@ -10,7 +10,7 @@ R1 beginner couple (no legal background, exploring) · R2 planner (organizing th
 R3 pragmatist (money/assets/debt decisions) · R4 pressured partner (asked — or being asked) ·
 R5 business/wealth holder · R6 parent blending families · R7 shopper (comparing routes/products)
 
-## A. Published guides (21)
+## A. Published guides (27)
 
 | ID | URL (/guides/<slug>/) | TITLE | type | cluster | topic | search intent | reader | situation | comm. | state focus | published | updated | status | inbound (editorial) | GSC imp/clk/ctr |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -35,19 +35,19 @@ R5 business/wealth holder · R6 parent blending families · R7 shopper (comparin
 | CW-019 | prenup-checklist | Prenup Checklist | CHECKLIST | Checklist | preparation | informational | R2 | — | low | generic | 2026-09-25 | — | PUBLISHED | index, states | — |
 | CW-020 | first-vs-helloprenup | First vs. HelloPrenup | COMPARISON | Compare | product review | commercial-investigation | R7 | — | high | generic | 2026-09-29 | — | PUBLISHED (UPDATE_REQUIRED: price refresh) | index | — |
 | CW-021 | legalzoom-prenup-review | LegalZoom Prenup Review | COMPARISON | Compare | product review | commercial-investigation | R7 | — | high | generic | 2026-09-29 | — | PUBLISHED (UPDATE_REQUIRED: price refresh) | index | — |
+| CW-022 | how-does-a-prenup-work | How Does a Prenup Work? The Whole Process, Start to Finish | GUIDE | Basics | lifecycle process | informational | R1 | researching | none | formalities | 2026-10-01 | — | PUBLISHED | what-is-a-prenup, bring-up | — |
+| CW-023 | what-should-i-ask-a-prenup-lawyer | What Should I Ask a Prenup Lawyer? Questions for Your First Meeting | CHECKLIST | Decision | attorney consultation | commercial-investigation | R3 | researching | high | counsel rules | 2026-10-01 | — | PUBLISHED | do-you-need-a-lawyer | — |
+| CW-024 | can-you-get-a-prenup-after-marriage | Can You Get a Prenup After Marriage? What a Postnup Does | GUIDE | Validity | postnuptial agreements | informational | R1 | researching | low | state variation | 2026-10-01 | — | PUBLISHED | divorce-without | — |
+| CW-025 | when-your-partner-asks-for-a-prenup | When Your Partner Asks for a Prenup: What to Say and Ask | QUESTION | Fear | receiving the request | informational | R4 | partner-wants-prenup | none | generic | 2026-10-01 | — | PUBLISHED | bring-up, partner-refuses | — |
+| CW-026 | who-keeps-the-house | Who Keeps the House? Deed, Mortgage, and What the Law Says | GUIDE | Risk | house division | informational | R3 | researching | medium | community vs equitable | 2026-10-01 | — | PUBLISHED | divorce-without | — |
+| CW-027 | can-a-prenup-protect-me-from-my-spouses-debt | Can a Prenup Protect Me From My Spouse's Debt? | QUESTION | Basics | debt protection | informational | R3 | debt | low | community debt | 2026-10-01 | — | PUBLISHED | debt-marriage | — |
 
-Source coverage: CW-001, CW-002, CW-003 have `## Sources` sections; **CW-004…CW-021 (18) do not → UPDATE on next touch** (BACKLOG → UPDATE).
+Source coverage: CW-001, CW-002, CW-003, CW-022…CW-027 (9 total) have `## Sources` sections; **CW-004…CW-021 (18) do not → UPDATE on next touch** (BACKLOG → UPDATE).
 
-## B. Briefs in flight (9)
+## B. Briefs in flight (3)
 
 | ID | Brief | slug | type | cluster | intent | situation | comm. | status |
 |---|---|---|---|---|---|---|---|---|
-| CW-022 | BRIEF-011 How Does a Prenup Work? | how-does-a-prenup-work | GUIDE | Basics | informational | researching | none | BRIEF (NOW batch) |
-| CW-023 | BRIEF-012 What Should I Ask a Prenup Lawyer? | what-should-i-ask-a-prenup-lawyer | CHECKLIST | High-Intent | commercial-investigation | researching | high | BRIEF (NOW batch) |
-| CW-024 | BRIEF-004 Prenup After Marriage (Postnup) | can-you-get-a-prenup-after-marriage | GUIDE | Basics | informational | researching | low | BRIEF (NOW batch) |
-| CW-025 | BRIEF-006 When Your Partner Asks | when-your-partner-asks-for-a-prenup | QUESTION | Fear | informational | partner-wants-prenup | none | BRIEF (NOW batch) |
-| CW-026 | BRIEF-007 Who Keeps the House | who-keeps-the-house | GUIDE | Assets | informational | researching | medium | BRIEF (NOW batch) |
-| CW-027 | BRIEF-008 Spouse's Debt Protection | can-a-prenup-protect-me-from-my-spouses-debt | QUESTION | Debt | informational | debt | low | BRIEF (NOW batch) |
 | CW-028 | BRIEF-005 What a Prenup Cannot Cover | what-does-a-prenup-not-cover | GUIDE | Basics | informational | researching | none | BRIEF (NEXT) |
 | CW-029 | BRIEF-009 Child Custody in a Prenup | can-a-prenup-address-child-custody | QUESTION | Family | informational | children-family-assets | low | BRIEF (NEXT) |
 | CW-030 | BRIEF-010 How to Find a Prenup Attorney | how-to-find-a-prenup-attorney | GUIDE | High-Intent | commercial-investigation | researching | high | BRIEF (NEXT) |

@@ -82,7 +82,7 @@ The process is less dramatic than it sounds:
 4. **Review — ideally with separate lawyers.** Each partner should understand exactly what they're giving up. Independent advice is what makes an agreement hold up years later.
 5. **Sign with your state's formalities.** Depending on where you live: witnesses, notarization, and in some states a waiting period between the final draft and signing.
 
-For most couples with straightforward finances, the whole thing takes a few weeks to a few months — and [costs far less than people assume](/guides/how-much-does-a-prenup-cost/).
+For most couples with straightforward finances, the whole thing takes a few weeks to a few months — and [costs far less than people assume](/guides/how-much-does-a-prenup-cost/). The full walk-through of [how a prenup works, step by step](/guides/how-does-a-prenup-work/), covers each of those five stages in detail.
 
 ## What about state law?
 
