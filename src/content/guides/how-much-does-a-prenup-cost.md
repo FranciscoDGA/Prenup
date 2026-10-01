@@ -62,7 +62,7 @@ High cost-of-living states price accordingly. Ranges are for a **standard, non-c
 
 ### 1. Each partner hiring their own attorney
 
-Sometimes required, sometimes just wise — but yes, it roughly doubles legal fees. It's also the single strongest insurance that the agreement survives: courts scrutinize whether both sides had *real* opportunity for independent advice.
+Sometimes required, sometimes just wise — but yes, it roughly doubles legal fees. It's also the single strongest insurance that the agreement survives: courts scrutinize whether both sides had *real* opportunity for independent advice. When counsel is genuinely worth it — and when the DIY route is defensible — is exactly what [Do You Need a Lawyer for a Prenup?](/guides/do-you-need-a-lawyer-for-a-prenup/) answers.
 
 ### 2. The negotiation rounds nobody quotes
 
@@ -74,7 +74,7 @@ A business, rental properties in two states, RSUs that vest over four years, a f
 
 ### 4. Waiting until the wedding month
 
-Rush fees are real, leverage is gone, and mistakes are expensive. Couples who start 3–6 months out routinely pay less than couples who start 3 weeks out — same document, fewer panicked billable hours.
+Rush fees are real, leverage is gone, and mistakes are expensive. Couples who start 3–6 months out routinely pay less than couples who start 3 weeks out — same document, fewer panicked billable hours. The schedule that keeps you out of that trap: [How Long Does a Prenup Take?](/guides/how-long-does-a-prenup-take/), timeline backward from your wedding date.
 
 ## How to keep a prenup cheap without cutting corners
 

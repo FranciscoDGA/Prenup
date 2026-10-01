@@ -72,6 +72,8 @@ An online service is enough when **all seven** apply:
 6. ☐ No huge gap in assets between you
 7. ☐ You both agree on the terms without an ultimatum
 
+If any of those seven fail you, the fuller framework for what to do next is [Do You Need a Lawyer for a Prenup?](/guides/do-you-need-a-lawyer-for-a-prenup/) — the six situations where counsel becomes close to essential.
+
 **Seven yeses → online, flat fee, done.** One or more noes → either online *plus* attorney review, or full representation. Two or more noes involving money or power → hire lawyers.
 
 ## The hybrid move nobody regrets

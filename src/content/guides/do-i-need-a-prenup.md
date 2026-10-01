@@ -26,7 +26,7 @@ You're lying awake two weeks after the proposal, and somewhere between the venue
 
 Then the guilt follows. Isn't that... unromantic? Isn't it basically planning the divorce?
 
-No. It's planning the marriage. Here's how to know if you actually need one — in about 60 seconds.
+No. It's planning the marriage. (Still fuzzy on what a prenup actually is? [What Is a Prenup?](/guides/what-is-a-prenup/) is the plain-English definition.) Here's how to know if you actually need one — in about 60 seconds.
 
 ## The 60-second test
 

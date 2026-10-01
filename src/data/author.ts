@@ -61,13 +61,13 @@ export const researchMethod = [
 export const authorLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': `https://prenupanswers.com${author.url}#person`,
+  '@id': `https://www.prenupanswers.com${author.url}#person`,
   name: author.name,
-  url: `https://prenupanswers.com${author.url}`,
+  url: `https://www.prenupanswers.com${author.url}`,
   jobTitle: 'Pastor',
   description: authorBio,
   knowsAbout: author.knowsAbout,
-  ...(author.photo ? { image: `https://prenupanswers.com${author.photo}` } : {}),
+  ...(author.photo ? { image: `https://www.prenupanswers.com${author.photo}` } : {}),
   ...(author.sameAs.length ? { sameAs: author.sameAs } : {}),
   worksFor: { '@type': 'Organization', name: 'PrenupAnswers' },
 };

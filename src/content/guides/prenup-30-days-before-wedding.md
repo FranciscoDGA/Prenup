@@ -35,6 +35,8 @@ So the entire strategy for a 30-day prenup is: **move fast through process, neve
 
 ## The 30-day plan (start today, not tomorrow)
 
+This is the compressed version. If your wedding is further out — or you want to see the whole path backward from the date — [How Long Does a Prenup Take?](/guides/how-long-does-a-prenup-take/) lays out the full timeline.
+
 **Days 1–3 — Disclosure, both of you, simultaneously.**
 Bank accounts, retirement, debts, income, inheritances. Lists, not novels. Doing this on day one does two things: it's legally the foundation of the whole agreement, and it signals *"we're moving because the wedding is close, not because I'm hiding anything."*
 

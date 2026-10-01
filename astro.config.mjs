@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://prenupanswers.com',
+  site: 'https://www.prenupanswers.com',
   integrations: [
     mdx(),
     sitemap({

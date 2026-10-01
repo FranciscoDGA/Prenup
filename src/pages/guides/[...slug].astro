@@ -40,14 +40,14 @@ const articleLd = {
   dateModified: (post.data.updated ?? post.data.published).toISOString(),
   author: {
     '@type': 'Person',
-    '@id': `https://prenupanswers.com${author.url}#person`,
+    '@id': `https://www.prenupanswers.com${author.url}#person`,
     name: post.data.author,
-    url: `https://prenupanswers.com${author.url}`,
+    url: `https://www.prenupanswers.com${author.url}`,
   },
   publisher: {
     '@type': 'Organization',
     name: 'PrenupAnswers',
-    url: 'https://prenupanswers.com/',
+    url: 'https://www.prenupanswers.com/',
   },
   mainEntityOfPage: new URL(`/guides/${post.id}/`, Astro.site).toString(),
 };

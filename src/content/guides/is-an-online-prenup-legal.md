@@ -72,7 +72,7 @@ Courts rarely second-guess substantive fairness — prenups don't have to be "eq
 - One spouse isn't fluent in the language being signed
 - You want aggressive support waivers or unusual estate terms
 
-The realistic hybrid — and what most careful couples do — is **platform for structure, lawyer for the two or three hard clauses.** You pay an attorney for two hours instead of thirty.
+The realistic hybrid — and what most careful couples do — is **platform for structure, lawyer for the two or three hard clauses.** You pay an attorney for two hours instead of thirty. The full decision framework for that call is in [Do You Need a Lawyer for a Prenup?](/guides/do-you-need-a-lawyer-for-a-prenup/).
 
 ## The 30-second validity check before you sign
 
