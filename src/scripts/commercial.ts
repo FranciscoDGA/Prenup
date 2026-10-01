@@ -72,9 +72,7 @@ export function initCommercialTracking(): void {
       },
       { threshold: 0.3 }
     );
-    document
-      .querySelectorAll('.cta-box[data-commercial-view], .commercial-resource[data-commercial-view]')
-      .forEach((el) => io.observe(el));
+    document.querySelectorAll('[data-commercial-view]').forEach((el) => io.observe(el));
   }
 
   document.addEventListener(

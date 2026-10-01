@@ -8,15 +8,24 @@ interface Props {
   partnerId?: string;
   pageType?: string;
   contentId?: string;
+  /** State abbreviation (state pages only) for affiliate_click attribution. */
+  state?: string;
 }
-const { heading, text, href, label, partnerId, pageType, contentId } = Astro.props;
+const { heading, text, href, label, partnerId, pageType, contentId, state } = Astro.props;
 
 // External destinations are commercial: mark as sponsored and show the disclosure (FASE 6).
-// Internal destinations are editorial: no rel, no disclosure.
+// Internal destinations are editorial: no rel, no disclosure, no commercial view event.
 const isExternal = /^https?:\/\//i.test(href);
 const showDisclosure = isExternal;
 ---
-<aside class="cta-box" data-commercial-view data-page-type={pageType} data-content-id={contentId}>
+<aside
+  class="cta-box"
+  data-commercial-view={isExternal ? '' : undefined}
+  data-partner-id={partnerId}
+  data-page-type={pageType}
+  data-content-id={contentId}
+  data-state={state}
+>
   <h3>{heading}</h3>
   <p>{text}</p>
   <a
@@ -26,6 +35,7 @@ const showDisclosure = isExternal;
     target={isExternal ? '_blank' : undefined}
     data-affiliate-link={isExternal ? '' : undefined}
     data-partner-id={partnerId}
+    data-state={state}
   >
     {label} →
   </a>
