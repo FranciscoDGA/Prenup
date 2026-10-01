@@ -1,30 +1,68 @@
-# Content Inventory (FASE 42) — internal file, no dashboard
+# Content Inventory (FASE 2 spec) — internal file, no dashboard
 
-Metrics columns (GSC/CF): **unavailable until Search Console connects** — leave "—" until real data exists. Updated: 2026-10-01. 21 guides.
+**Updated: 2026-10-01.** Full editorial inventory: guides + briefs in flight + other indexable surfaces.
+GSC/CF metrics columns: **unavailable until Search Console connects** — always "—" until real data exists (never fabricate).
 
-| URL (/guides/<slug>/) | Cluster | Intent | Situation | Published | Updated | Inbound (editorial) | Impressions | Clicks | CTR | Status |
-|---|---|---|---|---|---|---|---|---|---|---|
-| what-is-a-prenup | Basics | none | researching | 2026-10-01 | — | index, do-i-need | — | — | — | live |
-| how-long-does-a-prenup-take | Risk | medium | getting-married | 2026-10-01 | — | index, 30-days, cost | — | — | — | live |
-| do-you-need-a-lawyer-for-a-prenup | Decision | high | researching | 2026-10-01 | — | index, lawyer-vs-online, online-legal, cost | — | — | — | live |
-| do-i-need-a-prenup | Decision | low | getting-married | 2026-09-08 | — | index, states (51×), siblings | — | — | — | live |
-| how-much-does-a-prenup-cost | Cost | high | cost | 2026-09-22 | — | index, states, siblings | — | — | — | live |
-| what-does-a-prenup-cover | Basics | low | researching | 2026-09-27 | — | index, what-is-a-prenup | — | — | — | live |
-| prenup-30-days-before-wedding | Risk | medium | — | 2026-09-29 | — | index, siblings | — | — | — | live |
-| lawyer-vs-online-prenup | Compare | high | — | 2026-09-29 | — | index, cost, online-legal | — | — | — | live |
-| is-an-online-prenup-legal | Validity | medium | — | 2026-09-29 | — | index, siblings | — | — | — | live |
-| is-a-prenup-worth-it | Decision | medium | — | 2026-09-15 | — | index, states | — | — | — | live |
-| how-to-bring-up-a-prenup | Fear | none | — | 2026-09-24 | — | index | — | — | — | live |
-| what-happens-if-you-divorce-without-a-prenup | Risk | medium | — | 2026-09-23 | — | index, states | — | — | — | live |
-| what-happens-to-debt-when-you-get-married | Basics | low | debt | 2026-09-30 | — | index | — | — | — | live |
-| can-a-prenup-protect-a-business | Risk | medium | business-owner | 2026-09-30 | — | index, states | — | — | — | live |
-| can-a-prenup-protect-an-inheritance | Family | low | children-family-assets | 2026-09-30 | — | index | — | — | — | live |
-| second-marriage-prenup-protect-kids | Family | low | remarriage | 2026-09-28 | — | index | — | — | — | live |
-| partner-refuses-to-sign-prenup | Fear | none | partner-wants-prenup | 2026-09-29 | — | index | — | — | — | live |
-| does-a-prenup-mean-you-dont-trust-your-partner | Fear | none | partner-wants-prenup | 2026-09-26 | — | index | — | — | — | live |
-| prenup-checklist | Checklist | low | — | 2026-09-25 | — | index, states | — | — | — | live |
-| first-vs-helloprenup | Compare | high | — | 2026-09-29 | — | index | — | — | — | live (review: FRESHNESS) |
-| legalzoom-prenup-review | Compare | high | — | 2026-09-29 | — | index | — | — | — | live (review: FRESHNESS) |
+**Status vocabulary:** IDEA · BRIEF · DRAFT · REVIEW · READY · PUBLISHED · UPDATE_REQUIRED · ARCHIVED
 
-Status codes: live / refresh-queued (see REFRESH-QUEUE.md) / planned (briefs 4–10 in BACKLOG.md).
-Other indexable surfaces (not rows): 51 `/states/*` (hubs), `/tools/prenup-cost-calculator/`, `/start/`, `/about/`, `/free/*` (checklist + script + downloads), author page — all in sitemap (84 URLs).
+**Reader personas (target_reader codes, FASE 12):**
+R1 beginner couple (no legal background, exploring) · R2 planner (organizing the wedding/prenup process) ·
+R3 pragmatist (money/assets/debt decisions) · R4 pressured partner (asked — or being asked) ·
+R5 business/wealth holder · R6 parent blending families · R7 shopper (comparing routes/products)
+
+## A. Published guides (21)
+
+| ID | URL (/guides/<slug>/) | TITLE | type | cluster | topic | search intent | reader | situation | comm. | state focus | published | updated | status | inbound (editorial) | GSC imp/clk/ctr |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CW-001 | what-is-a-prenup | What Is a Prenuptial Agreement? | GUIDE | Basics | definition & purpose | informational | R1 | researching | none | generic | 2026-10-01 | — | PUBLISHED | index, do-i-need | — |
+| CW-002 | how-long-does-a-prenup-take | How Long Does a Prenup Take? | GUIDE | Risk | timeline | informational | R2 | getting-married | medium | timing rules | 2026-10-01 | — | PUBLISHED | index, 30-days, cost | — |
+| CW-003 | do-you-need-a-lawyer-for-a-prenup | Do You Need a Lawyer for a Prenup? | QUESTION | Decision | counsel decision | commercial-investigation | R3 | researching | high | counsel rules | 2026-10-01 | — | PUBLISHED | index, lawyer-vs-online, online-legal, cost | — |
+| CW-004 | do-i-need-a-prenup | Do I Need a Prenup? | GUIDE | Decision | need assessment | informational | R1 | getting-married | low | generic | 2026-09-08 | — | PUBLISHED | index, states (51×), siblings | — |
+| CW-005 | how-much-does-a-prenup-cost | How Much Does a Prenup Cost? | COST GUIDE | Cost | pricing & factors | commercial-investigation | R3 | cost | high | cost by state | 2026-09-22 | — | PUBLISHED | index, states, siblings | — |
+| CW-006 | what-does-a-prenup-cover | What Does a Prenup Cover? | GUIDE | Basics | scope | informational | R1 | researching | low | what state allows | 2026-09-27 | — | PUBLISHED | index, what-is-a-prenup | — |
+| CW-007 | prenup-30-days-before-wedding | Prenup 30 Days Before the Wedding | GUIDE | Risk | compressed timeline | informational | R2 | — | medium | timing rules | 2026-09-29 | — | PUBLISHED | index, siblings | — |
+| CW-008 | lawyer-vs-online-prenup | Lawyer vs. Online Prenup | COMPARISON | Compare | route comparison | commercial-investigation | R7 | — | high | generic | 2026-09-29 | — | PUBLISHED | index, cost, online-legal | — |
+| CW-009 | is-an-online-prenup-legal | Is an Online Prenup Legal? | QUESTION | Validity | DIY enforceability | commercial-investigation | R7 | — | medium | formality rules | 2026-09-29 | — | PUBLISHED | index, siblings | — |
+| CW-010 | is-a-prenup-worth-it | Is a Prenup Worth It? | QUESTION | Decision | value assessment | informational | R1 | — | medium | generic | 2026-09-15 | — | PUBLISHED | index, states | — |
+| CW-011 | how-to-bring-up-a-prenup | How to Bring Up a Prenup | GUIDE | Fear | first conversation | informational | R4 | — | none | support-waiver note (CA) | 2026-09-24 | — | PUBLISHED | index | — |
+| CW-012 | what-happens-if-you-divorce-without-a-prenup | Divorce Without a Prenup | QUESTION | Risk | default divorce rules | informational | R3 | — | medium | community vs equitable | 2026-09-23 | — | PUBLISHED | index, states | — |
+| CW-013 | what-happens-to-debt-when-you-get-married | Debt When You Get Married | GUIDE | Basics | marital debt | informational | R3 | debt | low | community debt | 2026-09-30 | — | PUBLISHED | index | — |
+| CW-014 | can-a-prenup-protect-a-business | Can a Prenup Protect a Business? | GUIDE | Risk | business protection | informational | R5 | business-owner | medium | valuation rules | 2026-09-30 | — | PUBLISHED | index, states | — |
+| CW-015 | can-a-prenup-protect-an-inheritance | Can a Prenup Protect an Inheritance? | QUESTION | Family | inheritance | informational | R6 | children-family-assets | low | separate property | 2026-09-30 | — | PUBLISHED | index | — |
+| CW-016 | second-marriage-prenup-protect-kids | Second Marriage: Protecting the Kids | GUIDE | Family | second marriage | informational | R6 | remarriage | low | estate intersection | 2026-09-28 | — | PUBLISHED | index | — |
+| CW-017 | partner-refuses-to-sign-prenup | Partner Refuses to Sign | QUESTION | Fear | refusal | informational | R4 | partner-wants-prenup | none | generic | 2026-09-29 | — | PUBLISHED | index | — |
+| CW-018 | does-a-prenup-mean-you-dont-trust-your-partner | Does a Prenup Mean You Don't Trust? | QUESTION | Fear | perception | informational | R4 | partner-wants-prenup | none | generic | 2026-09-26 | — | PUBLISHED | index | — |
+| CW-019 | prenup-checklist | Prenup Checklist | CHECKLIST | Checklist | preparation | informational | R2 | — | low | generic | 2026-09-25 | — | PUBLISHED | index, states | — |
+| CW-020 | first-vs-helloprenup | First vs. HelloPrenup | COMPARISON | Compare | product review | commercial-investigation | R7 | — | high | generic | 2026-09-29 | — | PUBLISHED (UPDATE_REQUIRED: price refresh) | index | — |
+| CW-021 | legalzoom-prenup-review | LegalZoom Prenup Review | COMPARISON | Compare | product review | commercial-investigation | R7 | — | high | generic | 2026-09-29 | — | PUBLISHED (UPDATE_REQUIRED: price refresh) | index | — |
+
+Source coverage: CW-001, CW-002, CW-003 have `## Sources` sections; **CW-004…CW-021 (18) do not → UPDATE on next touch** (BACKLOG → UPDATE).
+
+## B. Briefs in flight (9)
+
+| ID | Brief | slug | type | cluster | intent | situation | comm. | status |
+|---|---|---|---|---|---|---|---|---|
+| CW-022 | BRIEF-011 How Does a Prenup Work? | how-does-a-prenup-work | GUIDE | Basics | informational | researching | none | BRIEF (NOW batch) |
+| CW-023 | BRIEF-012 What Should I Ask a Prenup Lawyer? | what-should-i-ask-a-prenup-lawyer | CHECKLIST | High-Intent | commercial-investigation | researching | high | BRIEF (NOW batch) |
+| CW-024 | BRIEF-004 Prenup After Marriage (Postnup) | can-you-get-a-prenup-after-marriage | GUIDE | Basics | informational | researching | low | BRIEF (NOW batch) |
+| CW-025 | BRIEF-006 When Your Partner Asks | when-your-partner-asks-for-a-prenup | QUESTION | Fear | informational | partner-wants-prenup | none | BRIEF (NOW batch) |
+| CW-026 | BRIEF-007 Who Keeps the House | who-keeps-the-house | GUIDE | Assets | informational | researching | medium | BRIEF (NOW batch) |
+| CW-027 | BRIEF-008 Spouse's Debt Protection | can-a-prenup-protect-me-from-my-spouses-debt | QUESTION | Debt | informational | debt | low | BRIEF (NOW batch) |
+| CW-028 | BRIEF-005 What a Prenup Cannot Cover | what-does-a-prenup-not-cover | GUIDE | Basics | informational | researching | none | BRIEF (NEXT) |
+| CW-029 | BRIEF-009 Child Custody in a Prenup | can-a-prenup-address-child-custody | QUESTION | Family | informational | children-family-assets | low | BRIEF (NEXT) |
+| CW-030 | BRIEF-010 How to Find a Prenup Attorney | how-to-find-a-prenup-attorney | GUIDE | High-Intent | commercial-investigation | researching | high | BRIEF (NEXT) |
+
+## C. Other indexable surfaces
+
+| Surface | count | type | status |
+|---|---|---|---|
+| `/states/<slug>/` | 51 | STATE GUIDE (hub) | PUBLISHED — audited: substantive state-specific content, shared structure OK (FASE 31/32) |
+| `/states/` | 1 | INDEX | PUBLISHED |
+| `/tools/prenup-cost-calculator/` | 1 | TOOL | PUBLISHED |
+| `/start/` | 1 | SITUATION LANDING | PUBLISHED (8 situation anchors) |
+| `/about/` | 1 | ABOUT | PUBLISHED |
+| `/free/*` (checklist, money-talk script, downloads) | 3 | FREEBIE | PUBLISHED (2 noindex by design) |
+| home, `404.html`, `/free/thank-you/*` | 4 | SUPPORT | PUBLISHED (5 total excluded from sitemap by design) |
+| author page (`/about/` section) | 1 | BYLINE | PUBLISHED (disclaimers intact) |
+
+Sitemap: 84 URLs. Inventory rows cover every ranking surface; briefs (B) become rows here at DRAFT.

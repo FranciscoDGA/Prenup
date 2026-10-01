@@ -4,31 +4,49 @@ The workflow that turns a content opportunity into a publishable article.
 
 **The website is the product. This engine exists to feed it — not to change it.**
 
-## Workflow
+## Workflow (Sprint 7 — full editorial scale engine)
 
 ```
 OPPORTUNITY
-↓   (BACKLOG.md — is it in the 20? does it strengthen a cluster?)
+↓   (BACKLOG.md — in a cluster? completes a map gap? unique value?)
 RESEARCH
-↓   (search intent: WHY is this person searching? + SERP gap notes)
+↓   (search intent + SERP gaps + batch sources — EDITORIAL-CLUSTERS.md)
 BRIEF
-↓   (editorial/briefs/BRIEF-###-*.md from CONTENT-BRIEF-TEMPLATE.md)
-SOURCE PLAN
-↓   (every material legal claim mapped to a source before drafting)
+↓   (CONTENT-BRIEF-TEMPLATE.md — includes UNIQUE VALUE, required)
 DRAFT
-↓   (written with WRITE-ARTICLE-PROMPT.md)
-AMERICAN-NATIVE EDIT
-↓   (FASE 5 checklist: voice, transitions, first-answer rule)
-LEGAL ACCURACY EDIT
-↓   (FASE 20/21: no universal claims, state distinctions, no fabricated authority)
-SEO EDIT
-↓   (title, description, H1, slug, intent match — no stuffing)
-INTERNAL LINKING
-↓   (FASE 25/26: 3–6 descriptive anchors to existing content)
-FINAL QA
-↓   (QUALITY GATE checklist below + build/typecheck/lint)
-PUBLISH     (drop the .md in src/content/guides/)
+↓   (WRITE-ARTICLE-PROMPT.md + WRITING-STANDARD.md)
+LEGAL REVIEW        ← Level 2 (LEGAL-REVIEW.md: claim checklist, sources, jurisdictions)
+↓
+AMERICAN-NATIVE EDIT ← Level 1 (WRITING-STANDARD.md: voice, reader, human-edit pass)
+↓
+SOURCE CHECK        ← Level 2 (source-first, named, primary-first, no "experts say")
+↓
+SEO CHECK           ← Level 3 (intent, title, metadata, H1, no stuffing)
+↓
+INTERNAL LINKING    ← (≥2 natural inbound; cannibalization check; map completion)
+↓
+CONVERSION REVIEW   ← Level 4 (ONE CTA, most useful next step, situation, tool fit)
+↓
+PUBLISHING GATE (all 4 levels below) → PUBLISH → DISTRIBUTE (Sprint 6 docs)
+→ MEASURE (data when available; FAE 54: don't touch fresh content)
+→ UPDATE (REFRESH-QUEUE.md rules only)
 ```
+
+## Review levels (FASE 39) + Publishing gate (FASE 40)
+
+**Level 1 — Editorial:** clarity · grammar · American English · structure (→ WRITING-STANDARD.md)
+**Level 2 — Legal:** claims · sources · jurisdiction · dates (→ LEGAL-REVIEW.md)
+**Level 3 — SEO:** intent · title · metadata · internal links
+**Level 4 — Conversion:** CTA · next step · situation · tool fit
+
+Publish only when ALL pass:
+
+- [ ] Editorial pass
+- [ ] Legal pass
+- [ ] Source pass
+- [ ] SEO pass
+- [ ] Internal-link pass
+- [ ] CTA pass
 
 ## Quality Gate — an article is NOT ready until all pass
 
@@ -96,4 +114,11 @@ no ranking guarantees.
 | `EMAIL-DISTRIBUTION.md` | The Prenup Brief selection, format, subjects, reuse |
 | `SOCIAL-DISTRIBUTION.md` | Channels, Reddit rules, core ideas, link-earning policy |
 | `REFRESH-QUEUE.md` | Decay rules, refresh queue, title/meta + data decision rules |
-| `CONTENT-INVENTORY.md` | URL/cluster/intent/status table (metrics pending GSC) |
+| `CONTENT-INVENTORY.md` | Editorial inventory with content_id/status (FASE 2 spec) |
+| `EDITORIAL-CLUSTERS.md` | 9 strategic clusters, topical maps, gaps, intent groups, cannibalization |
+| `WRITING-STANDARD.md` | American-native voice, reader model, edit passes, content types |
+| `LEGAL-REVIEW.md` | Claim checklist, source-first rules, state discipline |
+| `NEXT-BATCH.md` | Selected next 6 articles + cadence + batching protocol |
+| `FUTURE-IDEAS.md` | Parked non-editorial ideas — nothing built from here without a sprint |
+
+**Cadence (FASE 34/35):** 1–3 strong articles/week as capacity allows; 3 excellent > 10 mediocre; no volume quotas.

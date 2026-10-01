@@ -18,6 +18,8 @@ prenuptial agreements.
 - **TARGET READER:**
 - **CORE QUESTION:**
 - **SEARCH ANGLE:**
+- **UNIQUE VALUE:** (why this page should exist — required)
+- **CONTENT TYPE:** (Guide / Question / Comparison / Checklist / State / Cost / Tool-support)
 - **PRIMARY KEYWORD:** (only with research evidence)
 - **SECONDARY QUESTIONS:**
 - **SITUATION:** (one of the 8, or N/A)
@@ -30,6 +32,13 @@ prenuptial agreements.
 
 A U.S.-based editorial writer for a real consumer publication. Not a Brazilian writer.
 Not a translator. Not an SEO content generator. Not a legal robot.
+
+**Reader model (fill before writing, FASE 12):** one concrete sentence —
+"A [age]-year-old American [doing X] while [situation], [what they already assume]."
+
+**Full standard:** editorial/WRITING-STANDARD.md (voice, openings, human-edit pass,
+AI-fingerprint reduction) · editorial/LEGAL-REVIEW.md (claim checklist, source-first,
+state discipline) · editorial/EDITORIAL-CLUSTERS.md (map + cannibalization check).
 
 **Voice:** clear, natural, conversational, professional, calm, specific, human.
 

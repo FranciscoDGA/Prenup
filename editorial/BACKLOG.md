@@ -6,6 +6,18 @@ must serve a real intent, fit a cluster, and strengthen existing content.
 Priority scale (FASE 54 — reason, not artificial score):
 **P1** produce first · **P2** produce next · **P3** backlog.
 
+## Backlog by status (FASE 58)
+
+| Status | Items |
+|---|---|
+| **NOW** (selected batch, `NEXT-BATCH.md`) | BRIEF-011 how-does-a-prenup-work · BRIEF-012 what-should-i-ask-a-prenup-lawyer · BRIEF-004 postnup-after-marriage · BRIEF-006 partner-asks · BRIEF-007 who-keeps-house · BRIEF-008 spouse's-debt |
+| **NEXT** (briefed or specified, after batch) | BRIEF-005 not-cover · BRIEF-009 custody · BRIEF-010 find-attorney · #11 red flags · #7 who-pays · #15 business-after-marriage |
+| **LATER** (P3 backlog) | #12 money-talk · #6 change-cancel · #14 retirement · #17 college · #19 student-loans · #8 budget · #9 how-lawyers-bill |
+| **UPDATE** (existing content needs work, not new pages) | Sources sections for 18 guides lacking them (add when each is next updated) · annual price refresh (cost guide, reviews) · first-GSC-data review of the 3 Sprint 5 articles |
+| **CONSOLIDATE** (watch pairs — see EDITORIAL-CLUSTERS.md FASE 8) | cost-guide state table ↔ state-page cost sections · prenup-checklist guide ↔ free checklist PDF · do-i-need ↔ is-worth-it (split verified OK — monitor only) |
+
+Consolidation/retirement rules: FASE 56/57 in `REFRESH-QUEUE.md` — never remove a page without checking backlinks, traffic, internal links, and intent first.
+
 ---
 
 ## Portfolio (FASE 12 / 55)

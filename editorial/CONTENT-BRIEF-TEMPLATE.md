@@ -39,6 +39,13 @@ The exact question the article must answer, in the reader's words.
 The specific angle that makes this article not-generic. (E.g. "cost transparency",
 "business-owner concern", "timing / legal distinction".)
 
+## UNIQUE VALUE (FASE 10 — mandatory)
+
+**"Why should this page exist?"** Answer with one of: clearer explanation · better
+organization · state-specific detail · useful example · original calculator · practical
+checklist · comparison · better source coverage · clearer terminology. If the only
+answer is "the keyword has volume" — do not produce the article yet.
+
 ## PRIMARY KEYWORD
 
 Only when there is evidence of demand (research note attached). Include the research source.

@@ -39,3 +39,8 @@ Once GSC/CF data accumulates (weeks, not days): top impressions, top clicks, top
 
 ## FASE 59 — Forbidden statements
 No "this will rank", "page one", "guaranteed keyword". Ever — in reports, content, or outreach.
+
+## FASE 56/57 — Consolidation & retirement
+- **Consolidate** when two pages share the same intent, audience, AND answer — pick the stronger page, merge, and redirect or replace internal links. Never let two pages compete for one question (current watch pairs listed in BACKLOG.md → CONSOLIDATE and EDITORIAL-CLUSTERS.md FASE 8).
+- **Retire** only after checking: backlinks · traffic · rankings · internal links · intent. Options: update · consolidate · redirect · archive. Never delete blind.
+- Both actions require a real reason (overlap or decay) — never date-driven fakery.
