@@ -70,7 +70,7 @@ Two wrinkles in common-law states:
 
 ## The student loan traps
 
-Student loans are the #1 debt conversation for couples under 40, and three things catch people off guard:
+Student loans are the debt conversation couples under 40 bring up first, and three things catch people off guard:
 
 **1. The income-driven repayment surprise.** If either of you is on an income-driven federal repayment plan, payments are calculated from household income — and in community property states, your spouse's income can count even if you file taxes separately. Couples have reported payment increases of thousands per year just from getting married. Rules and percentages change — confirm your current plan's treatment with your loan servicer or at studentaid.gov.
 

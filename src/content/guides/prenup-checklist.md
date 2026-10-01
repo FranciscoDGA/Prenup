@@ -10,7 +10,7 @@ published: 2026-09-25
 tldr: "A valid, durable prenup needs three layers: (1) full financial disclosure from both of you, (2) clear terms on property, debt, support, and the big assets, and (3) correct execution — signed before the wedding, voluntarily, with counsel recommended. Miss layer one and a court can throw the whole thing out."
 faq:
   - q: "What must be disclosed in a prenup?"
-    a: "Assets, debts, income, and expected inheritances — for both partners, in writing, attached as a schedule to the agreement. Full disclosure is the #1 factor courts check when validating a prenup. Hiding an account is the fastest way to lose the entire agreement."
+    a: "Assets, debts, income, and expected inheritances — for both partners, in writing, attached as a schedule to the agreement. Full disclosure is the first thing courts check when validating a prenup. Hiding an account is the fastest way to lose the entire agreement."
   - q: "What should NOT be in a prenup?"
     a: "Anything about child custody or child support (courts won't enforce them), penalties for infidelity in most states, terms that are unconscionable at signing, anything illegal, or provisions that push one spouse onto public assistance. Clauses with no legal basis only create holes opponents can attack."
   - q: "Do we need witnesses and a notary?"
@@ -40,7 +40,7 @@ Use this checklist in order. Three layers: **disclosure → terms → execution.
 - [ ] **Expected inheritances and trusts.** Even vague ones ("my parents' lake house eventually"). Future money needs an agreed treatment.
 - [ ] **Attach everything as an exhibit.** Disclosure lives *inside* the agreement as schedules both partners sign — not in an email. Courts want to see it on the document.
 
-> **Why this layer comes first:** the #1 reason prenups get tossed is inadequate or hidden disclosure. A $400,000 account discovered later doesn't just add to the fight — it can void the entire agreement.
+> **Why this layer comes first:** the classic reason prenups get tossed is inadequate or hidden disclosure. A $400,000 account discovered later doesn't just add to the fight — it can void the entire agreement.
 
 ## Layer 2: The terms (what the document actually decides)
 

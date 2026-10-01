@@ -7,9 +7,9 @@ keyword: who keeps the house in a divorce
 cluster: Risk
 published: 2026-10-01
 tldr: "There's no single answer. The deed says who owns it, the mortgage says who owes the lender, and state law decides what happens if you don't have an agreement. In community property states the house may be split 50/50; in equitable distribution states the court divides it fairly, not necessarily equally. A prenup can settle ownership before a dispute ever starts."
-ctaHeading: "See what your state's rules say about the house"
-ctaText: "Property division defaults differ enormously by state. Our state guides lay out the community property vs. equitable distribution rules that apply to you."
-ctaLabel: "Check your state's property rules"
+ctaHeading: "Want the flat-fee route instead of the hourly meter?"
+ctaText: "Online prenup services draft a state-specific agreement — house and property clauses included — for a flat fee most couples keep under $1,000. See what's actually included before you commit."
+ctaLabel: "See what HelloPrenup costs"
 faq:
   - q: "Whose name is on the deed determines who keeps the house, right?"
     a: "Not by itself. The deed shows title, but divorce courts look at how the house was acquired, when, with what money, and your state's property rules. A house titled in one spouse's name can still be treated as marital or community property if it was bought with marital earnings or during the marriage under community property law."

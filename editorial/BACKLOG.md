@@ -13,6 +13,7 @@ Priority scale (FASE 54 — reason, not artificial score):
 | **PRODUCE NOW** | — (NOW batch produced & published 2026-10-01; next candidates per intelligence: change-after-signing, who-pays) | NEXT-BATCH.md, intelligence/content-gaps.md |
 | **OPTIMIZE NOW** | 3 title-truncation pages (selected; execution gated on measurement baseline) | intelligence/experiments.md |
 | **UPDATE NOW** | 18 guides missing Sources (structural) + 2 review price-freshness | intelligence/refresh-queue.md |
+| **TRUST/MONETIZATION (Sprint 9 audit)** | FIX NOW done 2026-10-01 (CTA copy match, rel=sponsored ×7, "#1" claims ×3); OPTIMIZE + WATCH queue open | MONETIZATION-TRUST-AUDIT.md §11 |
 | **WATCH** | change-after-signing + who-pays (promoted by SERP evidence 10-01 → produce NEXT) · no-assets expansion · all corpus (<30 days, no data) · 2 cannibalization pairs | intelligence/content-gaps.md, FIRST-INTELLIGENCE-REPORT.md |
 
 ## Backlog by status (FASE 58)

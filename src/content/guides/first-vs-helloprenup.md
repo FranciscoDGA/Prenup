@@ -75,12 +75,12 @@ Wedding season is a cash vacuum: venue, rings, flights, dresses. HelloPrenup's A
 
 *Disclosure: some links below are affiliate links — we may earn a commission at no additional cost to you. It never changes which platform fits your situation. See our [affiliate disclosure](/disclosure/).*
 
-**Pick [First](https://www.thisfirst.com/?via=francisco) if:**
+<strong>Pick <a href="https://www.thisfirst.com/?via=francisco" rel="sponsored noopener">First</a> if:</strong>
 - You want one simple choice: self-serve or full lawyer package, nothing in between
 - Included notarization in the base price appeals and you'd rather never think about add-ons
 - You prefer its guided flow after trying both (both offer free starts — take ten minutes in each)
 
-**Pick [HelloPrenup](https://helloprenup.com/?via=francisco) if:**
+<strong>Pick <a href="https://helloprenup.com/?via=francisco" rel="sponsored noopener">HelloPrenup</a> if:</strong>
 - You want the attorney tier — you'll save roughly $1,500 for the same protection
 - You're in a state requiring representation for your clauses (CA/AL/NY/WA waivers, SC/WV)
 - You might only need a **$49 quick lawyer question** instead of a full review
@@ -89,6 +89,6 @@ Wedding season is a cash vacuum: venue, rings, flights, dresses. HelloPrenup's A
 
 **The honest verdict:** at $649, you can't lose on either. The decision only matters when lawyers enter the picture — and then HelloPrenup's pricing wins for almost every couple that isn't shopping purely for maximum bundled simplicity.
 
-**Next:** both offer free starts — run [HelloPrenup](https://helloprenup.com/?via=francisco) first since it's the cheaper escalation path, and keep the [17-point checklist](/guides/prenup-checklist/) open in the other tab so you know what questions to ask in either flow. Wondering whether online itself holds up? [The validity check is here.](/guides/is-an-online-prenup-legal/)
+**Next:** both offer free starts — run <a href="https://helloprenup.com/?via=francisco" rel="sponsored noopener">HelloPrenup</a> first since it's the cheaper escalation path, and keep the [17-point checklist](/guides/prenup-checklist/) open in the other tab so you know what questions to ask in either flow. Wondering whether online itself holds up? [The validity check is here.](/guides/is-an-online-prenup-legal/)
 
 <sub><em>Transparency: we earn a commission if you sign up through our links — it never changes a verdict, and you pay the same either way. See our <a href="/disclosure/">affiliate disclosure</a>.</em></sub>
