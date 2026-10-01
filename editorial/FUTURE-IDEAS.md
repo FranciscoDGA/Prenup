@@ -15,3 +15,5 @@ Building any of these requires its own explicit sprint authorization.
 | Author page expansion / second persona | Authorship is fixed (FASE 41/42); no invented experts |
 | Internal search | Feature creep; nav + guides index suffice |
 | Translation / non-English content | Audience is US English (FASE 11/12) |
+| SERP position tracking tool / third-party rank tracker | Data tooling — connect GSC first; log results here if ever requested (Sprint 8, FASE 74) |
+| Automated MailerLite/CF dashboard export into repo | Would need external credentials in repo — never (Sprint 8) |

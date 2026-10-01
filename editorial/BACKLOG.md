@@ -6,6 +6,15 @@ must serve a real intent, fit a cluster, and strengthen existing content.
 Priority scale (FASE 54 — reason, not artificial score):
 **P1** produce first · **P2** produce next · **P3** backlog.
 
+## Priority queue (FASE 56 — no numeric ranking)
+
+| Queue | Entries | Source |
+|---|---|---|
+| **PRODUCE NOW** | BRIEF-011, 012, 004, 006, 007, 008 (NOW batch) | NEXT-BATCH.md |
+| **OPTIMIZE NOW** | 3 title-truncation pages (selected; execution gated on measurement baseline) | intelligence/experiments.md |
+| **UPDATE NOW** | 18 guides missing Sources (structural) + 2 review price-freshness | intelligence/refresh-queue.md |
+| **WATCH** | change-after-signing + who-pays (promoted by SERP evidence 10-01 → produce NEXT) · no-assets expansion · all corpus (<30 days, no data) · 2 cannibalization pairs | intelligence/content-gaps.md, FIRST-INTELLIGENCE-REPORT.md |
+
 ## Backlog by status (FASE 58)
 
 | Status | Items |

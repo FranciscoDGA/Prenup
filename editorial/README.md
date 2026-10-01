@@ -28,9 +28,14 @@ INTERNAL LINKING    ← (≥2 natural inbound; cannibalization check; map comple
 CONVERSION REVIEW   ← Level 4 (ONE CTA, most useful next step, situation, tool fit)
 ↓
 PUBLISHING GATE (all 4 levels below) → PUBLISH → DISTRIBUTE (Sprint 6 docs)
+→ INTELLIGENCE loop (editorial/intelligence/ — data → insight → decision → optimization, FASE 41/73)
 → MEASURE (data when available; FAE 54: don't touch fresh content)
 → UPDATE (REFRESH-QUEUE.md rules only)
 ```
+
+**Content intelligence (Sprint 8):** queries/gaps/CTR/cannibalization live in
+`editorial/intelligence/` (its README = data-source audit + monthly review). Intelligence
+feeds `NEXT-BATCH.md`/`BACKLOG.md` — never a parallel pipeline (FASE 55).
 
 ## Review levels (FASE 39) + Publishing gate (FASE 40)
 
@@ -120,5 +125,6 @@ no ranking guarantees.
 | `LEGAL-REVIEW.md` | Claim checklist, source-first rules, state discipline |
 | `NEXT-BATCH.md` | Selected next 6 articles + cadence + batching protocol |
 | `FUTURE-IDEAS.md` | Parked non-editorial ideas — nothing built from here without a sprint |
+| `intelligence/*` | Content intelligence system: data audit, queries, gaps, CTR queue, refresh queue, decisions, experiments, first report |
 
 **Cadence (FASE 34/35):** 1–3 strong articles/week as capacity allows; 3 excellent > 10 mediocre; no volume quotas.

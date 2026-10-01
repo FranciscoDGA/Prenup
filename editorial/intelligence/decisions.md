@@ -1,0 +1,11 @@
+# Editorial Decision Log (FASE 50) — DATE · DATA · OBSERVATION · DECISION · REASON · ACTION
+
+| DATE | DATA | OBSERVATION | DECISION | REASON | ACTION |
+|---|---|---|---|---|---|
+| 2026-10-01 | repo audit (FASE 1) | No GSC/GA/verification in repo; CF Web Analytics external; event bridge exists with 10 event types | Build system around honest NOT AVAILABLE + SERP observation; GSC connection = external prerequisite | Data-driven loop can't start without a data source; fabricating is forbidden (FASE 49) | README data audit + report §1 |
+| 2026-10-01 | SERP `[SERP]` | "can you change a prenup after signing" → firm blogs/HelloPrenup/thisfirst; no Nolo-class authority owns it; our coverage: none | Promote change/cancel topic to NEXT production tier | Real observed demand + clear intent difference + completes Basics cluster | content-gaps.md + BACKLOG |
+| 2026-10-01 | SERP `[SERP]` | "who pays for a prenup" → firm blogs + NPR; our coverage: none | Promote who-pays topic to NEXT production tier | Observed cost-cluster intent; complements cost guide without overlapping | content-gaps.md + BACKLOG |
+| 2026-10-01 | SERP `[SERP]` + grep `[STATIC]` | "do i need a prenup if i have no assets" rankable SERP; phrase absent from do-i-need guide | EXPAND do-i-need-a-prenup with "no assets" angle (not a new page) | Same intent family — expansion beats a second page (FASE 10/11) | content-gaps.md → UPDATE queue |
+| 2026-10-01 | static title audit `[STATIC]` | 8/21 titles >65 chars; worst = second-marriage (90) | Select 3-page optimization batch in experiments.md; **execute after measurement baseline** | Truncation is a display risk, but FASE 72 requires measurable before/after — no baseline possible pre-GSC | experiments.md |
+| 2026-10-01 | content age (frontmatter) | All 21 guides published 2026-09-08→10-01 → **all <30 days** | Whole corpus = WATCH for data-dependent judgments (FASE 21/60) | Comparing/maturing needs time; no premature optimization (FASE 61) | report §4/§12 |
+| 2026-10-01 | state page audit (S7) + SERP | 51 state pages substantive; CA page covers §1615 7-day rule matching statute | No state content action; state queries → EXISTING | Coverage verified against primary source | queries.md |

@@ -44,3 +44,5 @@ No "this will rank", "page one", "guaranteed keyword". Ever — in reports, cont
 - **Consolidate** when two pages share the same intent, audience, AND answer — pick the stronger page, merge, and redirect or replace internal links. Never let two pages compete for one question (current watch pairs listed in BACKLOG.md → CONSOLIDATE and EDITORIAL-CLUSTERS.md FASE 8).
 - **Retire** only after checking: backlinks · traffic · rankings · internal links · intent. Options: update · consolidate · redirect · archive. Never delete blind.
 - Both actions require a real reason (overlap or decay) — never date-driven fakery.
+
+**Active queue entries** live in `intelligence/refresh-queue.md` (URL · reason · source · priority · action) — this file holds the rules only.
