@@ -106,6 +106,7 @@ no ranking guarantees.
 
 | File | Purpose |
 |---|---|
+| `OPERATING-MANUAL.md` | **Single source of truth for running the site** (mission, policies, routines, action list, freeze) |
 | `README.md` (this file) | Workflow + quality gate + distribution entry point |
 | `CONTENT-BRIEF-TEMPLATE.md` | Brief format every opportunity passes through |
 | `ARTICLE-TEMPLATE.md` | Article structure + frontmatter contract |
@@ -124,7 +125,7 @@ no ranking guarantees.
 | `WRITING-STANDARD.md` | American-native voice, reader model, edit passes, content types |
 | `LEGAL-REVIEW.md` | Claim checklist, source-first rules, state discipline |
 | `NEXT-BATCH.md` | Selected next 6 articles + cadence + batching protocol |
-| `FUTURE-IDEAS.md` | Parked non-editorial ideas — nothing built from here without a sprint |
+| `FUTURE-IDEAS.md` | Future backlog (NOW / LATER / IGNORE) — nothing built outside NOW without authorization |
 | `intelligence/*` | Content intelligence system: data audit, queries, gaps, CTR queue, refresh queue, decisions, experiments, first report |
 
 **Cadence (FASE 34/35):** 1–3 strong articles/week as capacity allows; 3 excellent > 10 mediocre; no volume quotas.

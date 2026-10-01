@@ -66,3 +66,22 @@ Source coverage: CW-001, CW-002, CW-003, CW-022â€¦CW-027 (9 total) have `## Sour
 | author page (`/about/` section) | 1 | BYLINE | PUBLISHED (disclaimers intact) |
 
 Sitemap: 84 URLs. Inventory rows cover every ranking surface; briefs (B) become rows here at DRAFT.
+
+## D. Final content inventory — Sprint 10 (FASE 55)
+
+Verified against the live build on 2026-09-30. This is the frozen-state baseline; new
+rows are added only through the 15-step workflow in `OPERATING-MANUAL.md` §4.
+
+| Surface | Count | Status | Notes |
+|---|---|---|---|
+| Guides `/guides/<slug>/` | 27 | PUBLISHED | 9 with `## Sources`; 18 UPDATE queue; all linked from `/guides/` hub (no orphans) |
+| Briefs in flight (CW-028…030) | 3 | BRIEF | NEXT tier in BACKLOG |
+| State pages `/states/<slug>/` | 51 | PUBLISHED | 50 states + D.C., substantive per-state content |
+| State index `/states/` | 1 | PUBLISHED | Hub |
+| Tool `/tools/prenup-cost-calculator/` | 1 | PUBLISHED | Formula + validation + events verified |
+| Situation landing `/start/` | 1 | PUBLISHED | 8 anchors, 24 routed links all valid |
+| Free funnel `/free/*` | 5 | PUBLISHED | Hub + 2 freebies + 2 thank-you; all noindex where designed, sitemap-excluded by design |
+| Trust/legal: about, author, privacy, terms, disclosure, cookies | 6 | PUBLISHED | Author disclaimers intact |
+| Support: home, 404 | 2 | PUBLISHED | Custom 404 live |
+| **Total rendered pages** | **95** | | 94 `index.html` + `404.html` |
+| **Sitemap URLs** | **90** | | 95 - 5 free-funnel exclusions (verified live) |
