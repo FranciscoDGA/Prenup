@@ -20,7 +20,16 @@ const posts = (await getCollection('guides')).sort(
   <section class="section">
     <div class="container grid grid-3">
       {posts.map((post) => (
-        <a class="card" href={`/guides/${post.id}/`} style="text-decoration:none; color:inherit;">
+        <a class="card card-guide" href={`/guides/${post.id}/`} style="text-decoration:none; color:inherit;">
+          <img
+            class="card-img"
+            src={post.data.image ?? '/images/hero-couple.jpg'}
+            alt={post.data.imageAlt ?? ''}
+            width="1600"
+            height="1067"
+            loading="lazy"
+            decoding="async"
+          />
           <span class="tag">{post.data.cluster}</span>
           <h3>{post.data.title}</h3>
           <p>{post.data.description}</p>

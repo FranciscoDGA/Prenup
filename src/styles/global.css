@@ -130,6 +130,19 @@ h3 { font-size: 1.25rem; margin: 1.8rem 0 .5rem; }
   font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
   color: var(--gold-dark);
 }
+.card-guide { display: flex; flex-direction: column; }
+.card-guide .card-img {
+  width: calc(100% + 3rem);
+  margin: -1.5rem -1.5rem 1.1rem;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--line);
+}
+.card-guide .tag { margin-bottom: .5rem; }
+.card-guide h3 { margin-bottom: .5rem; }
 .eyebrow {
   text-transform: uppercase; letter-spacing: .14em; font-size: .78rem;
   font-weight: 800; color: var(--gold-dark); margin-bottom: .4rem;
