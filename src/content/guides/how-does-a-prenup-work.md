@@ -5,6 +5,8 @@ commercialIntent: none
 description: "How a prenup actually works: the five steps from first talk to signed document, what happens during the marriage, and how changes work later."
 keyword: how does a prenup work
 cluster: Basics
+image: /images/guides/how-does-a-prenup-work.jpg
+imageAlt: "Legal documents and a pen on a desk"
 published: 2026-10-01
 tldr: "A prenup works like this: you and your partner agree on financial rules, exchange full financial disclosures, draft the agreement (lawyer or online service), review it, and sign it with your state's formalities before the wedding. Once signed, it sits in a drawer and governs your marriage's financial defaults — and it only changes if you both later sign a written change."
 ctaHeading: "The next question couples ask: how long does it take?"

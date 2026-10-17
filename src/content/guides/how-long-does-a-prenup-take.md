@@ -5,6 +5,8 @@ commercialIntent: medium
 description: "Most couples need about 6–10 weeks of active prenup work — and should start 3–6 months before the wedding. The timeline backward from your wedding date, plus state timing rules like California's 7-day rule."
 keyword: how long does a prenup take
 cluster: Risk
+image: /images/guides/how-long-does-a-prenup-take.jpg
+imageAlt: "A calendar and planner open on a desk"
 published: 2026-10-01
 tldr: "Plan on 6–10 weeks of active work for straightforward finances — and start the conversation 3–6 months before the wedding. Sign at least 30 days out. California has a hard rule: the final draft must be in both parties' hands at least 7 days before signing."
 ctaHeading: "Ready to start the clock?"

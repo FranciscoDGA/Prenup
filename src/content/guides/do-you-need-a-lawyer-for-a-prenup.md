@@ -5,6 +5,8 @@ commercialIntent: high
 description: "Most states let you sign a prenup without an attorney — but independent counsel is what makes it survive scrutiny. When you can go solo, when you shouldn't, and California's strict counsel rules."
 keyword: do you need a lawyer for a prenup
 cluster: Decision
+image: /images/guides/do-you-need-a-lawyer-for-a-prenup.jpg
+imageAlt: "A lawyer and client meeting in an office"
 published: 2026-10-01
 tldr: "No state says every couple must have lawyers for a prenup to exist — but courts weigh heavily whether each partner had independent legal advice, and a few situations (waiving spousal support in California, big wealth gaps, businesses, kids from prior marriages) make counsel close to essential. The popular middle path: online service for drafting, attorney review before signing."
 faq:

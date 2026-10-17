@@ -3,6 +3,8 @@ title: "Prenup Before Buying a House: What It Covers and When You Need One"
 description: "A prenup can govern your house — but only if signed before the wedding. What it covers, title vs mortgage, and when you need a co-ownership agreement instead."
 keyword: "prenup before buying a house"
 cluster: "Decision"
+image: /images/guides/prenup-before-buying-a-house.jpg
+imageAlt: "Couple holding the keys to their new home"
 published: 2026-10-17
 updated: 2026-10-17
 author: "Francisco Gomes Alves"

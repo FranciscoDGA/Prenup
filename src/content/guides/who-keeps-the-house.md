@@ -5,6 +5,8 @@ commercialIntent: medium
 description: "Who keeps the house in a divorce depends on three things: whose name is on the deed, who's on the mortgage, and your state's property rules. A prenup can settle it."
 keyword: who keeps the house in a divorce
 cluster: Risk
+image: /images/guides/who-keeps-the-house.jpg
+imageAlt: "Exterior of a suburban family home"
 published: 2026-10-01
 tldr: "There's no single answer. The deed says who owns it, the mortgage says who owes the lender, and state law decides what happens if you don't have an agreement. In community property states the house may be split 50/50; in equitable distribution states the court divides it fairly, not necessarily equally. A prenup can settle ownership before a dispute ever starts."
 ctaHeading: "Want the flat-fee route instead of the hourly meter?"

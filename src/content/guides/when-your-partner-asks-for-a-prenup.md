@@ -5,6 +5,8 @@ commercialIntent: none
 description: "Your partner just asked for a prenup. Here's what that request actually means, the questions worth asking back, and your rights while you consider it."
 keyword: when your partner asks for a prenup
 cluster: Fear
+image: /images/guides/when-your-partner-asks-for-a-prenup.jpg
+imageAlt: "A couple having a serious conversation at a table"
 published: 2026-10-01
 tldr: "A prenup request isn't a verdict on your relationship — it's usually about money habits, family pressure, or past experience. Your move: pause, ask direct questions about what they want to protect and why now, and know your rights — you're entitled to your own lawyer, full disclosure, and time to think. A script for the money conversation is below."
 ctaHeading: "Turn this conversation into a money talk you can actually have"

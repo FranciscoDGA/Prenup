@@ -5,6 +5,8 @@ commercialIntent: low
 description: "A prenup can protect you from your spouse's debt at divorce — but it can't bind your creditors. Here's what it does cover and the limits that remain."
 keyword: can a prenup protect me from my spouse's debt
 cluster: Basics
+image: /images/guides/can-a-prenup-protect-me-from-my-spouses-debt.jpg
+imageAlt: "Household bills and paperwork spread across a table"
 published: 2026-10-01
 tldr: "Partly yes. A prenup can assign debt between spouses for division at divorce and set rules for who owes what during the marriage — but it's a contract between the two of you, and creditors who weren't part of it aren't bound by it. In community property states especially, a creditor can still reach marital assets for debt either spouse incurred."
 ctaHeading: "Start with the debt rules you already live under"

@@ -5,6 +5,8 @@ commercialIntent: none
 description: "A prenup is a legal agreement signed before marriage that decides how property, debt, and support are handled. Here's what it does, what it doesn't, and how couples get one."
 keyword: what is a prenuptial agreement
 cluster: Basics
+image: /images/guides/what-is-a-prenup.jpg
+imageAlt: "Close-up of hands signing a legal document"
 published: 2026-10-01
 tldr: "A prenuptial agreement ('prenup') is a written contract two people sign before marriage that sets rules for how money, property, and debt are handled — during the marriage and if it ends. It's valid in every state when it's in writing, signed voluntarily, backed by honest financial disclosure, and it follows your state's formalities."
 ctaHeading: "So — do you actually need one?"

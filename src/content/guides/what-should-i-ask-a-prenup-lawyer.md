@@ -5,6 +5,8 @@ commercialIntent: high
 description: "20 questions to ask a prenup attorney in your first consultation: fees, timeline, disclosure, enforceability, and red flags to watch for."
 keyword: what should i ask a prenup lawyer
 cluster: Decision
+image: /images/guides/what-should-i-ask-a-prenup-lawyer.jpg
+imageAlt: "Someone taking notes during a meeting"
 published: 2026-10-01
 tldr: "Ask a prenup lawyer about their family-law experience, how they charge (hourly vs flat), the realistic timeline for your state, what disclosure they'll require, and who drafts first. Bring a list of your assets and debts to the meeting. Red flags: guarantees of enforceability, pressure to skip your partner's own lawyer, or refusal to put fees in writing."
 ctaHeading: "Ready to move — but not sure a lawyer is the next step?"

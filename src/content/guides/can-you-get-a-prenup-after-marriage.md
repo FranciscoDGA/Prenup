@@ -5,6 +5,8 @@ commercialIntent: low
 description: "Yes — you can sign an agreement after the wedding. It's called a postnuptial agreement, and it works like a prenup with higher scrutiny and extra formalities."
 keyword: can you get a prenup after marriage
 cluster: Validity
+image: /images/guides/can-you-get-a-prenup-after-marriage.jpg
+imageAlt: "Wedding rings resting on clasped hands"
 published: 2026-10-01
 tldr: "Yes. An agreement signed after the wedding is called a postnuptial agreement — same purpose, different name. States generally apply the same core requirements (writing, honesty, fair process) and often add stricter ones, like mandatory independent attorneys or formalities you never had to face before the wedding."
 faq:
