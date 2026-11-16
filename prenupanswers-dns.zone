@@ -1,0 +1,4 @@
+$ORIGIN prenupanswers.com.
+$TTL 3600
+@ IN CNAME 2ffa81945d35139b.vercel-dns-017.com.
+www IN CNAME 2ffa81945d35139b.vercel-dns-017.com.
