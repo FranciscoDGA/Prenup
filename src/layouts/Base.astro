@@ -24,6 +24,16 @@ const websiteLd = {
   description:
     'Plain-English prenuptial agreement answers for engaged couples in the United States — costs, checklists, state laws, and honest guidance without the legalese.',
 };
+
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'PrenupAnswers',
+  url: 'https://www.prenupanswers.com/',
+  logo: 'https://www.prenupanswers.com/favicon-96x96.png',
+  description:
+    'Independent educational resource providing plain-English, state-by-state guides on prenuptial agreements, costs, and asset protection in the United States.',
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -36,6 +46,8 @@ const websiteLd = {
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta property="og:site_name" content="PrenupAnswers" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -49,6 +61,7 @@ const websiteLd = {
     <meta name="twitter:image" content={imageUrl} />
     <meta name="twitter:image:alt" content={imageAlt ?? description} />
     <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationLd)} />
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
   </head>
   <body>

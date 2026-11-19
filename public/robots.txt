@@ -1,4 +1,26 @@
+# Robots.txt — PrenupAnswers
+# AI Context Index: https://www.prenupanswers.com/llms.txt
+
 User-agent: *
+Allow: /
+
+# Explicit permission for AI search & citation crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 Sitemap: https://www.prenupanswers.com/sitemap-index.xml
