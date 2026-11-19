@@ -28,6 +28,28 @@ Copie e cole uma por uma na barra de **Inspeção de URL** do GSC e clique em **
    * **Título:** Can a Prenup Protect Your 401(k) and Retirement? The Spousal Waiver Rule
    * **Cluster:** Risk / Retirement & ERISA
 
+### 🚀 Lote 2: 05 Novos Posts Virais (Dores Cruciais Subatendidas)
+
+6. `https://www.prenupanswers.com/guides/gray-divorce-prenup-after-50/`
+   * **Título:** Gray Divorce and Remarriage After 50: The Prenup Traps Most Couples Miss
+   * **Cluster:** Family / Late-in-Life & Elective Share
+
+7. `https://www.prenupanswers.com/guides/stay-at-home-parent-prenup-protection/`
+   * **Título:** Stay-at-Home Parent Prenup: How to Protect Career Sacrifices
+   * **Cluster:** Risk / Stay-at-Home Spouse Equity
+
+8. `https://www.prenupanswers.com/guides/crypto-rsu-startup-equity-prenup/`
+   * **Título:** Crypto, RSUs, and Startup Equity in a Prenup: The Tech Equity Guide
+   * **Cluster:** Risk / Tech Equity & RSUs
+
+9. `https://www.prenupanswers.com/guides/pet-custody-prenup/`
+   * **Título:** Pet Custody in a Prenup: Who Gets the Dog When Courts Don't Care?
+   * **Cluster:** Family / Companion Animal Custody
+
+10. `https://www.prenupanswers.com/guides/prenup-sunset-clause/`
+    * **Título:** The Prenup Sunset Clause: Can Your Agreement Expire After 10 Years?
+    * **Cluster:** Validity / Phased Sunset Clauses
+
 ---
 
 ### 🗺️ Sitemap Principal para Reenvio
