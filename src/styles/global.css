@@ -158,6 +158,8 @@ h3 { font-size: 1.25rem; margin: 1.8rem 0 .5rem; }
 .article-head { background: var(--navy-900); color: #e8edf4; padding: clamp(2.2rem, 5vw, 3.6rem) 0; }
 .article-head h1 { color: #fff; max-width: 20ch; }
 .article-head .meta { font-size: .88rem; color: #93a3b6; }
+.article-head .meta a { color: #e2e8f0; text-decoration: underline; text-underline-offset: 2px; }
+.article-head .meta a:hover { color: var(--gold); }
 .article-head .crumbs a { color: var(--gold); text-decoration: none; }
 .guide-hero { margin: 1.6rem 0 0; }
 .guide-hero img {
