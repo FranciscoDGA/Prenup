@@ -2,7 +2,7 @@
 
 > Plain-English, state-by-state guides, cost breakdowns, and checklists for prenuptial agreements in the United States.
 
-Independent educational resource explaining prenuptial agreement laws, community property vs. equitable distribution rules, asset protection, and realistic legal costs across US states without heavy legalese. Canonical domain: https://www.prenupanswers.com. Last updated: 2026-11-19.
+Independent educational resource explaining prenuptial agreement laws, community property vs. equitable distribution rules, asset protection, and realistic legal costs across US states without heavy legalese. Canonical domain: https://www.prenupanswers.com. Last updated: 2026-11-20.
 
 ## State Prenup Laws
 
@@ -72,6 +72,7 @@ Independent educational resource explaining prenuptial agreement laws, community
 - [Do I Need a Prenup? The Brutally Honest 60-Second Test](https://www.prenupanswers.com/guides/do-i-need-a-prenup/): Six questions that settle whether you actually need a prenuptial agreement — plus the four situations where the answer is almost always yes. No guilt, no legalese.
 - [Do You Need a Lawyer for a Prenup?](https://www.prenupanswers.com/guides/do-you-need-a-lawyer-for-a-prenup/): Most states let you sign a prenup without an attorney — but independent counsel is what makes it survive scrutiny. When you can go solo, when you shouldn't, and California's str...
 - [Does a Prenup Mean You Don't Trust Your Partner? (The Honest Answer)](https://www.prenupanswers.com/guides/does-a-prenup-mean-you-dont-trust-your-partner/): The fear behind every prenup conversation: 'if you trusted me, you wouldn't need this.' Why the opposite is true — and what real distrust actually looks like in a marriage.
+- [Does a Prenup Protect Future Assets Acquired After Marriage?](https://www.prenupanswers.com/guides/does-a-prenup-protect-future-assets/): Learn whether a prenup protects future assets, salary, equity, and appreciation acquired during marriage—plus commingling traps and state enforcement rules.
 - [First vs HelloPrenup: Which Online Prenup Service Is Right for You? (2026)](https://www.prenupanswers.com/guides/first-vs-helloprenup/): Both land at $649, both are built for couples, and both include state-specific agreements. The differences — attorney tiers, notarization, payment plans — decide which one fits...
 - [Gray Divorce and Remarriage After 50: The Prenup Traps Most Couples Miss](https://www.prenupanswers.com/guides/gray-divorce-prenup-after-50/): Marrying after 50? Learn how a prenup protects adult children's inheritances, navigates healthcare costs, and prevents state elective share conflicts.
 - [How Does a Prenup Work? The Whole Process, Start to Finish](https://www.prenupanswers.com/guides/how-does-a-prenup-work/): How a prenup actually works: the five steps from first talk to signed document, what happens during the marriage, and how changes work later.
