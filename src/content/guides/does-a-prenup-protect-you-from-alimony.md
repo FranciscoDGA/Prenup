@@ -3,6 +3,8 @@ title: "Does a Prenup Protect You From Alimony? Rules, Limits & Exceptions (2026
 description: "Does a prenup protect you from alimony? Learn how spousal support waivers work under US law, state-by-state exceptions, when courts override them, and how to make yours hold up."
 keyword: does a prenup protect you from alimony
 cluster: Validity
+image: /images/guides/does-a-prenup-protect-you-from-alimony.jpg
+imageAlt: "Engaged couple calmly reviewing prenuptial agreement and spousal support terms together at home"
 published: 2026-11-21
 author: Francisco Gomes Alves
 tldr: "Yes—in most US states, a properly drafted prenup can protect you from alimony by waiving, capping, or limiting spousal support. However, that protection is never absolute: a handful of states ban alimony waivers outright, California requires independent legal counsel and a 7-day waiting period, and nearly every state lets a judge override a waiver if enforcing it would force a spouse onto public assistance or be unconscionable at divorce."
